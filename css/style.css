@@ -396,12 +396,9 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 .social-icon-btn:hover {
     transform: scale(1.15) rotate(8deg);
-    color: white !important;
+    color: var(--primary) !important;
+    background: var(--secondary-container) !important;
 }
-.social-icon-btn.fb:hover { background: #1877F2; border-color: #1877F2; }
-.social-icon-btn.ig:hover { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
-.social-icon-btn.x:hover { background: #000000; }
-.social-icon-btn.in:hover { background: #0A66C2; }
 
 .team-info-box {
     position: absolute;
