@@ -1,850 +1,1191 @@
 <!DOCTYPE html>
 <html lang="en" style="scroll-behavior: smooth;">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Corporate Business Consultancy | Enterprise Excellence</title>
-    
+
     <!-- Bootstrap 5.3.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    
+
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
+
     <!-- Fonts and Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet"/>
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap"
+        rel="stylesheet" />
+
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
 
-<!-- Header Placeholder -->
-<div id="header-placeholder"></div>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden loading">
 
-<!-- 1. Hero Section (Swiper Carousel) -->
-<section class="p-0 position-relative">
-    <div class="swiper hero-swiper vh-100">
-        <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide position-relative">
-                <div class="position-absolute top-0 start-0 w-100 h-100 swiper-bg" style="background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBcBMTjbUD7KvkM5q5pulBXrv2SEYMmx4eHQzbqjF7yUp0YeXuntrC0cRXD6taKw2_tYakL4pDxNahTCi08EVqN29H9p7Bm_Y81BQC9rT1CgHrh3HTkGJeoTn88mXeJV3EVe3Jto-jMDPMqqUUm0h0_W9js15NPs2J8MsJ0CKYuNFkcE5m3rUle-K2JVZwXhmPV7ueUQ6CrdmT3T_iFJ0T93X5OlH1c8pHf4w2nr6iJyn58saLRcD6K2tTpeUAshPMnfJuSuKN7_g') center/cover no-repeat; "></div>
-                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75 z-1"></div>
-                <div class="container h-100 px-4 px-lg-5 position-relative" style="z-index: 2;">
-                    <div class="row align-items-center h-100 pt-5 mt-4 mt-lg-0 pt-lg-0">
-                        <div class="col-lg-8">
-                            <span data-aos="fade-down" data-aos-delay="100" class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Corporate Business Consultancy</span>
-                            <h1 data-aos="fade-right" data-aos-delay="200" class="display-2 font-heading fw-bold text-white lh-1 mb-4">Elevate Your <span class="text-secondary-container fst-italic">Enterprise.</span></h1>
-                            <p data-aos="fade-up" data-aos-delay="300" class="lead text-white-50 mb-5" style="max-width: 40rem;">We specialize in architecting high-yield strategies for global conglomerates. Partner with us to redefine your market ceiling and achieve operational excellence.</p>
-                            <div data-aos="zoom-in" data-aos-delay="400" class="d-flex flex-wrap gap-3">
-                                <button onclick="window.top.location.href='404.html'" class="btn btn-premium btn-premium-primary font-button px-4 px-md-5 py-3 rounded fw-bold shadow-lg fw-bold">Book a Consultation</button>
-                                <button onclick="window.top.location.href='404.html'" class="btn btn-premium btn-premium-outline-light font-button px-4 px-md-5 py-3 rounded fw-bold bg-white bg-opacity-10 fw-bold">Explore Our Services</button>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader-wrapper">
+        <div class="loader-brand">
+            <div class="loader-logo-mask"></div>
+        </div>
+    </div>
+
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- 1. Hero Section (Swiper Carousel) -->
+    <section class="p-0 position-relative">
+        <div class="swiper hero-swiper vh-100">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide position-relative">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 swiper-bg"
+                        style="background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBcBMTjbUD7KvkM5q5pulBXrv2SEYMmx4eHQzbqjF7yUp0YeXuntrC0cRXD6taKw2_tYakL4pDxNahTCi08EVqN29H9p7Bm_Y81BQC9rT1CgHrh3HTkGJeoTn88mXeJV3EVe3Jto-jMDPMqqUUm0h0_W9js15NPs2J8MsJ0CKYuNFkcE5m3rUle-K2JVZwXhmPV7ueUQ6CrdmT3T_iFJ0T93X5OlH1c8pHf4w2nr6iJyn58saLRcD6K2tTpeUAshPMnfJuSuKN7_g') center/cover no-repeat; ">
+                    </div>
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75 z-1"></div>
+                    <div class="container h-100 px-4 px-lg-5 position-relative" style="z-index: 2;">
+                        <div class="row align-items-center h-100 pt-5 mt-4 mt-lg-0 pt-lg-0">
+                            <div class="col-lg-8">
+                                <span data-aos="fade-down" data-aos-delay="100"
+                                    class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Corporate
+                                    Business Consultancy</span>
+                                <h1 data-aos="fade-right" data-aos-delay="200"
+                                    class="display-2 font-heading fw-bold text-white lh-1 mb-4">Elevate Your <span
+                                        class="text-secondary-container fst-italic">Enterprise.</span></h1>
+                                <p data-aos="fade-up" data-aos-delay="300" class="lead text-white-50 mb-5"
+                                    style="max-width: 40rem;">We specialize in architecting high-yield strategies for
+                                    global conglomerates. Partner with us to redefine your market ceiling and achieve
+                                    operational excellence.</p>
+                                <div data-aos="zoom-in" data-aos-delay="400" class="d-flex flex-wrap gap-3">
+                                    <button onclick="window.top.location.href='404.html'"
+                                        class="btn btn-premium btn-premium-primary font-button px-4 px-md-5 py-3 rounded fw-bold shadow-lg fw-bold">Book
+                                        a Consultation</button>
+                                    <button onclick="window.top.location.href='404.html'"
+                                        class="btn btn-premium btn-premium-outline-light font-button px-4 px-md-5 py-3 rounded fw-bold bg-white bg-opacity-10 fw-bold">Explore
+                                        Our Services</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Slide 2 -->
-            <div class="swiper-slide position-relative">
-                <div class="position-absolute top-0 start-0 w-100 h-100 swiper-bg" style="background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB83_0j2nGY6caPKJY_VFYaLe7xMLu2AdU4TJ3QnPnF3X42Gwi509W-C5R8jCUwMAaECN7icjiKyXRDExHkZqnLT7OAbTA__46AggBOgeGcDfcX9PGYw8AqEacXU-nkfSFwIPzGW9zRiEqweK2npAHpE_iX8HiMJAMB3F0bkfB0ui0FUzxfVucV29T99UDbbCw63aUh64pAm5TIJ3muibnbl_ReRnip4xemdrgsmuW_8vwLqERDJ022e6eg0LGOF-3V0W9dTLwx8F0') center/cover no-repeat; "></div>
-                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75 z-1"></div>
-                <div class="container h-100 px-4 px-lg-5 position-relative" style="z-index: 2;">
-                    <div class="row align-items-center justify-content-center text-center h-100 pt-5 mt-4 mt-lg-0 pt-lg-0">
-                        <div class="col-lg-9">
-                            <span data-aos="fade-down" data-aos-delay="100" class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Unrivaled Growth</span>
-                            <h1 data-aos="zoom-in" data-aos-delay="200" class="display-2 font-heading fw-bold text-white lh-1 mb-4">Strategic <span class="text-primary fst-italic">Market Dominance</span></h1>
-                            <p data-aos="fade-up" data-aos-delay="300" class="lead text-white-50 mx-auto mb-5" style="max-width: 48rem;">Move beyond incremental gains. Our corporate consultancy identifies untapped market white spaces and scales your business with unprecedented precision.</p>
-                            <div data-aos="fade-up" data-aos-delay="400" class="d-flex flex-wrap gap-3 justify-content-center">
-                                <button onclick="window.top.location.href='404.html'" class="btn btn-premium btn-premium-secondary font-button px-4 px-md-5 py-3 rounded fw-bold shadow-lg fw-bold">Discover Our Methods</button>
+                <!-- Slide 2 -->
+                <div class="swiper-slide position-relative">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 swiper-bg"
+                        style="background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB83_0j2nGY6caPKJY_VFYaLe7xMLu2AdU4TJ3QnPnF3X42Gwi509W-C5R8jCUwMAaECN7icjiKyXRDExHkZqnLT7OAbTA__46AggBOgeGcDfcX9PGYw8AqEacXU-nkfSFwIPzGW9zRiEqweK2npAHpE_iX8HiMJAMB3F0bkfB0ui0FUzxfVucV29T99UDbbCw63aUh64pAm5TIJ3muibnbl_ReRnip4xemdrgsmuW_8vwLqERDJ022e6eg0LGOF-3V0W9dTLwx8F0') center/cover no-repeat; ">
+                    </div>
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75 z-1"></div>
+                    <div class="container h-100 px-4 px-lg-5 position-relative" style="z-index: 2;">
+                        <div
+                            class="row align-items-center justify-content-center text-center h-100 pt-5 mt-4 mt-lg-0 pt-lg-0">
+                            <div class="col-lg-9">
+                                <span data-aos="fade-down" data-aos-delay="100"
+                                    class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Unrivaled
+                                    Growth</span>
+                                <h1 data-aos="zoom-in" data-aos-delay="200"
+                                    class="display-2 font-heading fw-bold text-white lh-1 mb-4">Strategic <span
+                                        class="text-primary fst-italic">Market Dominance</span></h1>
+                                <p data-aos="fade-up" data-aos-delay="300" class="lead text-white-50 mx-auto mb-5"
+                                    style="max-width: 48rem;">Move beyond incremental gains. Our corporate consultancy
+                                    identifies untapped market white spaces and scales your business with unprecedented
+                                    precision.</p>
+                                <div data-aos="fade-up" data-aos-delay="400"
+                                    class="d-flex flex-wrap gap-3 justify-content-center">
+                                    <button onclick="window.top.location.href='404.html'"
+                                        class="btn btn-premium btn-premium-secondary font-button px-4 px-md-5 py-3 rounded fw-bold shadow-lg fw-bold">Discover
+                                        Our Methods</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Slide 3 -->
-            <div class="swiper-slide position-relative">
-                <div class="position-absolute top-0 start-0 w-100 h-100 swiper-bg" style="background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcuE6cwvzMu-2sSZfyaUVtjW2lGngolNXWZTVKdIgT5qtDMelbVbzNZ_9iSqZqUGYtajFS0SI_vCdgWspb7bleQEbI6dj9Wc5nVVfNbiwVs8r1hrEf48tWMiYf_7uO_FslB5p9B6Ntomq2xwuklfa9V5NcqtkF0StK4J262mJ9zw6XU0f8Rj0y3408dMDpUxsAGdzofJFLvm_815sKX-5_cxYd3CKwTCFj9VQ4trXowsEZvf0n4jRwUP1xrL2G5AzXYYmg9MpEL-4') center/cover no-repeat; "></div>
-                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75 z-1"></div>
-                <div class="container h-100 px-4 px-lg-5 position-relative" style="z-index: 2;">
-                    <div class="row align-items-center justify-content-end h-100 text-end pt-5 mt-4 mt-lg-0 pt-lg-0">
-                        <div class="col-lg-8">
-                            <span data-aos="fade-down" data-aos-delay="100" class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Digital Transformation</span>
-                            <h1 data-aos="fade-left" data-aos-delay="200" class="display-2 font-heading fw-bold text-white lh-1 mb-4">The Future is <span class="text-secondary-container fst-italic">Now</span></h1>
-                            <p data-aos="fade-up" data-aos-delay="300" class="lead text-white-50 ms-auto mb-5" style="max-width: 40rem;">We re-architect legacy corporate systems into agile, data-driven powerhouses ready to conquer the modern digital landscape.</p>
-                            <div data-aos="fade-up" data-aos-delay="400" class="d-flex flex-wrap gap-3 justify-content-end">
-                                <button onclick="window.top.location.href='404.html'" class="btn btn-premium btn-premium-primary font-button px-4 px-md-5 py-3 rounded fw-bold shadow-lg fw-bold">View Digital Services</button>
-                            </div>
-                        </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide position-relative">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 swiper-bg"
+                        style="background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcuE6cwvzMu-2sSZfyaUVtjW2lGngolNXWZTVKdIgT5qtDMelbVbzNZ_9iSqZqUGYtajFS0SI_vCdgWspb7bleQEbI6dj9Wc5nVVfNbiwVs8r1hrEf48tWMiYf_7uO_FslB5p9B6Ntomq2xwuklfa9V5NcqtkF0StK4J262mJ9zw6XU0f8Rj0y3408dMDpUxsAGdzofJFLvm_815sKX-5_cxYd3CKwTCFj9VQ4trXowsEZvf0n4jRwUP1xrL2G5AzXYYmg9MpEL-4') center/cover no-repeat; ">
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- 2. Featured Flagship Report -->
-<section class="py-5 bg-white overflow-hidden">
-    <div class="container px-4 px-lg-5 py-lg-4">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-6 position-relative" data-aos="fade-right">
-                <div class="position-relative rounded-4 overflow-hidden shadow-lg" style="height: 400px;">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB83_0j2nGY6caPKJY_VFYaLe7xMLu2AdU4TJ3QnPnF3X42Gwi509W-C5R8jCUwMAaECN7icjiKyXRDExHkZqnLT7OAbTA__46AggBOgeGcDfcX9PGYw8AqEacXU-nkfSFwIPzGW9zRiEqweK2npAHpE_iX8HiMJAMB3F0bkfB0ui0FUzxfVucV29T99UDbbCw63aUh64pAm5TIJ3muibnbl_ReRnip4xemdrgsmuW_8vwLqERDJ022e6eg0LGOF-3V0W9dTLwx8F0" class="w-100 h-100 object-fit-cover" alt="Report Cover">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-25"></div>
-                    <!-- Badge -->
-                    <div class="position-absolute bottom-0 start-0 m-4 bg-white p-3 rounded shadow d-flex align-items-center gap-3 hover-scale-105 transition-all">
-                        <span class="material-symbols-outlined text-primary fs-1">picture_as_pdf</span>
-                        <div>
-                            <div class="fw-bold font-heading text-on-surface">Full Report</div>
-                            <small class="text-on-surface-variant font-label-caps">PDF • 4.2 MB</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-left">
-                <span class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Flagship Research</span>
-                <h2 class="display-5 font-heading fw-bold mb-4">The 2026 State of Corporate M&A</h2>
-                <p class="fs-5 text-on-surface-variant mb-4 lh-lg">Access our exclusive Q3 executive briefing. Discover how top-quartile enterprises are leveraging aggressive digital integration and strategic acquisitions to secure market dominance amidst global economic volatility.</p>
-                
-                <ul class="list-unstyled mb-5 text-on-surface-variant">
-                    <li class="d-flex align-items-center gap-3 mb-2">
-                        <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span>Analysis of $120B+ in recent corporate transactions</span>
-                    </li>
-                    <li class="d-flex align-items-center gap-3 mb-2">
-                        <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span>AI readiness frameworks for legacy boards</span>
-                    </li>
-                    <li class="d-flex align-items-center gap-3">
-                        <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span>Sector-by-sector risk mitigation strategies</span>
-                    </li>
-                </ul>
-                
-                <button onclick="window.top.location.href='404.html'" class="btn btn-premium btn-premium-primary font-button px-4 px-md-5 py-3 rounded fw-bold shadow fw-bold d-inline-flex align-items-center gap-2">
-                    <span class="material-symbols-outlined">download</span> Download Free Report
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 3. The Corporate Edge (USP) -->
-<section class="py-4 py-lg-5 bg-surface-container-low position-relative z-1">
-    <div class="container px-4 px-lg-5">
-        <div class="row align-items-end mb-5">
-            <div class="col-md-6" data-aos="fade-right">
-                <span class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">The Corporate Edge</span>
-                <h2 class="display-6 font-heading fw-bold">Why Boardrooms Choose Us</h2>
-            </div>
-            <div class="col-md-6" data-aos="fade-left">
-                <p class="text-on-surface-variant mb-0 fs-5">We don't just advise; we architect corporate transformation. Our consulting methodology combines rigorous financial analytics with organizational design to create lasting shareholder value.</p>
-            </div>
-        </div>
-        <div class="row g-4">
-            <!-- Card 1 -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-                <div class="edge-card p-4 p-lg-5 rounded-4 h-100 position-relative overflow-hidden group">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 card-overlay z-0"></div>
-                    <span class="material-symbols-outlined position-absolute watermark-icon z-0">data_exploration</span>
-                    
-                    <div class="position-relative z-1 d-flex flex-column h-100">
-                        <div class="icon-wrapper mb-4 bg-white rounded-circle d-inline-flex p-3 shadow-sm text-primary" style="width: max-content;">
-                            <span class="material-symbols-outlined fs-1" style="font-variation-settings: 'FILL' 1;">data_exploration</span>
-                        </div>
-                        <h3 class="h4 font-heading fw-bold mb-3 edge-card-title">Data-Driven Precision</h3>
-                        <p class="mb-0 edge-card-text text-on-surface-variant">Our insights are backed by proprietary analytics engines that process millions of market variables to predict future corporate trends with 94% accuracy.</p>
-                        
-                        <div class="mt-auto pt-4 border-top learn-more d-flex align-items-center" onclick="window.top.location.href='404.html'" style="cursor: pointer;">
-                             <span class="text-white fw-bold me-2 font-label-caps">Learn More</span>
-                             <span class="material-symbols-outlined text-white">arrow_forward</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="edge-card p-4 p-lg-5 rounded-4 h-100 position-relative overflow-hidden group">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 card-overlay z-0"></div>
-                    <span class="material-symbols-outlined position-absolute watermark-icon z-0">handshake</span>
-                    
-                    <div class="position-relative z-1 d-flex flex-column h-100">
-                        <div class="icon-wrapper mb-4 bg-white rounded-circle d-inline-flex p-3 shadow-sm text-primary" style="width: max-content;">
-                            <span class="material-symbols-outlined fs-1" style="font-variation-settings: 'FILL' 1;">handshake</span>
-                        </div>
-                        <h3 class="h4 font-heading fw-bold mb-3 edge-card-title">Executive Partnerships</h3>
-                        <p class="mb-0 edge-card-text text-on-surface-variant">We operate as an extension of your C-suite. No templated consulting solutions, only bespoke strategic roadmaps built for your unique market position.</p>
-                        
-                        <div class="mt-auto pt-4 border-top learn-more d-flex align-items-center" onclick="window.top.location.href='404.html'" style="cursor: pointer;">
-                             <span class="text-white fw-bold me-2 font-label-caps">Learn More</span>
-                             <span class="material-symbols-outlined text-white">arrow_forward</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="edge-card p-4 p-lg-5 rounded-4 h-100 position-relative overflow-hidden group">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 card-overlay z-0"></div>
-                    <span class="material-symbols-outlined position-absolute watermark-icon z-0">security</span>
-                    
-                    <div class="position-relative z-1 d-flex flex-column h-100">
-                        <div class="icon-wrapper mb-4 bg-white rounded-circle d-inline-flex p-3 shadow-sm text-primary" style="width: max-content;">
-                            <span class="material-symbols-outlined fs-1" style="font-variation-settings: 'FILL' 1;">security</span>
-                        </div>
-                        <h3 class="h4 font-heading fw-bold mb-3 edge-card-title">Proven Resilience</h3>
-                        <p class="mb-0 edge-card-text text-on-surface-variant">Our corporate frameworks are battle-tested across three economic cycles, ensuring your enterprise thrives regardless of global market volatility.</p>
-                        
-                        <div class="mt-auto pt-4 border-top learn-more d-flex align-items-center" onclick="window.top.location.href='404.html'" style="cursor: pointer;">
-                             <span class="text-white fw-bold me-2 font-label-caps">Learn More</span>
-                             <span class="material-symbols-outlined text-white">arrow_forward</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 4. Strategic Domains (Bento Grid) -->
-<section class="py-4 py-lg-5 bg-white overflow-hidden">
-    <div class="container px-4 px-lg-5">
-        <div class="text-center mb-5" data-aos="fade-up">
-            <span class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Core Capabilities</span>
-            <h2 class="display-6 font-heading fw-bold">Our Strategic Domains</h2>
-            <style>
-                .bento-arrow-hover:hover {
-                    background-color: var(--secondary-container) !important;
-                    color: var(--on-secondary-container) !important;
-                    border-color: var(--secondary-container) !important;
-                    transform: scale(1.1);
-                }
-            </style>
-        </div>
-        <div class="row g-4 bento-grid">
-            <div class="col-md-8" data-aos="fade-right">
-                <div class="position-relative overflow-hidden rounded-4 bento-card-glass h-100 min-h-300 shadow-sm border border-outline-variant">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bento-bg" style="background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBekTA-hs-eDwKaNnTYDHjmYB4pRcnBeXCXhiZKshAFvDY4XfppgtxWluJsvVyP0ZJ5yt1OX9oZ5pKx174hak2Xc_NAe1o7ZhMzd6aB93lhH_MoK_Uk_fZrqlxHJd3KdgLs-_1ClsBrOics3rWUPHvJ7REfG3_vSvhmjpXEAlWABgkoD8riK2a_wFIsPKEZ6JcdaYAIXeiU5ArLERlTEmClXlmmzCfMM4V-A-V-XEtF4FaXgG3zfBFd1ROPERnRb82tk6i3gINKusY') center/cover;"></div>
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 bento-overlay"></div>
-                    <div class="position-absolute bottom-0 start-0 p-4 p-lg-5 text-white w-100 d-flex justify-content-between align-items-end bento-content">
-                        <div>
-                            <h4 class="h3 font-heading fw-bold mb-2">Executive Leadership Strategy</h4>
-                            <p class="mb-0 text-white-75 w-75">Refining decision-making frameworks and succession planning for the modern corporate board.</p>
-                        </div>
-                        <span onclick="window.top.location.href='404.html'" style="cursor: pointer; transition: all 0.3s;" class="bento-arrow-hover material-symbols-outlined text-white bento-btn fs-1 border border-white rounded-circle p-2 bg-white bg-opacity-10 backdrop-blur">arrow_forward</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-left">
-                <div class="position-relative overflow-hidden rounded-4 bento-card-glass h-100 min-h-300 shadow-sm border border-outline-variant">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bento-bg" style="background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDw9FSe2Sth0eFdH8BD4zbrnu0nbdzNylVCnK-JNhjHNkj7xOtmuf6aH9rbS6Ct2QP4F8cZSKLPo7I9LNoEjsCIeufB8h7-A40GglVs75xkj4tkWskV7CrPoMyXZBfHaTOWv0tPAHnT8ecMoTzGJ-JeMH_0ff5VYhE3ElAD97VXNUNM56JN8Q_XAUqphk4o70owiuE8Wwx-ZXQcCfWVDpsj2Bze6luU4lcC2-diCvGAPnikJdGeiuu2YkJAHb1feUAUL4edDeuTTf0') center/cover;"></div>
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 bento-overlay"></div>
-                    <div class="position-absolute bottom-0 start-0 p-4 p-lg-5 text-white w-100 bento-content">
-                        <span onclick="window.top.location.href='404.html'" style="cursor: pointer; transition: all 0.3s;" class="bento-arrow-hover material-symbols-outlined text-white bento-btn fs-1 border border-white rounded-circle p-2 bg-white bg-opacity-10 backdrop-blur mb-3">arrow_forward</span>
-                        <h4 class="h3 font-heading fw-bold mb-2">Operational Excellence</h4>
-                        <p class="mb-0 text-white-75 d-none d-lg-block">Lean integration and supply chain optimization.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-right">
-                <div class="position-relative overflow-hidden rounded-4 bento-card-glass h-100 min-h-300 shadow-sm border border-outline-variant">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bento-bg" style="background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzsbYnyivaR8UhKKALm7QyHJD6tqtJOpj0W-_pNw2s1YL8psie23QeT9eDXtzCZVlkNJj1DjQSbCVno_yFZFTgf_yEOVmFSD5EdtiuQUtSkmj7vA6WOb-s6k2TR0SHLmmJcgC_jkuEIM-hOmeZXNENRHwjogTolxqwRNDzf5aXfH7lZaT0v6OV-qudiNkxDmEj5xlLm5bp_NXrynOofj7pOKkDknk8rurNB0tpT3fAcopb7Bq3TEIbr6XnZXkGfA4fxPmelPsEzJE') center/cover;"></div>
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 bento-overlay"></div>
-                    <div class="position-absolute bottom-0 start-0 p-4 p-lg-5 text-white w-100 bento-content">
-                        <span onclick="window.top.location.href='404.html'" style="cursor: pointer; transition: all 0.3s;" class="bento-arrow-hover material-symbols-outlined text-white bento-btn fs-1 border border-white rounded-circle p-2 bg-white bg-opacity-10 backdrop-blur mb-3">arrow_forward</span>
-                        <h4 class="h3 font-heading fw-bold mb-2">Digital Transformation</h4>
-                        <p class="mb-0 text-white-75 d-none d-lg-block">AI integration and legacy system overhauls.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8" data-aos="fade-left">
-                <div class="position-relative overflow-hidden rounded-4 bento-card-glass h-100 min-h-300 shadow-sm border border-outline-variant">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bento-bg" style="background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7o6xXFnK6qlaC2tAXvy94vrc-Q-iqasFDo1ofzQzYJQXxpXDR2e3j96HimY9-sRmV_XEhVZ7vUDZQ4y_jd4b-O2pPdS8RIkEPZlW1IBM7DTB3W1ZQBm9Paux2aUAkAbSKr7X0k51TlbmvhwW3jXov8ZumWgvp2Sf2T466OQeKoCq8v7VSaKtbYC-gNAGcu0bKee9QARbgCMSi3SsrTpJhHtx-lHZd-I6I05V8b19NMeuUQEbSsSekk1G8JcbnN7t6L1meKnVi4ac') center/cover;"></div>
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 bento-overlay"></div>
-                    <div class="position-absolute bottom-0 start-0 p-4 p-lg-5 text-white w-100 d-flex justify-content-between align-items-end bento-content">
-                        <div>
-                            <h4 class="h3 font-heading fw-bold mb-2">Mergers &amp; Acquisitions</h4>
-                            <p class="mb-0 text-white-75">Strategic valuation, due diligence, and cultural integration for high-stakes corporate transactions.</p>
-                        </div>
-                        <span onclick="window.top.location.href='404.html'" style="cursor: pointer; transition: all 0.3s;" class="bento-arrow-hover material-symbols-outlined text-white bento-btn fs-1 border border-white rounded-circle p-2 bg-white bg-opacity-10 backdrop-blur">arrow_forward</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 5. Impact by the Numbers -->
-<section class="py-5 bg-inverse-surface text-white position-relative overflow-hidden" id="stats-section">
-    <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-10" style="background-image: radial-gradient(circle at 50% 50%, var(--primary) 0%, transparent 60%);"></div>
-    <div class="container px-4 px-lg-5 position-relative z-1">
-        <div class="row text-center g-2 g-md-4">
-            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="0">
-                <div class="stat-neon-box h-100 d-flex flex-column justify-content-center cursor-pointer">
-                    <div class="display-3 font-heading fw-bold text-secondary-container mb-2">$<span class="counter" data-target="4.2">0</span>B+</div>
-                    <div class="font-label-caps text-white-50 tracking-widest text-uppercase">Client Value Created</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="stat-neon-box h-100 d-flex flex-column justify-content-center cursor-pointer">
-                    <div class="display-3 font-heading fw-bold text-secondary-container mb-2"><span class="counter" data-target="240">0</span>%</div>
-                    <div class="font-label-caps text-white-50 tracking-widest text-uppercase">Avg. Growth Rate</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="stat-neon-box h-100 d-flex flex-column justify-content-center cursor-pointer">
-                    <div class="display-3 font-heading fw-bold text-secondary-container mb-2"><span class="counter" data-target="18">0</span></div>
-                    <div class="font-label-caps text-white-50 tracking-widest text-uppercase">Global Markets</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="stat-neon-box h-100 d-flex flex-column justify-content-center cursor-pointer">
-                    <div class="display-3 font-heading fw-bold text-secondary-container mb-2"><span class="counter" data-target="98">0</span>%</div>
-                    <div class="font-label-caps text-white-50 tracking-widest text-uppercase">Retention Rate</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 6. Our Framework (Vertical Timeline) -->
-<section class="py-5 bg-surface-container-low">
-    <div class="container px-4 px-lg-5">
-        <div class="text-center mb-3" data-aos="fade-up">
-            <span class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">The Methodology</span>
-            <h2 class="display-6 font-heading fw-bold">The Corporate Transformation Framework</h2>
-            <p class="text-on-surface-variant mt-3 mx-auto fs-5" style="max-width: 42rem;">A rigorous four-phase cycle designed to restructure, optimize, and scale large enterprises.</p>
-        </div>
-        
-        <div class="timeline-container position-relative pt-2 mx-auto" style="max-width: 800px;">
-            <!-- Line -->
-            <div class="position-absolute h-100 bg-outline-variant timeline-line" style="width: 2px; top: 0;"></div>
-            
-            <!-- Step 1 -->
-            <div class="row align-items-center mb-3 position-relative timeline-step" data-aos="fade-up">
-                <div class="col-9 col-md-5 order-2 order-md-1 text-start text-md-end pe-md-4 ps-4 ps-md-0">
-                    <h4 class="h5 font-heading fw-bold text-primary mb-2">Discovery &amp; Audit</h4>
-                    <p class="text-on-surface-variant small mb-0">Deep-dive assessment into organizational structures, cultural alignment, and identifying financial leakage.</p>
-                </div>
-                <div class="col-3 col-md-2 order-1 order-md-2 d-flex justify-content-center position-relative">
-                    <div class="timeline-dot rounded-circle bg-primary text-white d-flex align-items-center justify-content-center fw-bold shadow-sm flex-shrink-0" style="width: 40px; height: 40px; z-index: 2;">01</div>
-                </div>
-                <div class="col-md-5 order-3 d-none d-md-block"></div>
-            </div>
-            
-            <!-- Step 2 -->
-            <div class="row align-items-center mb-3 position-relative timeline-step" data-aos="fade-up">
-                <div class="col-md-5 order-1 d-none d-md-block"></div>
-                <div class="col-3 col-md-2 order-1 order-md-2 d-flex justify-content-center position-relative">
-                    <div class="timeline-dot rounded-circle bg-secondary-container text-on-secondary-container d-flex align-items-center justify-content-center fw-bold shadow-sm flex-shrink-0" style="width: 40px; height: 40px; z-index: 2;">02</div>
-                </div>
-                <div class="col-9 col-md-5 order-2 order-md-3 text-start ps-4">
-                    <h4 class="h5 font-heading fw-bold mb-2">Strategic Architecture</h4>
-                    <p class="text-on-surface-variant small mb-0">Bespoke strategic modeling and corporate restructuring using our proprietary forecasting framework.</p>
-                </div>
-            </div>
-            
-            <!-- Step 3 -->
-            <div class="row align-items-center mb-3 position-relative timeline-step" data-aos="fade-up">
-                <div class="col-9 col-md-5 order-2 order-md-1 text-start text-md-end pe-md-4 ps-4 ps-md-0">
-                    <h4 class="h5 font-heading fw-bold text-primary mb-2">Agile Execution</h4>
-                    <p class="text-on-surface-variant small mb-0">Hands-on implementation and change management alongside your internal leadership teams.</p>
-                </div>
-                <div class="col-3 col-md-2 order-1 order-md-2 d-flex justify-content-center position-relative">
-                    <div class="timeline-dot rounded-circle bg-primary text-white d-flex align-items-center justify-content-center fw-bold shadow-sm flex-shrink-0" style="width: 40px; height: 40px; z-index: 2;">03</div>
-                </div>
-                <div class="col-md-5 order-3 d-none d-md-block"></div>
-            </div>
-            
-            <!-- Step 4 -->
-            <div class="row align-items-center position-relative timeline-step" data-aos="fade-up">
-                <div class="col-md-5 order-1 d-none d-md-block"></div>
-                <div class="col-3 col-md-2 order-1 order-md-2 d-flex justify-content-center position-relative">
-                    <div class="timeline-dot rounded-circle bg-secondary-container text-on-secondary-container d-flex align-items-center justify-content-center fw-bold shadow-sm flex-shrink-0" style="width: 40px; height: 40px; z-index: 2;">04</div>
-                </div>
-                <div class="col-9 col-md-5 order-2 order-md-3 text-start ps-4">
-                    <h4 class="h5 font-heading fw-bold mb-2">Systemic Anchoring</h4>
-                    <p class="text-on-surface-variant small mb-0">Continuous refinement, KPI monitoring, and scaling to ensure long-term industry dominance.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 7. Strategic Intelligence Hubs -->
-<section class="py-5 py-lg-6 bg-dark text-white position-relative overflow-hidden border-top border-secondary border-opacity-25 py-5">
-    <div class="container px-4 px-lg-5 position-relative z-1">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5" data-aos="fade-up">
-            <div style="max-width: 600px;">
-                <div class="d-flex align-items-center gap-3">
-                    <span class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm" style="letter-spacing: 2px;">Global Presence</span>
-                </div>
-                <h2 class="display-5 font-heading fw-bold mb-0">Strategic Intelligence Hubs</h2>
-            </div>
-            <div class="mt-4 mt-md-0">
-                <button onclick="window.top.location.href='404.html'" class="btn btn-premium btn-premium-outline-light font-button px-4 py-2 rounded fw-bold">View All Offices</button>
-            </div>
-        </div>
-        
-        <div class="row g-4">
-            <!-- Hub 1: New York -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
-                <div class="position-relative overflow-hidden rounded-4 shadow-lg group" style="height: 400px; cursor: pointer;">
-                    <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=800&auto=format&fit=crop" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 hub-img" style="transition: transform 0.7s ease;" alt="New York">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark hub-overlay" style="opacity: 0.3; transition: opacity 0.5s;"></div>
-                    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 60%);"></div>
-                    
-                    <div class="position-absolute bottom-0 start-0 w-100 p-4 transition-all group-hover-translate-y" style="transform: translateY(20px);">
-                        <h4 class="font-heading fw-bold mb-1 text-white">New York</h4>
-                        <p class="text-white-50 font-label-caps small mb-3">Global Headquarters</p>
-                        <div class="d-flex align-items-center gap-2 text-primary opacity-0 transition-all group-hover-opacity-100">
-                            <span class="font-button fw-bold small">Connect</span>
-                            <span class="material-symbols-outlined fs-6">arrow_forward</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Hub 2: London -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="position-relative overflow-hidden rounded-4 shadow-lg group" style="height: 400px; cursor: pointer;">
-                    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=800&auto=format&fit=crop" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 hub-img" style="transition: transform 0.7s ease;" alt="London">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark hub-overlay" style="opacity: 0.4; transition: opacity 0.5s;"></div>
-                    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 60%);"></div>
-                    
-                    <div class="position-absolute bottom-0 start-0 w-100 p-4 transition-all group-hover-translate-y" style="transform: translateY(20px);">
-                        <h4 class="font-heading fw-bold mb-1 text-white">London</h4>
-                        <p class="text-white-50 font-label-caps small mb-3">EMEA Operations</p>
-                        <div class="d-flex align-items-center gap-2 text-primary opacity-0 transition-all group-hover-opacity-100">
-                            <span class="font-button fw-bold small">Connect</span>
-                            <span class="material-symbols-outlined fs-6">arrow_forward</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Hub 3: Dubai -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="position-relative overflow-hidden rounded-4 shadow-lg group" style="height: 400px; cursor: pointer;">
-                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=800&auto=format&fit=crop" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 hub-img" style="transition: transform 0.7s ease;" alt="Dubai">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark hub-overlay" style="opacity: 0.4; transition: opacity 0.5s;"></div>
-                    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 60%);"></div>
-                    
-                    <div class="position-absolute bottom-0 start-0 w-100 p-4 transition-all group-hover-translate-y" style="transform: translateY(20px);">
-                        <h4 class="font-heading fw-bold mb-1 text-white">Dubai</h4>
-                        <p class="text-white-50 font-label-caps small mb-3">MENA Operations</p>
-                        <div class="d-flex align-items-center gap-2 text-primary opacity-0 transition-all group-hover-opacity-100">
-                            <span class="font-button fw-bold small">Connect</span>
-                            <span class="material-symbols-outlined fs-6">arrow_forward</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Hub 4: Singapore -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="position-relative overflow-hidden rounded-4 shadow-lg group" style="height: 400px; cursor: pointer;">
-                    <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?q=80&w=800&auto=format&fit=crop" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 hub-img" style="transition: transform 0.7s ease;" alt="Singapore">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark hub-overlay" style="opacity: 0.4; transition: opacity 0.5s;"></div>
-                    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 60%);"></div>
-                    
-                    <div class="position-absolute bottom-0 start-0 w-100 p-4 transition-all group-hover-translate-y" style="transform: translateY(20px);">
-                        <h4 class="font-heading fw-bold mb-1 text-white">Singapore</h4>
-                        <p class="text-white-50 font-label-caps small mb-3">APAC Operations</p>
-                        <div class="d-flex align-items-center gap-2 text-primary opacity-0 transition-all group-hover-opacity-100">
-                            <span class="font-button fw-bold small">Connect</span>
-                            <span class="material-symbols-outlined fs-6">arrow_forward</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 8. Industry Specializations (Accordion) -->
-<section class="py-5 bg-surface-container-low border-top border-outline-variant">
-    <div class="container px-4 px-lg-5">
-        <div class="row g-5">
-            <div class="col-lg-5" data-aos="fade-right">
-                <span class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Industry Expertise</span>
-                <h2 class="display-6 font-heading fw-bold mb-4">Cross-Sector Corporate Mastery</h2>
-                <p class="text-on-surface-variant fs-5 mb-4">Our consultants bring decades of specialized experience across diverse global markets, allowing us to cross-pollinate strategies and innovate where others stagnate.</p>
-                <button onclick="window.top.location.href='404.html'" class="btn bg-primary-container text-on-primary-container px-4 py-2 font-button rounded border-0 fw-bold hover-scale-105">View All Industries</button>
-            </div>
-            <div class="col-lg-7" data-aos="fade-left">
-                <div class="accordion custom-accordion" id="industryAccordion">
-                    <!-- Item 1 -->
-                    <div class="accordion-item border-0 bg-transparent mb-3 border-bottom border-outline-variant pb-2 px-3">
-                        <h2 class="accordion-header">
-                            <button onclick="window.top.location.href='404.html'" class="accordion-button bg-transparent shadow-none font-heading fw-bold fs-4 px-0 text-on-surface" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <span class="material-symbols-outlined text-primary me-3 fs-3 accordion-icon-rotate">account_balance</span> Financial Services &amp; FinTech
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#industryAccordion">
-                            <div class="accordion-body px-0 pt-3 text-on-surface-variant pb-4 fs-6">
-                                We help legacy banks digitize operations and assist FinTech startups in navigating complex regulatory environments for rapid IPO readiness and market scaling.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 2 -->
-                    <div class="accordion-item border-0 bg-transparent mb-3 border-bottom border-outline-variant pb-2 px-3">
-                        <h2 class="accordion-header">
-                            <button onclick="window.top.location.href='404.html'" class="accordion-button collapsed bg-transparent shadow-none font-heading fw-bold fs-4 px-0 text-on-surface" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <span class="material-symbols-outlined text-primary me-3 fs-3 accordion-icon-rotate">precision_manufacturing</span> Advanced Manufacturing
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#industryAccordion">
-                            <div class="accordion-body px-0 pt-3 text-on-surface-variant pb-4 fs-6">
-                                From supply chain resilience to Industry 4.0 IoT integrations, we optimize production floors and global logistics for maximum yield and minimum waste.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="accordion-item border-0 bg-transparent mb-3 border-bottom border-outline-variant pb-2 px-3">
-                        <h2 class="accordion-header">
-                            <button onclick="window.top.location.href='404.html'" class="accordion-button collapsed bg-transparent shadow-none font-heading fw-bold fs-4 px-0 text-on-surface" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <span class="material-symbols-outlined text-primary me-3 fs-3 accordion-icon-rotate">monitor_heart</span> Healthcare &amp; Life Sciences
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#industryAccordion">
-                            <div class="accordion-body px-0 pt-3 text-on-surface-variant pb-4 fs-6">
-                                Guiding pharmaceutical and healthcare conglomerates through digital patient experiences, R&amp;D cost optimization, and M&amp;A integration.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 4 -->
-                    <div class="accordion-item border-0 bg-transparent px-3">
-                        <h2 class="accordion-header">
-                            <button onclick="window.top.location.href='404.html'" class="accordion-button collapsed bg-transparent shadow-none font-heading fw-bold fs-4 px-0 text-on-surface" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                <span class="material-symbols-outlined text-primary me-3 fs-3 accordion-icon-rotate">bolt</span> Energy &amp; Resources
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#industryAccordion">
-                            <div class="accordion-body px-0 pt-3 text-on-surface-variant pb-4 fs-6">
-                                Strategic consulting for the global transition toward renewable energy, maximizing asset lifecycles, and ESG compliance.
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75 z-1"></div>
+                    <div class="container h-100 px-4 px-lg-5 position-relative" style="z-index: 2;">
+                        <div
+                            class="row align-items-center justify-content-end h-100 text-end pt-5 mt-4 mt-lg-0 pt-lg-0">
+                            <div class="col-lg-8">
+                                <span data-aos="fade-down" data-aos-delay="100"
+                                    class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Digital
+                                    Transformation</span>
+                                <h1 data-aos="fade-left" data-aos-delay="200"
+                                    class="display-2 font-heading fw-bold text-white lh-1 mb-4">The Future is <span
+                                        class="text-secondary-container fst-italic">Now</span></h1>
+                                <p data-aos="fade-up" data-aos-delay="300" class="lead text-white-50 ms-auto mb-5"
+                                    style="max-width: 40rem;">We re-architect legacy corporate systems into agile,
+                                    data-driven powerhouses ready to conquer the modern digital landscape.</p>
+                                <div data-aos="fade-up" data-aos-delay="400"
+                                    class="d-flex flex-wrap gap-3 justify-content-end">
+                                    <button onclick="window.top.location.href='404.html'"
+                                        class="btn btn-premium btn-premium-primary font-button px-4 px-md-5 py-3 rounded fw-bold shadow-lg fw-bold">View
+                                        Digital Services</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+        </header>
 
-<!-- 9. Executive Leadership -->
-<section class="py-5 py-lg-6 bg-white">
-    <div class="container px-4 px-lg-5">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5 pb-3" data-aos="fade-up">
-            <div style="max-width: 600px;">
-                <div class="d-flex align-items-center gap-3">
-                    <span class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm" style="letter-spacing: 2px;">Our Principals</span>
-                </div>
-                <h2 class="display-5 font-heading fw-bold mb-0">The Minds Behind<br/>The Strategy</h2>
-            </div>
-            <div class="mt-4 mt-md-0">
-                <p class="text-on-surface-variant fs-5 mb-0" style="max-width: 350px;">A coalition of former Fortune 500 executives and elite strategists dedicated to your success.</p>
-            </div>
-        </div>
-        
-        <div class="row g-4 justify-content-center">
-            <!-- Team Member 1 -->
-            <div class="col-sm-6 col-md-3 group" data-aos="fade-up" data-aos-delay="0">
-                <div class="rounded-4 overflow-hidden position-relative shadow-sm hover-shadow-lg transition-all team-card-elite" style="height: 480px; cursor: pointer;">
-                    <img class="w-100 h-100 object-fit-cover grayscale-hover-color team-img" style="transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtCm3p50HCk5xxwyvB97o-sAgQDlk0yW2-fAT7dsYgwi63A_y47UIW5v8oYRIv3R3rH4VRk7fS_3VlN_VMnFbwG7n6uXp2Ki_1qAFNGEzirhxJK7Sg4thABaafvzlK7zgs6IYbQncIqlhqHJ_QTaDZUVtbxYzwM9VheDtb4Tw2bUMB185DTCHmyua0_t6USBEgD6_LXiL_-wYuEEoniq6PxrCA-jxyGuwPNAip7f0eLX8LlSA-Ukr1EMdB0VxzzvM9MAa-t87CoO0" alt="Julian Thorne"/>
-                    
-                    <div class="social-dock z-2">
-                        <a href="404.html" class="social-icon-btn fb" style="--i:1;"><i class="fab fa-facebook-f"></i></a>
-                        <a href="404.html" class="social-icon-btn ig" style="--i:2;"><i class="fab fa-instagram"></i></a>
-                        <a href="404.html" class="social-icon-btn x" style="--i:3;"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="404.html" class="social-icon-btn in" style="--i:4;"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    
-                    <div class="team-info-box z-1">
-                        <h4 class="font-heading fw-bold mb-1 text-on-surface">Julian Thorne</h4>
-                        <p class="text-primary font-label-caps mb-0 fw-bold" style="font-size: 11px; letter-spacing: 1px;">Managing Partner</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Team Member 2 -->
-            <div class="col-sm-6 col-md-3 group" data-aos="fade-up" data-aos-delay="100">
-                <div class="rounded-4 overflow-hidden position-relative shadow-sm hover-shadow-lg transition-all team-card-elite" style="height: 480px; cursor: pointer;">
-                    <img class="w-100 h-100 object-fit-cover grayscale-hover-color team-img" style="transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1EhU4IsqzRwxtw-8bQ0kWkLhlwa-2v413lo0SJf5KpRaQWAfr8jnqBNoZVzWWnsRTSddHJCLvFZitIRQEVIAKah9pYGqxfMoTcvxww6RdfDSFfqvCypxI1OSKVRRHLXfb4m4Y9lQVRfa9iMdHuBJnF9cuIPyFHLbssIXdNlo1dnqJ_hR0Zjjk3lVlllyx4lvmwrLp3skC1ztB4I7BPKqT8vM65Ro6Db5W_v5GWwEoRiDWcwyhZaFE253B6DkWkUr937VyrgEH2bo" alt="Elena Vance"/>
-                    
-                    <div class="social-dock z-2">
-                        <a href="404.html" class="social-icon-btn fb" style="--i:1;"><i class="fab fa-facebook-f"></i></a>
-                        <a href="404.html" class="social-icon-btn ig" style="--i:2;"><i class="fab fa-instagram"></i></a>
-                        <a href="404.html" class="social-icon-btn x" style="--i:3;"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="404.html" class="social-icon-btn in" style="--i:4;"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    
-                    <div class="team-info-box z-1">
-                        <h4 class="font-heading fw-bold mb-1 text-on-surface">Elena Vance</h4>
-                        <p class="text-primary font-label-caps mb-0 fw-bold" style="font-size: 11px; letter-spacing: 1px;">Head of Transformation</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Team Member 3 -->
-            <div class="col-sm-6 col-md-3 group" data-aos="fade-up" data-aos-delay="200">
-                <div class="rounded-4 overflow-hidden position-relative shadow-sm hover-shadow-lg transition-all team-card-elite" style="height: 480px; cursor: pointer;">
-                    <img class="w-100 h-100 object-fit-cover grayscale-hover-color team-img" style="transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlSE-eW_BvzQcBQ6PQfvJggzCCTAZcJJzQGFVr8upK2O1BGYRYct42R4SSHGO84kE_qeUtVyfmUPgEgwH7w6JgElOg5eKd4GZvukZRXexVfBTiFiE7nX6GaSf4nmIoOPwb-G3LhHVNNPrR7FDyDAKW3pFnZrWQ7fgNdWuNaIjF3LYyNK1_5IKT7Emuv40DzZtOshKNeD-pRUK_OaEvs4QqKTohfxdqrsETaVdoVSxd4Wux71dLxlqhcrUB5lUJ2wjB5r_LvMCVrhk" alt="Marcus Chen"/>
-                    
-                    <div class="social-dock z-2">
-                        <a href="404.html" class="social-icon-btn fb" style="--i:1;"><i class="fab fa-facebook-f"></i></a>
-                        <a href="404.html" class="social-icon-btn ig" style="--i:2;"><i class="fab fa-instagram"></i></a>
-                        <a href="404.html" class="social-icon-btn x" style="--i:3;"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="404.html" class="social-icon-btn in" style="--i:4;"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    
-                    <div class="team-info-box z-1">
-                        <h4 class="font-heading fw-bold mb-1 text-on-surface">Marcus Chen</h4>
-                        <p class="text-primary font-label-caps mb-0 fw-bold" style="font-size: 11px; letter-spacing: 1px;">Digital Strategy Lead</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Team Member 4 -->
-            <div class="col-sm-6 col-md-3 group" data-aos="fade-up" data-aos-delay="300">
-                <div class="rounded-4 overflow-hidden position-relative shadow-sm hover-shadow-lg transition-all team-card-elite" style="height: 480px; cursor: pointer;">
-                    <img class="w-100 h-100 object-fit-cover grayscale-hover-color team-img" style="transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc-sWPlZgtG0a9781avwLnO1wOUT6Lx3ZwjoLUMLADYoWBtXcoeKTaJ1qWxUwoM0jfX05qVSDaASTSGtCSPnT242KyMOwiBGFDvStofMRPezTR4Px4khln-Qgep7gePe9aTOoJDvqBlu213_Y2rdOnEdXegNMMTXbSKi7zV3L47OWgUJvNRJKLkEamTzlfmwOmik_mRMAOYkttdTeMQ9H8-GhRhI6aUJTWR3KqxIizQZ_ZCG3SVgA9YHqbBOStCSEDdzwbcaNGPZs" alt="Sarah Sterling"/>
-                    
-                    <div class="social-dock z-2">
-                        <a href="404.html" class="social-icon-btn fb" style="--i:1;"><i class="fab fa-facebook-f"></i></a>
-                        <a href="404.html" class="social-icon-btn ig" style="--i:2;"><i class="fab fa-instagram"></i></a>
-                        <a href="404.html" class="social-icon-btn x" style="--i:3;"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="404.html" class="social-icon-btn in" style="--i:4;"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    
-                    <div class="team-info-box z-1">
-                        <h4 class="font-heading fw-bold mb-1 text-on-surface">Sarah Sterling</h4>
-                        <p class="text-primary font-label-caps mb-0 fw-bold" style="font-size: 11px; letter-spacing: 1px;">Chief Operations Officer</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 10. Client Testimonials (Swiper Carousel) -->
-<section class="py-4 py-lg-5 bg-surface overflow-hidden position-relative">
-    <div class="container px-4 px-lg-5 position-relative z-1">
-        <div class="row justify-content-center text-center mb-3" data-aos="fade-up">
-            <div class="col-lg-8">
-                <div class="mb-4 d-flex flex-column align-items-center">
-                    <span class="material-symbols-outlined text-primary opacity-50 mb-3" style="font-size: 3rem; font-variation-settings: 'FILL' 1;">format_quote</span>
-                    <span class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block tracking-widest fw-bold shadow-sm">Executive Testimonials</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="swiper testimonial-swiper pb-0" data-aos="fade-up" data-aos-delay="100">
-            <div class="swiper-wrapper align-items-stretch">
-                <!-- Testimonial 1 -->
-                <div class="swiper-slide h-auto">
-                    <div class="card border-0 h-100 p-4 p-xl-5 rounded-4 shadow-sm bg-white">
-                        <div class="d-flex align-items-center gap-3 mb-4">
-                            <img class="rounded-circle border border-2 border-primary object-fit-cover" style="width: 60px; height: 60px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQNjqyyF64m7iJIgMziy14ls8WynITgTgV-0Bg-hpahwM--cZZqAkB4skhsn0-_6_ZO_s--soTjP-jHeoEdi3NGZsVZ0hnId_wUKJNyldObhNpIHq8pQzeP3RvAfKU2jvaoyoJAQa5NJbj6E5nF77PCFIrsiRRRUpo1qWXxRTXhObK8u8rwl3M8zRiFaNlmJcoukxI4Wp2rPuJW7TTwKmUF9Q5zXd31ltfoIFEhYe51xzyeecwqGf0PidR0fafHiNpRgWOwyg3-FQ" alt="Robert McAllister"/>
-                            <div>
-                                <div class="h6 font-heading fw-bold mb-1 text-on-surface">Robert McAllister</div>
-                                <p class="text-primary font-label-caps mb-0" style="font-size: 10px;">CEO, GLOBAL LOGISTICS</p>
+        <!-- 2. Featured Flagship Report -->
+        <section class="py-5 bg-white overflow-hidden">
+            <div class="container px-4 px-lg-5 py-lg-4">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 position-relative" data-aos="fade-right">
+                        <div class="position-relative rounded-4 overflow-hidden shadow-lg" style="height: 400px;">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB83_0j2nGY6caPKJY_VFYaLe7xMLu2AdU4TJ3QnPnF3X42Gwi509W-C5R8jCUwMAaECN7icjiKyXRDExHkZqnLT7OAbTA__46AggBOgeGcDfcX9PGYw8AqEacXU-nkfSFwIPzGW9zRiEqweK2npAHpE_iX8HiMJAMB3F0bkfB0ui0FUzxfVucV29T99UDbbCw63aUh64pAm5TIJ3muibnbl_ReRnip4xemdrgsmuW_8vwLqERDJ022e6eg0LGOF-3V0W9dTLwx8F0"
+                                class="w-100 h-100 object-fit-cover" alt="Report Cover">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-25"></div>
+                            <!-- Badge -->
+                            <div
+                                class="position-absolute bottom-0 start-0 m-4 bg-white p-3 rounded shadow d-flex align-items-center gap-3 hover-scale-105 transition-all">
+                                <span class="material-symbols-outlined text-primary fs-1">picture_as_pdf</span>
+                                <div>
+                                    <div class="fw-bold font-heading text-on-surface">Full Report</div>
+                                    <small class="text-on-surface-variant font-label-caps">PDF • 4.2 MB</small>
+                                </div>
                             </div>
                         </div>
-                        <p class="text-on-surface-variant fst-italic mb-0 lh-lg">"They didn't just change our processes; they fundamentally shifted our corporate DNA. Their methodologies are lived realities in every single deliverable they provide."</p>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <span
+                            class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Flagship
+                            Research</span>
+                        <h2 class="display-5 font-heading fw-bold mb-4">The 2026 State of Corporate M&A</h2>
+                        <p class="fs-5 text-on-surface-variant mb-4 lh-lg">Access our exclusive Q3 executive briefing.
+                            Discover how top-quartile enterprises are leveraging aggressive digital integration and
+                            strategic acquisitions to secure market dominance amidst global economic volatility.</p>
+
+                        <ul class="list-unstyled mb-5 text-on-surface-variant">
+                            <li class="d-flex align-items-center gap-3 mb-2">
+                                <span class="material-symbols-outlined text-primary">check_circle</span>
+                                <span>Analysis of $120B+ in recent corporate transactions</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-3 mb-2">
+                                <span class="material-symbols-outlined text-primary">check_circle</span>
+                                <span>AI readiness frameworks for legacy boards</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-3">
+                                <span class="material-symbols-outlined text-primary">check_circle</span>
+                                <span>Sector-by-sector risk mitigation strategies</span>
+                            </li>
+                        </ul>
+
+                        <button onclick="window.top.location.href='404.html'"
+                            class="btn btn-premium btn-premium-primary font-button px-4 px-md-5 py-3 rounded fw-bold shadow fw-bold d-inline-flex align-items-center gap-2">
+                            <span class="material-symbols-outlined">download</span> Download Free Report
+                        </button>
                     </div>
                 </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="swiper-slide h-auto">
-                    <div class="card border-0 h-100 p-4 p-xl-5 rounded-4 shadow-sm bg-white">
-                        <div class="d-flex align-items-center gap-3 mb-4">
-                            <img class="rounded-circle border border-2 border-primary object-fit-cover" style="width: 60px; height: 60px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCeDJrIl5kDGWE3NRcUOFt9eqr4i8fPf1P5CR2RvWLt99ftQeZNoZn9rN9DgGO7x72SueC-2ZZa2-TNF1u7T_CBoLNbNVNdquP67NZil4E2xm-yyGXto_5yHF9gxBQ52GRTLVHSDlyoSNXtnvi1Yk7GWaBKhYseUMhFA1Mtp9qjbVslC7gnAQuZBU7Z7Ec7Y9gI3B0TEZWgcF-IQ5o2lFBkpm0DiQyRdJM2yU2YMZ3dgM5e_3mYCXc046HqUtWBidTf475vaP_Lqk" alt="Elena Vovk"/>
-                            <div>
-                                <div class="h6 font-heading fw-bold mb-1 text-on-surface">Elena Vovk</div>
-                                <p class="text-primary font-label-caps mb-0" style="font-size: 10px;">CFO, HORIZON FINTECH</p>
+            </div>
+        </section>
+
+        <!-- 3. The Corporate Edge (USP) -->
+        <section class="py-4 py-lg-5 bg-surface-container-low position-relative z-1">
+            <div class="container px-4 px-lg-5">
+                <div class="row align-items-end mb-5">
+                    <div class="col-md-6" data-aos="fade-right">
+                        <span
+                            class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">The
+                            Corporate Edge</span>
+                        <h2 class="display-6 font-heading fw-bold">Why Boardrooms Choose Us</h2>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-left">
+                        <p class="text-on-surface-variant mb-0 fs-5">We don't just advise; we architect corporate
+                            transformation. Our consulting methodology combines rigorous financial analytics with
+                            organizational design to create lasting shareholder value.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                        <div class="edge-card p-4 p-lg-5 rounded-4 h-100 position-relative overflow-hidden group">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 card-overlay z-0"></div>
+                            <span
+                                class="material-symbols-outlined position-absolute watermark-icon z-0">data_exploration</span>
+
+                            <div class="position-relative z-1 d-flex flex-column h-100">
+                                <div class="icon-wrapper mb-4 bg-white rounded-circle d-inline-flex p-3 shadow-sm text-primary"
+                                    style="width: max-content;">
+                                    <span class="material-symbols-outlined fs-1"
+                                        style="font-variation-settings: 'FILL' 1;">data_exploration</span>
+                                </div>
+                                <h3 class="h4 font-heading fw-bold mb-3 edge-card-title">Data-Driven Precision</h3>
+                                <p class="mb-0 edge-card-text text-on-surface-variant">Our insights are backed by
+                                    proprietary analytics engines that process millions of market variables to predict
+                                    future corporate trends with 94% accuracy.</p>
+
+                                <div class="mt-auto pt-4 border-top learn-more d-flex align-items-center"
+                                    onclick="window.top.location.href='404.html'" style="cursor: pointer;">
+                                    <span class="text-white fw-bold me-2 font-label-caps">Learn More</span>
+                                    <span class="material-symbols-outlined text-white">arrow_forward</span>
+                                </div>
                             </div>
                         </div>
-                        <p class="text-on-surface-variant fst-italic mb-0 lh-lg">"Their strategic foresight during our M&A phase saved us hundreds of millions in operational redundancies. Truly the gold standard in elite business consulting."</p>
                     </div>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="swiper-slide h-auto">
-                    <div class="card border-0 h-100 p-4 p-xl-5 rounded-4 shadow-sm bg-white">
-                        <div class="d-flex align-items-center gap-3 mb-4">
-                            <img class="rounded-circle border border-2 border-primary object-fit-cover" style="width: 60px; height: 60px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6xU_SUuQTwrbNZDDVFOHl7FkGyuJ2aNEVJUieNPC7sR8FACmldJxZ3cSsHLqqGU1LpkQ4E2ADzSlEd7-jhiySHRCux9qBLkAyQVKFMKKmrPkClU6S71Hz58qZ0I6b1W_iFtd8_qYcZeyY0rlWPEkhpBFHcfMwptOcEIImvBTsaqrQY6r8NHG6ybkCH1CEB3C5X3PwSlKwbS9EfVw0t0G8CYFDYnPXfasEbfvfhgugZtGRoVqBh2uWxr1wTey1yVv3DrfnECgHuUM" alt="Michael Chang"/>
-                            <div>
-                                <div class="h6 font-heading fw-bold mb-1 text-on-surface">Michael Chang</div>
-                                <p class="text-primary font-label-caps mb-0" style="font-size: 10px;">COO, NEXUS RETAIL</p>
+                    <!-- Card 2 -->
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="edge-card p-4 p-lg-5 rounded-4 h-100 position-relative overflow-hidden group">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 card-overlay z-0"></div>
+                            <span
+                                class="material-symbols-outlined position-absolute watermark-icon z-0">handshake</span>
+
+                            <div class="position-relative z-1 d-flex flex-column h-100">
+                                <div class="icon-wrapper mb-4 bg-white rounded-circle d-inline-flex p-3 shadow-sm text-primary"
+                                    style="width: max-content;">
+                                    <span class="material-symbols-outlined fs-1"
+                                        style="font-variation-settings: 'FILL' 1;">handshake</span>
+                                </div>
+                                <h3 class="h4 font-heading fw-bold mb-3 edge-card-title">Executive Partnerships</h3>
+                                <p class="mb-0 edge-card-text text-on-surface-variant">We operate as an extension of
+                                    your C-suite. No templated consulting solutions, only bespoke strategic roadmaps
+                                    built for your unique market position.</p>
+
+                                <div class="mt-auto pt-4 border-top learn-more d-flex align-items-center"
+                                    onclick="window.top.location.href='404.html'" style="cursor: pointer;">
+                                    <span class="text-white fw-bold me-2 font-label-caps">Learn More</span>
+                                    <span class="material-symbols-outlined text-white">arrow_forward</span>
+                                </div>
                             </div>
                         </div>
-                        <p class="text-on-surface-variant fst-italic mb-0 lh-lg">"We were struggling with supply chain bottlenecks. Their intervention was surgical, precise, and yielded a 40% efficiency increase within the first quarter."</p>
                     </div>
-                </div>
-                
-                <!-- Testimonial 4 -->
-                <div class="swiper-slide h-auto">
-                    <div class="card border-0 h-100 p-4 p-xl-5 rounded-4 shadow-sm bg-white">
-                        <div class="d-flex align-items-center gap-3 mb-4">
-                            <img class="rounded-circle border border-2 border-primary object-fit-cover" style="width: 60px; height: 60px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtCm3p50HCk5xxwyvB97o-sAgQDlk0yW2-fAT7dsYgwi63A_y47UIW5v8oYRIv3R3rH4VRk7fS_3VlN_VMnFbwG7n6uXp2Ki_1qAFNGEzirhxJK7Sg4thABaafvzlK7zgs6IYbQncIqlhqHJ_QTaDZUVtbxYzwM9VheDtb4Tw2bUMB185DTCHmyua0_t6USBEgD6_LXiL_-wYuEEoniq6PxrCA-jxyGuwPNAip7f0eLX8LlSA-Ukr1EMdB0VxzzvM9MAa-t87CoO0" alt="David Sterling"/>
-                            <div>
-                                <div class="h6 font-heading fw-bold mb-1 text-on-surface">David Sterling</div>
-                                <p class="text-primary font-label-caps mb-0" style="font-size: 10px;">PRESIDENT, STERLING IND.</p>
+                    <!-- Card 3 -->
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="edge-card p-4 p-lg-5 rounded-4 h-100 position-relative overflow-hidden group">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 card-overlay z-0"></div>
+                            <span class="material-symbols-outlined position-absolute watermark-icon z-0">security</span>
+
+                            <div class="position-relative z-1 d-flex flex-column h-100">
+                                <div class="icon-wrapper mb-4 bg-white rounded-circle d-inline-flex p-3 shadow-sm text-primary"
+                                    style="width: max-content;">
+                                    <span class="material-symbols-outlined fs-1"
+                                        style="font-variation-settings: 'FILL' 1;">security</span>
+                                </div>
+                                <h3 class="h4 font-heading fw-bold mb-3 edge-card-title">Proven Resilience</h3>
+                                <p class="mb-0 edge-card-text text-on-surface-variant">Our corporate frameworks are
+                                    battle-tested across three economic cycles, ensuring your enterprise thrives
+                                    regardless of global market volatility.</p>
+
+                                <div class="mt-auto pt-4 border-top learn-more d-flex align-items-center"
+                                    onclick="window.top.location.href='404.html'" style="cursor: pointer;">
+                                    <span class="text-white fw-bold me-2 font-label-caps">Learn More</span>
+                                    <span class="material-symbols-outlined text-white">arrow_forward</span>
+                                </div>
                             </div>
                         </div>
-                        <p class="text-on-surface-variant fst-italic mb-0 lh-lg">"The team's ability to digest complex global market data and turn it into actionable, hyper-local strategies is unparalleled. They are an indispensable partner."</p>
                     </div>
                 </div>
-                
-                <!-- Testimonial 5 -->
-                <div class="swiper-slide h-auto">
-                    <div class="card border-0 h-100 p-4 p-xl-5 rounded-4 shadow-sm bg-white">
-                        <div class="d-flex align-items-center gap-3 mb-4">
-                            <img class="rounded-circle border border-2 border-primary object-fit-cover" style="width: 60px; height: 60px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc-sWPlZgtG0a9781avwLnO1wOUT6Lx3ZwjoLUMLADYoWBtXcoeKTaJ1qWxUwoM0jfX05qVSDaASTSGtCSPnT242KyMOwiBGFDvStofMRPezTR4Px4khln-Qgep7gePe9aTOoJDvqBlu213_Y2rdOnEdXegNMMTXbSKi7zV3L47OWgUJvNRJKLkEamTzlfmwOmik_mRMAOYkttdTeMQ9H8-GhRhI6aUJTWR3KqxIizQZ_ZCG3SVgA9YHqbBOStCSEDdzwbcaNGPZs" alt="Sarah Jenkins"/>
-                            <div>
-                                <div class="h6 font-heading fw-bold mb-1 text-on-surface">Sarah Jenkins</div>
-                                <p class="text-primary font-label-caps mb-0" style="font-size: 10px;">VP STRATEGY, OMNICOMP</p>
+            </div>
+        </section>
+
+        <!-- 4. Strategic Domains (Bento Grid) -->
+        <section class="py-4 py-lg-5 bg-white overflow-hidden">
+            <div class="container px-4 px-lg-5">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span
+                        class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Core
+                        Capabilities</span>
+                    <h2 class="display-6 font-heading fw-bold">Our Strategic Domains</h2>
+                    <style>
+                        .bento-arrow-hover:hover {
+                            background-color: var(--secondary-container) !important;
+                            color: var(--on-secondary-container) !important;
+                            border-color: var(--secondary-container) !important;
+                            transform: scale(1.1);
+                        }
+                    </style>
+                </div>
+                <div class="row g-4 bento-grid">
+                    <div class="col-md-8" data-aos="fade-right">
+                        <div
+                            class="position-relative overflow-hidden rounded-4 bento-card-glass h-100 min-h-300 shadow-sm border border-outline-variant">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bento-bg"
+                                style="background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBekTA-hs-eDwKaNnTYDHjmYB4pRcnBeXCXhiZKshAFvDY4XfppgtxWluJsvVyP0ZJ5yt1OX9oZ5pKx174hak2Xc_NAe1o7ZhMzd6aB93lhH_MoK_Uk_fZrqlxHJd3KdgLs-_1ClsBrOics3rWUPHvJ7REfG3_vSvhmjpXEAlWABgkoD8riK2a_wFIsPKEZ6JcdaYAIXeiU5ArLERlTEmClXlmmzCfMM4V-A-V-XEtF4FaXgG3zfBFd1ROPERnRb82tk6i3gINKusY') center/cover;">
+                            </div>
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 bento-overlay">
+                            </div>
+                            <div
+                                class="position-absolute bottom-0 start-0 p-4 p-lg-5 text-white w-100 d-flex justify-content-between align-items-end bento-content">
+                                <div>
+                                    <h4 class="h3 font-heading fw-bold mb-2">Executive Leadership Strategy</h4>
+                                    <p class="mb-0 text-white-75 w-75">Refining decision-making frameworks and
+                                        succession planning for the modern corporate board.</p>
+                                </div>
+                                <span onclick="window.top.location.href='404.html'"
+                                    style="cursor: pointer; transition: all 0.3s;"
+                                    class="bento-arrow-hover material-symbols-outlined text-white bento-btn fs-1 border border-white rounded-circle p-2 bg-white bg-opacity-10 backdrop-blur">arrow_forward</span>
                             </div>
                         </div>
-                        <p class="text-on-surface-variant fst-italic mb-0 lh-lg">"From digital transformation to organizational restructuring, they handle every challenge with a level of rigor and sophistication that sets them entirely apart."</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 11. Strategic Insights (Blog preview) -->
-<section class="py-5 bg-white">
-    <div class="container px-4 px-lg-5">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5" data-aos="fade-up">
-            <div>
-                <span class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Executive Insights</span>
-                <h2 class="display-6 font-heading fw-bold mb-0">Thought Leadership</h2>
-            </div>
-            <a class="btn btn-premium btn-premium-outline-dark font-button px-4 py-2 rounded fw-bold mt-3 mt-md-0" href="blog.html">View All Articles</a>
-        </div>
-        <div class="row g-4">
-            <!-- Article 1 -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-                <div class="card border-0 h-100 group blog-card-elite rounded-4 shadow-sm text-decoration-none overflow-hidden">
-                    <div class="position-relative overflow-hidden" style="height: 220px;">
-                        <img class="w-100 h-100 object-fit-cover img-zoom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXNORI9IE-XDseM4XkiQYKLhLhQqzcRaQFo0Wg4eMqPWwHVmLsLzIWRK-q9_LzjpvXuAaFP8sbNES4vrwItQN-mPjjstz9Pdva-95wvTy_SI_OkU-UySYv0ywfZ9_aJCIV4d6ZHQLbkS5x5O_rvxKikgfFZ7b5MMj43eS6ujPNqJPB5rXXogZmp0_mz_IA5Jy3CJbQjwJCA_G774EFJAB9hTH3XIlp3VR7od8so1cTtiBUIY-BeeTdrqWTy12sw4BGmWVuJZLq-EQ" alt="Economy"/>
-                        <span class="position-absolute top-0 start-0 m-3 bg-white text-primary font-label-caps px-3 py-1 rounded-pill shadow-sm fw-bold">Economy</span>
-                        <span class="position-absolute top-0 end-0 m-3 bg-dark bg-opacity-75 backdrop-blur text-white font-label-caps px-2 py-1 rounded-pill shadow-sm" style="font-size: 10px;"><span class="material-symbols-outlined align-text-bottom me-1" style="font-size: 14px;">timer</span>4 min read</span>
+                    <div class="col-md-4" data-aos="fade-left">
+                        <div
+                            class="position-relative overflow-hidden rounded-4 bento-card-glass h-100 min-h-300 shadow-sm border border-outline-variant">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bento-bg"
+                                style="background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDw9FSe2Sth0eFdH8BD4zbrnu0nbdzNylVCnK-JNhjHNkj7xOtmuf6aH9rbS6Ct2QP4F8cZSKLPo7I9LNoEjsCIeufB8h7-A40GglVs75xkj4tkWskV7CrPoMyXZBfHaTOWv0tPAHnT8ecMoTzGJ-JeMH_0ff5VYhE3ElAD97VXNUNM56JN8Q_XAUqphk4o70owiuE8Wwx-ZXQcCfWVDpsj2Bze6luU4lcC2-diCvGAPnikJdGeiuu2YkJAHb1feUAUL4edDeuTTf0') center/cover;">
+                            </div>
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 bento-overlay">
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 p-4 p-lg-5 text-white w-100 bento-content">
+                                <span onclick="window.top.location.href='404.html'"
+                                    style="cursor: pointer; transition: all 0.3s;"
+                                    class="bento-arrow-hover material-symbols-outlined text-white bento-btn fs-1 border border-white rounded-circle p-2 bg-white bg-opacity-10 backdrop-blur mb-3">arrow_forward</span>
+                                <h4 class="h3 font-heading fw-bold mb-2">Operational Excellence</h4>
+                                <p class="mb-0 text-white-75 d-none d-lg-block">Lean integration and supply chain
+                                    optimization.</p>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="p-4 d-flex flex-column">
-                        <time class="text-on-surface-variant opacity-75 font-label-caps d-block mb-3" style="font-size: 10px;">OCTOBER 14, 2024</time>
-                        <h3 class="h5 font-heading fw-bold mb-3 text-on-surface lh-base">Navigating Post-Inflationary Markets: A CEO's Guide</h3>
-                        <p class="text-on-surface-variant mb-4 small lh-lg" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">The global economy is entering a period of 'Decisive Stability'. Here is how to hedge against currency volatility while maintaining aggressive expansion targets.</p>
-                        
-                        <div class="mt-auto">
-                            <a href="404.html" class="read-more-link d-inline-flex align-items-center gap-2 font-button fw-bold text-decoration-none">
-                                <span>Read Article</span>
-                                <span class="material-symbols-outlined fs-6 link-arrow">arrow_forward</span>
-                            </a>
+                    <div class="col-md-4" data-aos="fade-right">
+                        <div
+                            class="position-relative overflow-hidden rounded-4 bento-card-glass h-100 min-h-300 shadow-sm border border-outline-variant">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bento-bg"
+                                style="background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzsbYnyivaR8UhKKALm7QyHJD6tqtJOpj0W-_pNw2s1YL8psie23QeT9eDXtzCZVlkNJj1DjQSbCVno_yFZFTgf_yEOVmFSD5EdtiuQUtSkmj7vA6WOb-s6k2TR0SHLmmJcgC_jkuEIM-hOmeZXNENRHwjogTolxqwRNDzf5aXfH7lZaT0v6OV-qudiNkxDmEj5xlLm5bp_NXrynOofj7pOKkDknk8rurNB0tpT3fAcopb7Bq3TEIbr6XnZXkGfA4fxPmelPsEzJE') center/cover;">
+                            </div>
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 bento-overlay">
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 p-4 p-lg-5 text-white w-100 bento-content">
+                                <span onclick="window.top.location.href='404.html'"
+                                    style="cursor: pointer; transition: all 0.3s;"
+                                    class="bento-arrow-hover material-symbols-outlined text-white bento-btn fs-1 border border-white rounded-circle p-2 bg-white bg-opacity-10 backdrop-blur mb-3">arrow_forward</span>
+                                <h4 class="h3 font-heading fw-bold mb-2">Digital Transformation</h4>
+                                <p class="mb-0 text-white-75 d-none d-lg-block">AI integration and legacy system
+                                    overhauls.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8" data-aos="fade-left">
+                        <div
+                            class="position-relative overflow-hidden rounded-4 bento-card-glass h-100 min-h-300 shadow-sm border border-outline-variant">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bento-bg"
+                                style="background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7o6xXFnK6qlaC2tAXvy94vrc-Q-iqasFDo1ofzQzYJQXxpXDR2e3j96HimY9-sRmV_XEhVZ7vUDZQ4y_jd4b-O2pPdS8RIkEPZlW1IBM7DTB3W1ZQBm9Paux2aUAkAbSKr7X0k51TlbmvhwW3jXov8ZumWgvp2Sf2T466OQeKoCq8v7VSaKtbYC-gNAGcu0bKee9QARbgCMSi3SsrTpJhHtx-lHZd-I6I05V8b19NMeuUQEbSsSekk1G8JcbnN7t6L1meKnVi4ac') center/cover;">
+                            </div>
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 bento-overlay">
+                            </div>
+                            <div
+                                class="position-absolute bottom-0 start-0 p-4 p-lg-5 text-white w-100 d-flex justify-content-between align-items-end bento-content">
+                                <div>
+                                    <h4 class="h3 font-heading fw-bold mb-2">Mergers &amp; Acquisitions</h4>
+                                    <p class="mb-0 text-white-75">Strategic valuation, due diligence, and cultural
+                                        integration for high-stakes corporate transactions.</p>
+                                </div>
+                                <span onclick="window.top.location.href='404.html'"
+                                    style="cursor: pointer; transition: all 0.3s;"
+                                    class="bento-arrow-hover material-symbols-outlined text-white bento-btn fs-1 border border-white rounded-circle p-2 bg-white bg-opacity-10 backdrop-blur">arrow_forward</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Article 2 -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card border-0 h-100 group blog-card-elite rounded-4 shadow-sm text-decoration-none overflow-hidden">
-                    <div class="position-relative overflow-hidden" style="height: 220px;">
-                        <img class="w-100 h-100 object-fit-cover img-zoom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPH2fQT3FD-SRKjmDB-kxu5Pn0lxPR1X4atbEagP8mHqzKyxLpxlAOPyZgvE9PgZIqM9mdgEZY4AELJPBt9AYJpbMhxSnEgk1Wpj0IFecnzNG8HJwvicUAMubhEtYKOseHtu_arK4X9cd3STyQP1a2yQniNZSSWaINwriIkBGIQxKVO5wCpxGKMQR2dHBCovmaWwJ_oScO-7R631C2gr1Qq-1MCWOTIXw8STYr4ZOmZCJ-Ln1WXeEgBuA2en4WwQCk30A4gPZ-otQ" alt="Strategy"/>
-                        <span class="position-absolute top-0 start-0 m-3 bg-white text-primary font-label-caps px-3 py-1 rounded-pill shadow-sm fw-bold">Strategy</span>
-                        <span class="position-absolute top-0 end-0 m-3 bg-dark bg-opacity-75 backdrop-blur text-white font-label-caps px-2 py-1 rounded-pill shadow-sm" style="font-size: 10px;"><span class="material-symbols-outlined align-text-bottom me-1" style="font-size: 14px;">timer</span>7 min read</span>
+        </section>
+
+        <!-- 5. Impact by the Numbers -->
+        <section class="py-5 bg-inverse-surface text-white position-relative overflow-hidden" id="stats-section">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-10"
+                style="background-image: radial-gradient(circle at 50% 50%, var(--primary) 0%, transparent 60%);"></div>
+            <div class="container px-4 px-lg-5 position-relative z-1">
+                <div class="row text-center g-2 g-md-4">
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="0">
+                        <div class="stat-neon-box h-100 d-flex flex-column justify-content-center cursor-pointer">
+                            <div class="display-3 font-heading fw-bold text-secondary-container mb-2">$<span
+                                    class="counter" data-target="4.2">0</span>B+</div>
+                            <div class="font-label-caps text-white-50 tracking-widest text-uppercase">Client Value
+                                Created</div>
+                        </div>
                     </div>
-                    
-                    <div class="p-4 d-flex flex-column">
-                        <time class="text-on-surface-variant opacity-75 font-label-caps d-block mb-3" style="font-size: 10px;">OCTOBER 08, 2024</time>
-                        <h3 class="h5 font-heading fw-bold mb-3 text-on-surface lh-base">The Precision Edge: Why Micro-Optimizations Matter</h3>
-                        <p class="text-on-surface-variant mb-4 small lh-lg" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">In a saturated market, your competitive advantage lies in the final 2% of operational efficiency. We break down the math behind the 'Marginal Gold' effect.</p>
-                        
-                        <div class="mt-auto">
-                            <a href="404.html" class="read-more-link d-inline-flex align-items-center gap-2 font-button fw-bold text-decoration-none">
-                                <span>Read Article</span>
-                                <span class="material-symbols-outlined fs-6 link-arrow">arrow_forward</span>
-                            </a>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-neon-box h-100 d-flex flex-column justify-content-center cursor-pointer">
+                            <div class="display-3 font-heading fw-bold text-secondary-container mb-2"><span
+                                    class="counter" data-target="240">0</span>%</div>
+                            <div class="font-label-caps text-white-50 tracking-widest text-uppercase">Avg. Growth Rate
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-neon-box h-100 d-flex flex-column justify-content-center cursor-pointer">
+                            <div class="display-3 font-heading fw-bold text-secondary-container mb-2"><span
+                                    class="counter" data-target="18">0</span></div>
+                            <div class="font-label-caps text-white-50 tracking-widest text-uppercase">Global Markets
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-neon-box h-100 d-flex flex-column justify-content-center cursor-pointer">
+                            <div class="display-3 font-heading fw-bold text-secondary-container mb-2"><span
+                                    class="counter" data-target="98">0</span>%</div>
+                            <div class="font-label-caps text-white-50 tracking-widest text-uppercase">Retention Rate
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Article 3 -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card border-0 h-100 group blog-card-elite rounded-4 shadow-sm text-decoration-none overflow-hidden">
-                    <div class="position-relative overflow-hidden" style="height: 220px;">
-                        <img class="w-100 h-100 object-fit-cover img-zoom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6xU_SUuQTwrbNZDDVFOHl7FkGyuJ2aNEVJUieNPC7sR8FACmldJxZ3cSsHLqqGU1LpkQ4E2ADzSlEd7-jhiySHRCux9qBLkAyQVKFMKKmrPkClU6S71Hz58qZ0I6b1W_iFtd8_qYcZeyY0rlWPEkhpBFHcfMwptOcEIImvBTsaqrQY6r8NHG6ybkCH1CEB3C5X3PwSlKwbS9EfVw0t0G8CYFDYnPXfasEbfvfhgugZtGRoVqBh2uWxr1wTey1yVv3DrfnECgHuUM" alt="Leadership"/>
-                        <span class="position-absolute top-0 start-0 m-3 bg-white text-primary font-label-caps px-3 py-1 rounded-pill shadow-sm fw-bold">Leadership</span>
-                        <span class="position-absolute top-0 end-0 m-3 bg-dark bg-opacity-75 backdrop-blur text-white font-label-caps px-2 py-1 rounded-pill shadow-sm" style="font-size: 10px;"><span class="material-symbols-outlined align-text-bottom me-1" style="font-size: 14px;">timer</span>5 min read</span>
+        </section>
+
+        <!-- 6. Our Framework (Vertical Timeline) -->
+        <section class="py-5 bg-surface-container-low">
+            <div class="container px-4 px-lg-5">
+                <div class="text-center mb-3" data-aos="fade-up">
+                    <span
+                        class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">The
+                        Methodology</span>
+                    <h2 class="display-6 font-heading fw-bold">The Corporate Transformation Framework</h2>
+                    <p class="text-on-surface-variant mt-3 mx-auto fs-5" style="max-width: 42rem;">A rigorous four-phase
+                        cycle designed to restructure, optimize, and scale large enterprises.</p>
+                </div>
+
+                <div class="timeline-container position-relative pt-2 mx-auto" style="max-width: 800px;">
+                    <!-- Line -->
+                    <div class="position-absolute h-100 bg-outline-variant timeline-line" style="width: 2px; top: 0;">
                     </div>
-                    
-                    <div class="p-4 d-flex flex-column">
-                        <time class="text-on-surface-variant opacity-75 font-label-caps d-block mb-3" style="font-size: 10px;">SEPTEMBER 29, 2024</time>
-                        <h3 class="h5 font-heading fw-bold mb-3 text-on-surface lh-base">Cultural Cohesion in Distributed Global Enterprises</h3>
-                        <p class="text-on-surface-variant mb-4 small lh-lg" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">Remote work isn't the problem—fragmented corporate culture is. Learn our framework for maintaining institutional integrity across global borders.</p>
-                        
-                        <div class="mt-auto">
-                            <a href="404.html" class="read-more-link d-inline-flex align-items-center gap-2 font-button fw-bold text-decoration-none">
-                                <span>Read Article</span>
-                                <span class="material-symbols-outlined fs-6 link-arrow">arrow_forward</span>
-                            </a>
+
+                    <!-- Step 1 -->
+                    <div class="row align-items-center mb-3 position-relative timeline-step" data-aos="fade-up">
+                        <div class="col-9 col-md-5 order-2 order-md-1 text-start text-md-end pe-md-4 ps-4 ps-md-0">
+                            <h4 class="h5 font-heading fw-bold text-primary mb-2">Discovery &amp; Audit</h4>
+                            <p class="text-on-surface-variant small mb-0">Deep-dive assessment into organizational
+                                structures, cultural alignment, and identifying financial leakage.</p>
+                        </div>
+                        <div class="col-3 col-md-2 order-1 order-md-2 d-flex justify-content-center position-relative">
+                            <div class="timeline-dot rounded-circle bg-primary text-white d-flex align-items-center justify-content-center fw-bold shadow-sm flex-shrink-0"
+                                style="width: 40px; height: 40px; z-index: 2;">01</div>
+                        </div>
+                        <div class="col-md-5 order-3 d-none d-md-block"></div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="row align-items-center mb-3 position-relative timeline-step" data-aos="fade-up">
+                        <div class="col-md-5 order-1 d-none d-md-block"></div>
+                        <div class="col-3 col-md-2 order-1 order-md-2 d-flex justify-content-center position-relative">
+                            <div class="timeline-dot rounded-circle bg-secondary-container text-on-secondary-container d-flex align-items-center justify-content-center fw-bold shadow-sm flex-shrink-0"
+                                style="width: 40px; height: 40px; z-index: 2;">02</div>
+                        </div>
+                        <div class="col-9 col-md-5 order-2 order-md-3 text-start ps-4">
+                            <h4 class="h5 font-heading fw-bold mb-2">Strategic Architecture</h4>
+                            <p class="text-on-surface-variant small mb-0">Bespoke strategic modeling and corporate
+                                restructuring using our proprietary forecasting framework.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="row align-items-center mb-3 position-relative timeline-step" data-aos="fade-up">
+                        <div class="col-9 col-md-5 order-2 order-md-1 text-start text-md-end pe-md-4 ps-4 ps-md-0">
+                            <h4 class="h5 font-heading fw-bold text-primary mb-2">Agile Execution</h4>
+                            <p class="text-on-surface-variant small mb-0">Hands-on implementation and change management
+                                alongside your internal leadership teams.</p>
+                        </div>
+                        <div class="col-3 col-md-2 order-1 order-md-2 d-flex justify-content-center position-relative">
+                            <div class="timeline-dot rounded-circle bg-primary text-white d-flex align-items-center justify-content-center fw-bold shadow-sm flex-shrink-0"
+                                style="width: 40px; height: 40px; z-index: 2;">03</div>
+                        </div>
+                        <div class="col-md-5 order-3 d-none d-md-block"></div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="row align-items-center position-relative timeline-step" data-aos="fade-up">
+                        <div class="col-md-5 order-1 d-none d-md-block"></div>
+                        <div class="col-3 col-md-2 order-1 order-md-2 d-flex justify-content-center position-relative">
+                            <div class="timeline-dot rounded-circle bg-secondary-container text-on-secondary-container d-flex align-items-center justify-content-center fw-bold shadow-sm flex-shrink-0"
+                                style="width: 40px; height: 40px; z-index: 2;">04</div>
+                        </div>
+                        <div class="col-9 col-md-5 order-2 order-md-3 text-start ps-4">
+                            <h4 class="h5 font-heading fw-bold mb-2">Systemic Anchoring</h4>
+                            <p class="text-on-surface-variant small mb-0">Continuous refinement, KPI monitoring, and
+                                scaling to ensure long-term industry dominance.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- 12. Final CTA -->
-<section class="py-5 bg-surface position-relative z-1">
-    <div class="container px-3 px-md-4 px-lg-5 cta-floating-wrapper" data-aos="fade-up">
-        <div class="cta-glass-card text-white p-3 p-md-5 py-lg-6 d-flex flex-column align-items-center justify-content-center text-center border border-secondary border-opacity-25">
-            
-            <div style="max-width: 52rem; width: 100%;" class="position-relative z-2 py-4">
-                <span class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-4 tracking-widest fw-bold shadow-lg border border-secondary border-opacity-25">Take Action</span>
-                <h2 class="display-3 font-heading fw-bold mb-4 text-gradient-gold pb-2" style="line-height: 1.1;">Define Your Corporate Standard.</h2>
-                <p class="mb-5 fs-5 text-white-75 mx-auto px-2" style="max-width: 36rem;">Your enterprise transformation begins with a single strategic conversation. Let's build the future together.</p>
-                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 w-100 px-3 px-sm-0">
-                    <button onclick="window.top.location.href='404.html'" class="btn btn-premium btn-premium-secondary font-button px-3 px-md-5 py-3 rounded shadow-lg fw-bold w-100 w-sm-auto">Inquire Now</button>
-                    <button onclick="window.top.location.href='404.html'" class="btn btn-premium btn-premium-outline-light font-button px-3 px-md-5 py-3 rounded fw-bold w-100 w-sm-auto">Download Brochure</button>
+        <!-- 7. Strategic Intelligence Hubs -->
+        <section
+            class="py-5 py-lg-6 bg-dark text-white position-relative overflow-hidden border-top border-secondary border-opacity-25 py-5">
+            <div class="container px-4 px-lg-5 position-relative z-1">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5"
+                    data-aos="fade-up">
+                    <div style="max-width: 600px;">
+                        <div class="d-flex align-items-center gap-3">
+                            <span
+                                class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm"
+                                style="letter-spacing: 2px;">Global Presence</span>
+                        </div>
+                        <h2 class="display-5 font-heading fw-bold mb-0">Strategic Intelligence Hubs</h2>
+                    </div>
+                    <div class="mt-4 mt-md-0">
+                        <button onclick="window.top.location.href='404.html'"
+                            class="btn btn-premium btn-premium-outline-light font-button px-4 py-2 rounded fw-bold">View
+                            All Offices</button>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Hub 1: New York -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                        <div class="position-relative overflow-hidden rounded-4 shadow-lg group"
+                            style="height: 400px; cursor: pointer;">
+                            <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=800&auto=format&fit=crop"
+                                class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 hub-img"
+                                style="transition: transform 0.7s ease;" alt="New York">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark hub-overlay"
+                                style="opacity: 0.3; transition: opacity 0.5s;"></div>
+                            <div class="position-absolute top-0 start-0 w-100 h-100"
+                                style="background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 60%);">
+                            </div>
+
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4 transition-all group-hover-translate-y"
+                                style="transform: translateY(20px);">
+                                <h4 class="font-heading fw-bold mb-1 text-white">New York</h4>
+                                <p class="text-white-50 font-label-caps small mb-3">Global Headquarters</p>
+                                <div
+                                    class="d-flex align-items-center gap-2 text-primary opacity-0 transition-all group-hover-opacity-100">
+                                    <span class="font-button fw-bold small">Connect</span>
+                                    <span class="material-symbols-outlined fs-6">arrow_forward</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hub 2: London -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="position-relative overflow-hidden rounded-4 shadow-lg group"
+                            style="height: 400px; cursor: pointer;">
+                            <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=800&auto=format&fit=crop"
+                                class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 hub-img"
+                                style="transition: transform 0.7s ease;" alt="London">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark hub-overlay"
+                                style="opacity: 0.4; transition: opacity 0.5s;"></div>
+                            <div class="position-absolute top-0 start-0 w-100 h-100"
+                                style="background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 60%);">
+                            </div>
+
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4 transition-all group-hover-translate-y"
+                                style="transform: translateY(20px);">
+                                <h4 class="font-heading fw-bold mb-1 text-white">London</h4>
+                                <p class="text-white-50 font-label-caps small mb-3">EMEA Operations</p>
+                                <div
+                                    class="d-flex align-items-center gap-2 text-primary opacity-0 transition-all group-hover-opacity-100">
+                                    <span class="font-button fw-bold small">Connect</span>
+                                    <span class="material-symbols-outlined fs-6">arrow_forward</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hub 3: Dubai -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="position-relative overflow-hidden rounded-4 shadow-lg group"
+                            style="height: 400px; cursor: pointer;">
+                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=800&auto=format&fit=crop"
+                                class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 hub-img"
+                                style="transition: transform 0.7s ease;" alt="Dubai">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark hub-overlay"
+                                style="opacity: 0.4; transition: opacity 0.5s;"></div>
+                            <div class="position-absolute top-0 start-0 w-100 h-100"
+                                style="background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 60%);">
+                            </div>
+
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4 transition-all group-hover-translate-y"
+                                style="transform: translateY(20px);">
+                                <h4 class="font-heading fw-bold mb-1 text-white">Dubai</h4>
+                                <p class="text-white-50 font-label-caps small mb-3">MENA Operations</p>
+                                <div
+                                    class="d-flex align-items-center gap-2 text-primary opacity-0 transition-all group-hover-opacity-100">
+                                    <span class="font-button fw-bold small">Connect</span>
+                                    <span class="material-symbols-outlined fs-6">arrow_forward</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hub 4: Singapore -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="position-relative overflow-hidden rounded-4 shadow-lg group"
+                            style="height: 400px; cursor: pointer;">
+                            <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?q=80&w=800&auto=format&fit=crop"
+                                class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 hub-img"
+                                style="transition: transform 0.7s ease;" alt="Singapore">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark hub-overlay"
+                                style="opacity: 0.4; transition: opacity 0.5s;"></div>
+                            <div class="position-absolute top-0 start-0 w-100 h-100"
+                                style="background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 60%);">
+                            </div>
+
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4 transition-all group-hover-translate-y"
+                                style="transform: translateY(20px);">
+                                <h4 class="font-heading fw-bold mb-1 text-white">Singapore</h4>
+                                <p class="text-white-50 font-label-caps small mb-3">APAC Operations</p>
+                                <div
+                                    class="d-flex align-items-center gap-2 text-primary opacity-0 transition-all group-hover-opacity-100">
+                                    <span class="font-button fw-bold small">Connect</span>
+                                    <span class="material-symbols-outlined fs-6">arrow_forward</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Footer Placeholder -->
-<div id="footer-placeholder"></div>
+        <!-- 8. Industry Specializations (Accordion) -->
+        <section class="py-5 bg-surface-container-low border-top border-outline-variant">
+            <div class="container px-4 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <span
+                            class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Industry
+                            Expertise</span>
+                        <h2 class="display-6 font-heading fw-bold mb-4">Cross-Sector Corporate Mastery</h2>
+                        <p class="text-on-surface-variant fs-5 mb-4">Our consultants bring decades of specialized
+                            experience across diverse global markets, allowing us to cross-pollinate strategies and
+                            innovate where others stagnate.</p>
+                        <button onclick="window.top.location.href='404.html'"
+                            class="btn bg-primary-container text-on-primary-container px-4 py-2 font-button rounded border-0 fw-bold hover-scale-105">View
+                            All Industries</button>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="accordion custom-accordion" id="industryAccordion">
+                            <!-- Item 1 -->
+                            <div
+                                class="accordion-item border-0 bg-transparent mb-3 border-bottom border-outline-variant pb-2 px-3">
+                                <h2 class="accordion-header">
+                                    <button onclick="window.top.location.href='404.html'"
+                                        class="accordion-button bg-transparent shadow-none font-heading fw-bold fs-4 px-0 text-on-surface"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                        <span
+                                            class="material-symbols-outlined text-primary me-3 fs-3 accordion-icon-rotate">account_balance</span>
+                                        Financial Services &amp; FinTech
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#industryAccordion">
+                                    <div class="accordion-body px-0 pt-3 text-on-surface-variant pb-4 fs-6">
+                                        We help legacy banks digitize operations and assist FinTech startups in
+                                        navigating complex regulatory environments for rapid IPO readiness and market
+                                        scaling.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div
+                                class="accordion-item border-0 bg-transparent mb-3 border-bottom border-outline-variant pb-2 px-3">
+                                <h2 class="accordion-header">
+                                    <button onclick="window.top.location.href='404.html'"
+                                        class="accordion-button collapsed bg-transparent shadow-none font-heading fw-bold fs-4 px-0 text-on-surface"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                        <span
+                                            class="material-symbols-outlined text-primary me-3 fs-3 accordion-icon-rotate">precision_manufacturing</span>
+                                        Advanced Manufacturing
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#industryAccordion">
+                                    <div class="accordion-body px-0 pt-3 text-on-surface-variant pb-4 fs-6">
+                                        From supply chain resilience to Industry 4.0 IoT integrations, we optimize
+                                        production floors and global logistics for maximum yield and minimum waste.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div
+                                class="accordion-item border-0 bg-transparent mb-3 border-bottom border-outline-variant pb-2 px-3">
+                                <h2 class="accordion-header">
+                                    <button onclick="window.top.location.href='404.html'"
+                                        class="accordion-button collapsed bg-transparent shadow-none font-heading fw-bold fs-4 px-0 text-on-surface"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                        aria-expanded="false" aria-controls="collapseThree">
+                                        <span
+                                            class="material-symbols-outlined text-primary me-3 fs-3 accordion-icon-rotate">monitor_heart</span>
+                                        Healthcare &amp; Life Sciences
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#industryAccordion">
+                                    <div class="accordion-body px-0 pt-3 text-on-surface-variant pb-4 fs-6">
+                                        Guiding pharmaceutical and healthcare conglomerates through digital patient
+                                        experiences, R&amp;D cost optimization, and M&amp;A integration.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="accordion-item border-0 bg-transparent px-3">
+                                <h2 class="accordion-header">
+                                    <button onclick="window.top.location.href='404.html'"
+                                        class="accordion-button collapsed bg-transparent shadow-none font-heading fw-bold fs-4 px-0 text-on-surface"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                        aria-expanded="false" aria-controls="collapseFour">
+                                        <span
+                                            class="material-symbols-outlined text-primary me-3 fs-3 accordion-icon-rotate">bolt</span>
+                                        Energy &amp; Resources
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#industryAccordion">
+                                    <div class="accordion-body px-0 pt-3 text-on-surface-variant pb-4 fs-6">
+                                        Strategic consulting for the global transition toward renewable energy,
+                                        maximizing asset lifecycles, and ESG compliance.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- Bootstrap 5.3.3 JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- 9. Executive Leadership -->
+        <section class="py-5 py-lg-6 bg-white">
+            <div class="container px-4 px-lg-5">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5 pb-3"
+                    data-aos="fade-up">
+                    <div style="max-width: 600px;">
+                        <div class="d-flex align-items-center gap-3">
+                            <span
+                                class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm"
+                                style="letter-spacing: 2px;">Our Principals</span>
+                        </div>
+                        <h2 class="display-5 font-heading fw-bold mb-0">The Minds Behind<br />The Strategy</h2>
+                    </div>
+                    <div class="mt-4 mt-md-0">
+                        <p class="text-on-surface-variant fs-5 mb-0" style="max-width: 350px;">A coalition of former
+                            Fortune 500 executives and elite strategists dedicated to your success.</p>
+                    </div>
+                </div>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                <div class="row g-4 justify-content-center">
+                    <!-- Team Member 1 -->
+                    <div class="col-sm-6 col-md-3 group" data-aos="fade-up" data-aos-delay="0">
+                        <div class="rounded-4 overflow-hidden position-relative shadow-sm hover-shadow-lg transition-all team-card-elite"
+                            style="height: 480px; cursor: pointer;">
+                            <img class="w-100 h-100 object-fit-cover grayscale-hover-color team-img"
+                                style="transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtCm3p50HCk5xxwyvB97o-sAgQDlk0yW2-fAT7dsYgwi63A_y47UIW5v8oYRIv3R3rH4VRk7fS_3VlN_VMnFbwG7n6uXp2Ki_1qAFNGEzirhxJK7Sg4thABaafvzlK7zgs6IYbQncIqlhqHJ_QTaDZUVtbxYzwM9VheDtb4Tw2bUMB185DTCHmyua0_t6USBEgD6_LXiL_-wYuEEoniq6PxrCA-jxyGuwPNAip7f0eLX8LlSA-Ukr1EMdB0VxzzvM9MAa-t87CoO0"
+                                alt="Julian Thorne" />
 
-<!-- AOS Animation JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                            <div class="social-dock z-2">
+                                <a href="404.html" class="social-icon-btn fb" style="--i:1;"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="404.html" class="social-icon-btn ig" style="--i:2;"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="404.html" class="social-icon-btn x" style="--i:3;"><i
+                                        class="fa-brands fa-x-twitter"></i></a>
+                                <a href="404.html" class="social-icon-btn in" style="--i:4;"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
 
-<!-- Custom JS -->
-<script src="js/main.js"></script>
+                            <div class="team-info-box z-1">
+                                <h4 class="font-heading fw-bold mb-1 text-on-surface">Julian Thorne</h4>
+                                <p class="text-primary font-label-caps mb-0 fw-bold"
+                                    style="font-size: 11px; letter-spacing: 1px;">Managing Partner</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="col-sm-6 col-md-3 group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="rounded-4 overflow-hidden position-relative shadow-sm hover-shadow-lg transition-all team-card-elite"
+                            style="height: 480px; cursor: pointer;">
+                            <img class="w-100 h-100 object-fit-cover grayscale-hover-color team-img"
+                                style="transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1EhU4IsqzRwxtw-8bQ0kWkLhlwa-2v413lo0SJf5KpRaQWAfr8jnqBNoZVzWWnsRTSddHJCLvFZitIRQEVIAKah9pYGqxfMoTcvxww6RdfDSFfqvCypxI1OSKVRRHLXfb4m4Y9lQVRfa9iMdHuBJnF9cuIPyFHLbssIXdNlo1dnqJ_hR0Zjjk3lVlllyx4lvmwrLp3skC1ztB4I7BPKqT8vM65Ro6Db5W_v5GWwEoRiDWcwyhZaFE253B6DkWkUr937VyrgEH2bo"
+                                alt="Elena Vance" />
+
+                            <div class="social-dock z-2">
+                                <a href="404.html" class="social-icon-btn fb" style="--i:1;"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="404.html" class="social-icon-btn ig" style="--i:2;"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="404.html" class="social-icon-btn x" style="--i:3;"><i
+                                        class="fa-brands fa-x-twitter"></i></a>
+                                <a href="404.html" class="social-icon-btn in" style="--i:4;"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+
+                            <div class="team-info-box z-1">
+                                <h4 class="font-heading fw-bold mb-1 text-on-surface">Elena Vance</h4>
+                                <p class="text-primary font-label-caps mb-0 fw-bold"
+                                    style="font-size: 11px; letter-spacing: 1px;">Head of Transformation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="col-sm-6 col-md-3 group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="rounded-4 overflow-hidden position-relative shadow-sm hover-shadow-lg transition-all team-card-elite"
+                            style="height: 480px; cursor: pointer;">
+                            <img class="w-100 h-100 object-fit-cover grayscale-hover-color team-img"
+                                style="transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlSE-eW_BvzQcBQ6PQfvJggzCCTAZcJJzQGFVr8upK2O1BGYRYct42R4SSHGO84kE_qeUtVyfmUPgEgwH7w6JgElOg5eKd4GZvukZRXexVfBTiFiE7nX6GaSf4nmIoOPwb-G3LhHVNNPrR7FDyDAKW3pFnZrWQ7fgNdWuNaIjF3LYyNK1_5IKT7Emuv40DzZtOshKNeD-pRUK_OaEvs4QqKTohfxdqrsETaVdoVSxd4Wux71dLxlqhcrUB5lUJ2wjB5r_LvMCVrhk"
+                                alt="Marcus Chen" />
+
+                            <div class="social-dock z-2">
+                                <a href="404.html" class="social-icon-btn fb" style="--i:1;"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="404.html" class="social-icon-btn ig" style="--i:2;"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="404.html" class="social-icon-btn x" style="--i:3;"><i
+                                        class="fa-brands fa-x-twitter"></i></a>
+                                <a href="404.html" class="social-icon-btn in" style="--i:4;"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+
+                            <div class="team-info-box z-1">
+                                <h4 class="font-heading fw-bold mb-1 text-on-surface">Marcus Chen</h4>
+                                <p class="text-primary font-label-caps mb-0 fw-bold"
+                                    style="font-size: 11px; letter-spacing: 1px;">Digital Strategy Lead</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="col-sm-6 col-md-3 group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="rounded-4 overflow-hidden position-relative shadow-sm hover-shadow-lg transition-all team-card-elite"
+                            style="height: 480px; cursor: pointer;">
+                            <img class="w-100 h-100 object-fit-cover grayscale-hover-color team-img"
+                                style="transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc-sWPlZgtG0a9781avwLnO1wOUT6Lx3ZwjoLUMLADYoWBtXcoeKTaJ1qWxUwoM0jfX05qVSDaASTSGtCSPnT242KyMOwiBGFDvStofMRPezTR4Px4khln-Qgep7gePe9aTOoJDvqBlu213_Y2rdOnEdXegNMMTXbSKi7zV3L47OWgUJvNRJKLkEamTzlfmwOmik_mRMAOYkttdTeMQ9H8-GhRhI6aUJTWR3KqxIizQZ_ZCG3SVgA9YHqbBOStCSEDdzwbcaNGPZs"
+                                alt="Sarah Sterling" />
+
+                            <div class="social-dock z-2">
+                                <a href="404.html" class="social-icon-btn fb" style="--i:1;"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="404.html" class="social-icon-btn ig" style="--i:2;"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="404.html" class="social-icon-btn x" style="--i:3;"><i
+                                        class="fa-brands fa-x-twitter"></i></a>
+                                <a href="404.html" class="social-icon-btn in" style="--i:4;"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+
+                            <div class="team-info-box z-1">
+                                <h4 class="font-heading fw-bold mb-1 text-on-surface">Sarah Sterling</h4>
+                                <p class="text-primary font-label-caps mb-0 fw-bold"
+                                    style="font-size: 11px; letter-spacing: 1px;">Chief Operations Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Client Testimonials (Swiper Carousel) -->
+        <section class="py-4 py-lg-5 bg-surface overflow-hidden position-relative">
+            <div class="container px-4 px-lg-5 position-relative z-1">
+                <div class="row justify-content-center text-center mb-3" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <div class="mb-4 d-flex flex-column align-items-center">
+                            <span class="material-symbols-outlined text-primary opacity-50 mb-3"
+                                style="font-size: 3rem; font-variation-settings: 'FILL' 1;">format_quote</span>
+                            <span
+                                class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block tracking-widest fw-bold shadow-sm">Executive
+                                Testimonials</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper testimonial-swiper pb-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper align-items-stretch">
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="card border-0 h-100 p-4 p-xl-5 rounded-4 shadow-sm bg-white">
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <img class="rounded-circle border border-2 border-primary object-fit-cover"
+                                        style="width: 60px; height: 60px;"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQNjqyyF64m7iJIgMziy14ls8WynITgTgV-0Bg-hpahwM--cZZqAkB4skhsn0-_6_ZO_s--soTjP-jHeoEdi3NGZsVZ0hnId_wUKJNyldObhNpIHq8pQzeP3RvAfKU2jvaoyoJAQa5NJbj6E5nF77PCFIrsiRRRUpo1qWXxRTXhObK8u8rwl3M8zRiFaNlmJcoukxI4Wp2rPuJW7TTwKmUF9Q5zXd31ltfoIFEhYe51xzyeecwqGf0PidR0fafHiNpRgWOwyg3-FQ"
+                                        alt="Robert McAllister" />
+                                    <div>
+                                        <div class="h6 font-heading fw-bold mb-1 text-on-surface">Robert McAllister
+                                        </div>
+                                        <p class="text-primary font-label-caps mb-0" style="font-size: 10px;">CEO,
+                                            GLOBAL LOGISTICS</p>
+                                    </div>
+                                </div>
+                                <p class="text-on-surface-variant fst-italic mb-0 lh-lg">"They didn't just change our
+                                    processes; they fundamentally shifted our corporate DNA. Their methodologies are
+                                    lived realities in every single deliverable they provide."</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="card border-0 h-100 p-4 p-xl-5 rounded-4 shadow-sm bg-white">
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <img class="rounded-circle border border-2 border-primary object-fit-cover"
+                                        style="width: 60px; height: 60px;"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCeDJrIl5kDGWE3NRcUOFt9eqr4i8fPf1P5CR2RvWLt99ftQeZNoZn9rN9DgGO7x72SueC-2ZZa2-TNF1u7T_CBoLNbNVNdquP67NZil4E2xm-yyGXto_5yHF9gxBQ52GRTLVHSDlyoSNXtnvi1Yk7GWaBKhYseUMhFA1Mtp9qjbVslC7gnAQuZBU7Z7Ec7Y9gI3B0TEZWgcF-IQ5o2lFBkpm0DiQyRdJM2yU2YMZ3dgM5e_3mYCXc046HqUtWBidTf475vaP_Lqk"
+                                        alt="Elena Vovk" />
+                                    <div>
+                                        <div class="h6 font-heading fw-bold mb-1 text-on-surface">Elena Vovk</div>
+                                        <p class="text-primary font-label-caps mb-0" style="font-size: 10px;">CFO,
+                                            HORIZON FINTECH</p>
+                                    </div>
+                                </div>
+                                <p class="text-on-surface-variant fst-italic mb-0 lh-lg">"Their strategic foresight
+                                    during our M&A phase saved us hundreds of millions in operational redundancies.
+                                    Truly the gold standard in elite business consulting."</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="card border-0 h-100 p-4 p-xl-5 rounded-4 shadow-sm bg-white">
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <img class="rounded-circle border border-2 border-primary object-fit-cover"
+                                        style="width: 60px; height: 60px;"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6xU_SUuQTwrbNZDDVFOHl7FkGyuJ2aNEVJUieNPC7sR8FACmldJxZ3cSsHLqqGU1LpkQ4E2ADzSlEd7-jhiySHRCux9qBLkAyQVKFMKKmrPkClU6S71Hz58qZ0I6b1W_iFtd8_qYcZeyY0rlWPEkhpBFHcfMwptOcEIImvBTsaqrQY6r8NHG6ybkCH1CEB3C5X3PwSlKwbS9EfVw0t0G8CYFDYnPXfasEbfvfhgugZtGRoVqBh2uWxr1wTey1yVv3DrfnECgHuUM"
+                                        alt="Michael Chang" />
+                                    <div>
+                                        <div class="h6 font-heading fw-bold mb-1 text-on-surface">Michael Chang</div>
+                                        <p class="text-primary font-label-caps mb-0" style="font-size: 10px;">COO, NEXUS
+                                            RETAIL</p>
+                                    </div>
+                                </div>
+                                <p class="text-on-surface-variant fst-italic mb-0 lh-lg">"We were struggling with supply
+                                    chain bottlenecks. Their intervention was surgical, precise, and yielded a 40%
+                                    efficiency increase within the first quarter."</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="card border-0 h-100 p-4 p-xl-5 rounded-4 shadow-sm bg-white">
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <img class="rounded-circle border border-2 border-primary object-fit-cover"
+                                        style="width: 60px; height: 60px;"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtCm3p50HCk5xxwyvB97o-sAgQDlk0yW2-fAT7dsYgwi63A_y47UIW5v8oYRIv3R3rH4VRk7fS_3VlN_VMnFbwG7n6uXp2Ki_1qAFNGEzirhxJK7Sg4thABaafvzlK7zgs6IYbQncIqlhqHJ_QTaDZUVtbxYzwM9VheDtb4Tw2bUMB185DTCHmyua0_t6USBEgD6_LXiL_-wYuEEoniq6PxrCA-jxyGuwPNAip7f0eLX8LlSA-Ukr1EMdB0VxzzvM9MAa-t87CoO0"
+                                        alt="David Sterling" />
+                                    <div>
+                                        <div class="h6 font-heading fw-bold mb-1 text-on-surface">David Sterling</div>
+                                        <p class="text-primary font-label-caps mb-0" style="font-size: 10px;">PRESIDENT,
+                                            STERLING IND.</p>
+                                    </div>
+                                </div>
+                                <p class="text-on-surface-variant fst-italic mb-0 lh-lg">"The team's ability to digest
+                                    complex global market data and turn it into actionable, hyper-local strategies is
+                                    unparalleled. They are an indispensable partner."</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 5 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="card border-0 h-100 p-4 p-xl-5 rounded-4 shadow-sm bg-white">
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <img class="rounded-circle border border-2 border-primary object-fit-cover"
+                                        style="width: 60px; height: 60px;"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc-sWPlZgtG0a9781avwLnO1wOUT6Lx3ZwjoLUMLADYoWBtXcoeKTaJ1qWxUwoM0jfX05qVSDaASTSGtCSPnT242KyMOwiBGFDvStofMRPezTR4Px4khln-Qgep7gePe9aTOoJDvqBlu213_Y2rdOnEdXegNMMTXbSKi7zV3L47OWgUJvNRJKLkEamTzlfmwOmik_mRMAOYkttdTeMQ9H8-GhRhI6aUJTWR3KqxIizQZ_ZCG3SVgA9YHqbBOStCSEDdzwbcaNGPZs"
+                                        alt="Sarah Jenkins" />
+                                    <div>
+                                        <div class="h6 font-heading fw-bold mb-1 text-on-surface">Sarah Jenkins</div>
+                                        <p class="text-primary font-label-caps mb-0" style="font-size: 10px;">VP
+                                            STRATEGY, OMNICOMP</p>
+                                    </div>
+                                </div>
+                                <p class="text-on-surface-variant fst-italic mb-0 lh-lg">"From digital transformation to
+                                    organizational restructuring, they handle every challenge with a level of rigor and
+                                    sophistication that sets them entirely apart."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Strategic Insights (Blog preview) -->
+        <section class="py-5 bg-white">
+            <div class="container px-4 px-lg-5">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5"
+                    data-aos="fade-up">
+                    <div>
+                        <span
+                            class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Executive
+                            Insights</span>
+                        <h2 class="display-6 font-heading fw-bold mb-0">Thought Leadership</h2>
+                    </div>
+                    <a class="btn btn-premium btn-premium-outline-dark font-button px-4 py-2 rounded fw-bold mt-3 mt-md-0"
+                        href="blog.html">View All Articles</a>
+                </div>
+                <div class="row g-4">
+                    <!-- Article 1 -->
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                        <div
+                            class="card border-0 h-100 group blog-card-elite rounded-4 shadow-sm text-decoration-none overflow-hidden">
+                            <div class="position-relative overflow-hidden" style="height: 220px;">
+                                <img class="w-100 h-100 object-fit-cover img-zoom"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXNORI9IE-XDseM4XkiQYKLhLhQqzcRaQFo0Wg4eMqPWwHVmLsLzIWRK-q9_LzjpvXuAaFP8sbNES4vrwItQN-mPjjstz9Pdva-95wvTy_SI_OkU-UySYv0ywfZ9_aJCIV4d6ZHQLbkS5x5O_rvxKikgfFZ7b5MMj43eS6ujPNqJPB5rXXogZmp0_mz_IA5Jy3CJbQjwJCA_G774EFJAB9hTH3XIlp3VR7od8so1cTtiBUIY-BeeTdrqWTy12sw4BGmWVuJZLq-EQ"
+                                    alt="Economy" />
+                                <span
+                                    class="position-absolute top-0 start-0 m-3 bg-white text-primary font-label-caps px-3 py-1 rounded-pill shadow-sm fw-bold">Economy</span>
+                                <span
+                                    class="position-absolute top-0 end-0 m-3 bg-dark bg-opacity-75 backdrop-blur text-white font-label-caps px-2 py-1 rounded-pill shadow-sm"
+                                    style="font-size: 10px;"><span
+                                        class="material-symbols-outlined align-text-bottom me-1"
+                                        style="font-size: 14px;">timer</span>4 min read</span>
+                            </div>
+
+                            <div class="p-4 d-flex flex-column">
+                                <time class="text-on-surface-variant opacity-75 font-label-caps d-block mb-3"
+                                    style="font-size: 10px;">OCTOBER 14, 2024</time>
+                                <h3 class="h5 font-heading fw-bold mb-3 text-on-surface lh-base">Navigating
+                                    Post-Inflationary Markets: A CEO's Guide</h3>
+                                <p class="text-on-surface-variant mb-4 small lh-lg"
+                                    style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                    The global economy is entering a period of 'Decisive Stability'. Here is how to
+                                    hedge against currency volatility while maintaining aggressive expansion targets.
+                                </p>
+
+                                <div class="mt-auto">
+                                    <a href="404.html"
+                                        class="read-more-link d-inline-flex align-items-center gap-2 font-button fw-bold text-decoration-none">
+                                        <span>Read Article</span>
+                                        <span class="material-symbols-outlined fs-6 link-arrow">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="card border-0 h-100 group blog-card-elite rounded-4 shadow-sm text-decoration-none overflow-hidden">
+                            <div class="position-relative overflow-hidden" style="height: 220px;">
+                                <img class="w-100 h-100 object-fit-cover img-zoom"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPH2fQT3FD-SRKjmDB-kxu5Pn0lxPR1X4atbEagP8mHqzKyxLpxlAOPyZgvE9PgZIqM9mdgEZY4AELJPBt9AYJpbMhxSnEgk1Wpj0IFecnzNG8HJwvicUAMubhEtYKOseHtu_arK4X9cd3STyQP1a2yQniNZSSWaINwriIkBGIQxKVO5wCpxGKMQR2dHBCovmaWwJ_oScO-7R631C2gr1Qq-1MCWOTIXw8STYr4ZOmZCJ-Ln1WXeEgBuA2en4WwQCk30A4gPZ-otQ"
+                                    alt="Strategy" />
+                                <span
+                                    class="position-absolute top-0 start-0 m-3 bg-white text-primary font-label-caps px-3 py-1 rounded-pill shadow-sm fw-bold">Strategy</span>
+                                <span
+                                    class="position-absolute top-0 end-0 m-3 bg-dark bg-opacity-75 backdrop-blur text-white font-label-caps px-2 py-1 rounded-pill shadow-sm"
+                                    style="font-size: 10px;"><span
+                                        class="material-symbols-outlined align-text-bottom me-1"
+                                        style="font-size: 14px;">timer</span>7 min read</span>
+                            </div>
+
+                            <div class="p-4 d-flex flex-column">
+                                <time class="text-on-surface-variant opacity-75 font-label-caps d-block mb-3"
+                                    style="font-size: 10px;">OCTOBER 08, 2024</time>
+                                <h3 class="h5 font-heading fw-bold mb-3 text-on-surface lh-base">The Precision Edge: Why
+                                    Micro-Optimizations Matter</h3>
+                                <p class="text-on-surface-variant mb-4 small lh-lg"
+                                    style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                    In a saturated market, your competitive advantage lies in the final 2% of
+                                    operational efficiency. We break down the math behind the 'Marginal Gold' effect.
+                                </p>
+
+                                <div class="mt-auto">
+                                    <a href="404.html"
+                                        class="read-more-link d-inline-flex align-items-center gap-2 font-button fw-bold text-decoration-none">
+                                        <span>Read Article</span>
+                                        <span class="material-symbols-outlined fs-6 link-arrow">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="card border-0 h-100 group blog-card-elite rounded-4 shadow-sm text-decoration-none overflow-hidden">
+                            <div class="position-relative overflow-hidden" style="height: 220px;">
+                                <img class="w-100 h-100 object-fit-cover img-zoom"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6xU_SUuQTwrbNZDDVFOHl7FkGyuJ2aNEVJUieNPC7sR8FACmldJxZ3cSsHLqqGU1LpkQ4E2ADzSlEd7-jhiySHRCux9qBLkAyQVKFMKKmrPkClU6S71Hz58qZ0I6b1W_iFtd8_qYcZeyY0rlWPEkhpBFHcfMwptOcEIImvBTsaqrQY6r8NHG6ybkCH1CEB3C5X3PwSlKwbS9EfVw0t0G8CYFDYnPXfasEbfvfhgugZtGRoVqBh2uWxr1wTey1yVv3DrfnECgHuUM"
+                                    alt="Leadership" />
+                                <span
+                                    class="position-absolute top-0 start-0 m-3 bg-white text-primary font-label-caps px-3 py-1 rounded-pill shadow-sm fw-bold">Leadership</span>
+                                <span
+                                    class="position-absolute top-0 end-0 m-3 bg-dark bg-opacity-75 backdrop-blur text-white font-label-caps px-2 py-1 rounded-pill shadow-sm"
+                                    style="font-size: 10px;"><span
+                                        class="material-symbols-outlined align-text-bottom me-1"
+                                        style="font-size: 14px;">timer</span>5 min read</span>
+                            </div>
+
+                            <div class="p-4 d-flex flex-column">
+                                <time class="text-on-surface-variant opacity-75 font-label-caps d-block mb-3"
+                                    style="font-size: 10px;">SEPTEMBER 29, 2024</time>
+                                <h3 class="h5 font-heading fw-bold mb-3 text-on-surface lh-base">Cultural Cohesion in
+                                    Distributed Global Enterprises</h3>
+                                <p class="text-on-surface-variant mb-4 small lh-lg"
+                                    style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                    Remote work isn't the problem—fragmented corporate culture is. Learn our framework
+                                    for maintaining institutional integrity across global borders.</p>
+
+                                <div class="mt-auto">
+                                    <a href="404.html"
+                                        class="read-more-link d-inline-flex align-items-center gap-2 font-button fw-bold text-decoration-none">
+                                        <span>Read Article</span>
+                                        <span class="material-symbols-outlined fs-6 link-arrow">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. Final CTA -->
+        <section class="py-5 bg-surface position-relative z-1">
+            <div class="container px-3 px-md-4 px-lg-5 cta-floating-wrapper" data-aos="fade-up">
+                <div
+                    class="cta-glass-card text-white p-3 p-md-5 py-lg-6 d-flex flex-column align-items-center justify-content-center text-center border border-secondary border-opacity-25">
+
+                    <div style="max-width: 52rem; width: 100%;" class="position-relative z-2 py-4">
+                        <span
+                            class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-4 tracking-widest fw-bold shadow-lg border border-secondary border-opacity-25">Take
+                            Action</span>
+                        <h2 class="display-3 font-heading fw-bold mb-4 text-gradient-gold pb-2"
+                            style="line-height: 1.1;">Define Your Corporate Standard.</h2>
+                        <p class="mb-5 fs-5 text-white-75 mx-auto px-2" style="max-width: 36rem;">Your enterprise
+                            transformation begins with a single strategic conversation. Let's build the future together.
+                        </p>
+                        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 w-100 px-3 px-sm-0">
+                            <button onclick="window.top.location.href='404.html'"
+                                class="btn btn-premium btn-premium-secondary font-button px-3 px-md-5 py-3 rounded shadow-lg fw-bold w-100 w-sm-auto">Inquire
+                                Now</button>
+                            <button onclick="window.top.location.href='404.html'"
+                                class="btn btn-premium btn-premium-outline-light font-button px-3 px-md-5 py-3 rounded fw-bold w-100 w-sm-auto">Download
+                                Brochure</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Placeholder -->
+        <div id="footer-placeholder"></div>
+
+        <!-- Bootstrap 5.3.3 JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- AOS Animation JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- Custom JS -->
+        <script src="js/main.js"></script>
 
 </body>
+
 </html>
-
-

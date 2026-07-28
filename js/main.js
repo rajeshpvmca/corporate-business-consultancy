@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS animations
-    AOS.init({
-        duration: 800,
-        once: true,
-        offset: 100
-    });
+    
 
     // Load Header
     fetch('header.html')
@@ -143,5 +139,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const statsSection = document.getElementById('stats-section');
     if (statsSection) {
         observer.observe(statsSection);
+    }
+});
+
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add('loaded');
+            document.body.classList.remove('loading');
+            
+            setTimeout(() => {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100
+                });
+            }, 400); // Initialize AOS when preloader starts fading out
+        }, 300);
+    } else {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
     }
 });
