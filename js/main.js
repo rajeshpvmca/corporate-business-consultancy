@@ -50,6 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+            on: {
+                slideChangeTransitionStart: function () {
+                    // Remove AOS animate class from all slides
+                    document.querySelectorAll('.hero-swiper [data-aos]').forEach(el => {
+                        el.classList.remove('aos-animate');
+                    });
+                },
+                slideChangeTransitionEnd: function () {
+                    // Add AOS animate class to active slide elements
+                    document.querySelectorAll('.hero-swiper .swiper-slide-active [data-aos]').forEach(el => {
+                        el.classList.add('aos-animate');
+                    });
+                }
+            }
         });
     }
 
