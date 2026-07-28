@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top border-bottom border-outline-variant shadow-sm py-3" style="background: rgba(249, 249, 249, 0.95); backdrop-filter: blur(10px);">
+<nav class="navbar navbar-expand-lg fixed-top border-bottom border-outline-variant shadow-sm py-2" style="background: rgba(249, 249, 249, 0.95); backdrop-filter: blur(10px);">
     <div class="container px-4 px-lg-5">
        <a class="navbar-brand position-relative" style="z-index: 1060;" href="index.html">
             <div style="-webkit-mask: url('assets/images/logoStackly.webp') no-repeat center left; -webkit-mask-size: contain; mask: url('assets/images/logoStackly.webp') no-repeat center left; mask-size: contain; background-color: var(--primary); width: 160px; height: 50px;"
@@ -31,7 +31,21 @@
                 </li>
             </ul>
             <div class="d-flex justify-content-center mt-4 mt-lg-0">
-                <a href="login.html" class="btn btn-premium btn-premium-primary font-button px-4 py-2 rounded fw-bold shadow-sm text-decoration-none">Login</a>
+                <style>
+                    .login-btn-group:hover .login-icon-wrapper {
+                        transform: rotate(360deg);
+                        background-color: var(--secondary-container) !important;
+                    }
+                    .login-btn-group:hover .login-icon {
+                        color: var(--on-secondary-container) !important;
+                    }
+                </style>
+                <a href="login.html" class="btn btn-premium btn-premium-primary font-button px-4 py-2 rounded fw-bold shadow-sm text-decoration-none d-inline-flex align-items-center gap-2 login-btn-group">
+                    <span>Login</span>
+                    <div class="login-icon-wrapper d-flex align-items-center justify-content-center rounded-circle bg-white" style="width: 24px; height: 24px; transition: transform 0.5s ease, background-color 0.3s ease;">
+                        <span class="material-symbols-outlined login-icon" style="font-size: 16px; color: var(--primary); transition: color 0.3s ease;">login</span>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
