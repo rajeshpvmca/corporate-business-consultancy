@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Invoices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        body {
+            background-color: transparent;
+            padding: 2rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .stat-card {
+            background: #ffffff;
+            border: 1px solid var(--outline-variant);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary-container);
+            box-shadow: 0 8px 25px rgba(184, 151, 116, 0.15);
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+        }
+        
+        .stat-card.stat-gold::before { background: var(--secondary-container); }
+        .stat-card.stat-green::before { background: #10b981; }
+
+        .stat-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--surface-variant);
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .table-modern {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid var(--outline-variant);
+        }
+        
+        .table-modern th {
+            background: var(--surface-variant);
+            color: var(--on-surface-variant);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 1rem;
+            border-bottom: none;
+        }
+        
+        .table-modern td {
+            padding: 1rem;
+            vertical-align: middle;
+            border-bottom: 1px solid var(--outline-variant);
+            color: var(--on-surface);
+        }
+        
+        .badge-status {
+            padding: 0.4em 0.8em;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+        
+        .badge-paid { background: #d1fae5; color: #065f46; border: 1px solid #34d399; }
+        .badge-pending { background: #fef3c7; color: #92400e; border: 1px solid #fbbf24; }
+        .badge-overdue { background: #fee2e2; color: #b91c1c; border: 1px solid #f87171; }
+
+        .invoice-id {
+            color: var(--primary);
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+        
+        .amount-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--on-surface);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid p-0">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h4 class="font-heading fw-bold text-primary mb-1">Billing & Invoices</h4>
+                <p class="text-secondary small font-button mb-0">View your payment history and outstanding balances.</p>
+            </div>
+            <button class="btn btn-premium btn-premium-primary rounded-pill px-4 py-2 font-button fw-bold d-flex align-items-center gap-2">
+                <span class="material-symbols-outlined fs-5">payment</span> Make a Payment
+            </button>
+        </div>
+
+        <!-- KPI Stats -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-4">
+                <div class="stat-card">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <p class="mb-1 text-secondary small text-uppercase fw-bold">Outstanding Balance</p>
+                            <h3 class="mb-0 fw-bold font-heading text-primary">$12,450.00</h3>
+                            <p class="mb-0 mt-2 text-danger small font-button"><span class="fw-bold">1</span> Invoice Overdue</p>
+                        </div>
+                        <div class="stat-icon" style="background: #fee2e2; color: #b91c1c;"><span class="material-symbols-outlined">warning</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card stat-gold">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <p class="mb-1 text-secondary small text-uppercase fw-bold">Next Payment Due</p>
+                            <h3 class="mb-0 fw-bold font-heading text-primary">Nov 15, 2026</h3>
+                            <p class="mb-0 mt-2 text-secondary small font-button">For Invoice <span class="fw-bold">#INV-2026-088</span></p>
+                        </div>
+                        <div class="stat-icon" style="background: rgba(184, 151, 116, 0.2); color: var(--secondary-container);"><span class="material-symbols-outlined">event</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card stat-green">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <p class="mb-1 text-secondary small text-uppercase fw-bold">Total Paid (YTD)</p>
+                            <h3 class="mb-0 fw-bold font-heading text-primary">$45,200.00</h3>
+                            <p class="mb-0 mt-2 text-success small font-button"><span class="fw-bold">100%</span> of Q1-Q2 Invoices</p>
+                        </div>
+                        <div class="stat-icon" style="background: #d1fae5; color: #065f46;"><span class="material-symbols-outlined">verified</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- ApexChart: Billing History -->
+            <div class="col-lg-12 mb-4">
+                <div class="card border-0 shadow-sm rounded-4 h-100" style="border: 1px solid var(--outline-variant) !important;">
+                    <div class="card-header bg-white border-bottom-0 pt-4 pb-0 px-4">
+                        <h5 class="font-heading fw-bold text-primary mb-0">Billing History (2026)</h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div id="billingChart" style="width: 100%; min-height: 300px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Invoices Table -->
+            <div class="col-lg-12">
+                <div class="table-modern">
+                    <div class="p-4 border-bottom border-outline-variant d-flex justify-content-between align-items-center bg-white">
+                        <h5 class="font-heading fw-bold text-primary mb-0">Recent Invoices</h5>
+                        <div class="btn-group">
+                            <button class="btn btn-sm btn-outline-primary active font-button">All</button>
+                            <button class="btn btn-sm btn-outline-primary font-button">Unpaid</button>
+                            <button class="btn btn-sm btn-outline-primary font-button">Paid</button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Invoice ID</th>
+                                    <th>Description</th>
+                                    <th>Issue Date</th>
+                                    <th>Due Date</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th class="text-end">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="invoice-id">#INV-2026-088</td>
+                                    <td>
+                                        <div class="fw-bold text-primary">Phase 2: Strategy Dev</div>
+                                        <div class="small text-secondary font-button">Consulting Hours</div>
+                                    </td>
+                                    <td class="text-secondary small font-button">Nov 01, 2026</td>
+                                    <td class="text-secondary small font-button">Nov 15, 2026</td>
+                                    <td class="amount-text">$8,250.00</td>
+                                    <td><span class="badge badge-pending">Pending</span></td>
+                                    <td class="text-end">
+                                        <button class="btn btn-sm btn-primary rounded-pill px-3 shadow-sm font-button">Pay Now</button>
+                                        <button class="btn btn-sm btn-light text-primary rounded-circle ms-1 p-2 shadow-sm" title="Download PDF"><span class="material-symbols-outlined" style="font-size: 1.1rem; display: block;">download</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="invoice-id">#INV-2026-075</td>
+                                    <td>
+                                        <div class="fw-bold text-primary">Software Licensing</div>
+                                        <div class="small text-secondary font-button">Annual Renewal</div>
+                                    </td>
+                                    <td class="text-secondary small font-button">Oct 15, 2026</td>
+                                    <td class="text-danger fw-bold small font-button">Oct 30, 2026</td>
+                                    <td class="amount-text">$4,200.00</td>
+                                    <td><span class="badge badge-overdue">Overdue</span></td>
+                                    <td class="text-end">
+                                        <button class="btn btn-sm btn-danger rounded-pill px-3 shadow-sm font-button">Pay Now</button>
+                                        <button class="btn btn-sm btn-light text-primary rounded-circle ms-1 p-2 shadow-sm" title="Download PDF"><span class="material-symbols-outlined" style="font-size: 1.1rem; display: block;">download</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="invoice-id">#INV-2026-042</td>
+                                    <td>
+                                        <div class="fw-bold text-primary">Phase 1: Discovery</div>
+                                        <div class="small text-secondary font-button">Retainer Fee</div>
+                                    </td>
+                                    <td class="text-secondary small font-button">Sep 01, 2026</td>
+                                    <td class="text-secondary small font-button">Sep 15, 2026</td>
+                                    <td class="amount-text">$15,000.00</td>
+                                    <td><span class="badge badge-paid">Paid on Sep 14</span></td>
+                                    <td class="text-end">
+                                        <button class="btn btn-sm btn-light text-secondary rounded-pill px-3 shadow-sm font-button" disabled>Paid</button>
+                                        <button class="btn btn-sm btn-light text-primary rounded-circle ms-1 p-2 shadow-sm" title="Download PDF"><span class="material-symbols-outlined" style="font-size: 1.1rem; display: block;">download</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="invoice-id">#INV-2026-018</td>
+                                    <td>
+                                        <div class="fw-bold text-primary">Initial Consultation</div>
+                                        <div class="small text-secondary font-button">Market Entry Setup</div>
+                                    </td>
+                                    <td class="text-secondary small font-button">Aug 01, 2026</td>
+                                    <td class="text-secondary small font-button">Aug 15, 2026</td>
+                                    <td class="amount-text">$26,000.00</td>
+                                    <td><span class="badge badge-paid">Paid on Aug 10</span></td>
+                                    <td class="text-end">
+                                        <button class="btn btn-sm btn-light text-secondary rounded-pill px-3 shadow-sm font-button" disabled>Paid</button>
+                                        <button class="btn btn-sm btn-light text-primary rounded-circle ms-1 p-2 shadow-sm" title="Download PDF"><span class="material-symbols-outlined" style="font-size: 1.1rem; display: block;">download</span></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize ApexChart for Billing History
+        document.addEventListener('DOMContentLoaded', function () {
+            var options = {
+                series: [{
+                    name: 'Amount Billed',
+                    data: [15000, 26000, 8500, 14200, 15000, 12450]
+                }, {
+                    name: 'Amount Paid',
+                    data: [15000, 26000, 8500, 14200, 15000, 0]
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 350,
+                    fontFamily: 'Inter, sans-serif',
+                    toolbar: { show: false },
+                    stacked: false
+                },
+                colors: ['#dfb78c', '#1e3a8a'], // Gold for Billed, Primary for Paid
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        columnWidth: '55%',
+                        borderRadius: 4
+                    },
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    show: true,
+                    width: 2,
+                    colors: ['transparent']
+                },
+                xaxis: {
+                    categories: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+                    axisBorder: { show: false },
+                    axisTicks: { show: false }
+                },
+                yaxis: {
+                    labels: {
+                        formatter: function (val) {
+                            return "$" + val.toLocaleString();
+                        }
+                    }
+                },
+                fill: {
+                    opacity: 1
+                },
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return "$" + val.toLocaleString();
+                        }
+                    }
+                },
+                grid: {
+                    borderColor: '#f1f5f9',
+                    strokeDashArray: 4,
+                }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#billingChart"), options);
+            chart.render();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Case Studies | GoldStandard Consulting</title>
+    
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .gold-gradient {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-container) 100%);
+        }
+        .metallic-border {
+            border: 1px solid rgba(142, 113, 100, 0.2);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+
+<!-- Header Placeholder -->
+<div id="header-placeholder"></div>
+
+<main>
+<!-- 1. Premium Animated Hero Section -->
+<section class="position-relative overflow-hidden pt-5 pb-5 vh-100 d-flex align-items-center" style="min-height: 800px;">
+    
+    <!-- Animated Background Image & Overlay -->
+    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2000&auto=format&fit=crop" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover bg-zoom-animate" style="z-index: 0;" alt="Business Analytics">
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75" style="z-index: 0;"></div>
+    
+    <!-- Floating Orbs -->
+    <div class="position-absolute rounded-circle float-animate" style="width: 400px; height: 400px; background: radial-gradient(circle, rgba(160, 65, 0, 0.3) 0%, transparent 70%); top: 10%; left: 5%; z-index: 0; filter: blur(30px);"></div>
+    <div class="position-absolute rounded-circle float-animate" style="width: 500px; height: 500px; background: radial-gradient(circle, rgba(254, 214, 91, 0.15) 0%, transparent 70%); bottom: -10%; right: -5%; z-index: 0; filter: blur(40px); animation-delay: 2s;"></div>
+
+    <div class="container px-4 px-lg-5 position-relative z-1">
+        <div class="mx-auto text-center" style="max-width: 60rem;">
+            
+            <span class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-4 tracking-widest fw-bold shadow-sm border border-secondary border-opacity-50" data-aos="fade-down" data-aos-delay="0">Evidence of Excellence</span>
+            
+            <h1 class="display-3 font-heading fw-bold mb-4 text-white text-shadow-lg" data-aos="fade-up" data-aos-delay="200" style="line-height: 1.2;">
+                Precision Strategies, <br/><span class="text-gradient-gold">Measurable Returns.</span>
+            </h1>
+            
+            <p class="fs-5 text-white-50 mb-5 lh-lg mx-auto" style="max-width: 48rem;" data-aos="fade-up" data-aos-delay="400">
+                Explore our portfolio of strategic interventions where we turned complex business challenges into "Gold Standard" success stories through data-driven methodology.
+            </p>
+            
+            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3" data-aos="fade-up" data-aos-delay="600">
+                <button class="btn btn-premium btn-premium-primary font-button px-5 py-3 rounded shadow-lg fw-bold w-100 w-sm-auto">View All Cases</button>
+                <button class="btn btn-premium btn-premium-outline-light font-button px-5 py-3 rounded shadow-sm fw-bold w-100 w-sm-auto">Our Methodology</button>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Filterable Portfolio -->
+<section class="py-5 bg-surface-container-low">
+    <div class="container px-4 px-lg-5">
+        <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-5 gap-4" data-aos="fade-up">
+            <div>
+                <span class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Case Studies</span>
+                <h2 class="display-6 font-heading fw-bold mb-2">Portfolio of Impact</h2>
+                <p class="text-on-surface-variant" style="max-width: 28rem;">Filter our work by industry or service type to find the most relevant insights for your organization.</p>
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+                <button class="btn bg-secondary-container text-on-secondary-container rounded-pill px-4 py-2 font-button fw-bold border-0">All Industries</button>
+                <button class="btn bg-white metallic-border text-on-surface-variant rounded-pill px-4 py-2 font-button fw-bold" onmouseover="this.classList.add('bg-secondary-container', 'bg-opacity-25')" onmouseout="this.classList.remove('bg-secondary-container', 'bg-opacity-25')">FinTech</button>
+                <button class="btn bg-white metallic-border text-on-surface-variant rounded-pill px-4 py-2 font-button fw-bold" onmouseover="this.classList.add('bg-secondary-container', 'bg-opacity-25')" onmouseout="this.classList.remove('bg-secondary-container', 'bg-opacity-25')">Manufacturing</button>
+                <button class="btn bg-white metallic-border text-on-surface-variant rounded-pill px-4 py-2 font-button fw-bold" onmouseover="this.classList.add('bg-secondary-container', 'bg-opacity-25')" onmouseout="this.classList.remove('bg-secondary-container', 'bg-opacity-25')">Healthcare</button>
+                <button class="btn bg-white metallic-border text-on-surface-variant rounded-pill px-4 py-2 font-button fw-bold" onmouseover="this.classList.add('bg-secondary-container', 'bg-opacity-25')" onmouseout="this.classList.remove('bg-secondary-container', 'bg-opacity-25')">SaaS</button>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="bg-white rounded-3 overflow-hidden shadow-sm metallic-border card-hover h-100 d-flex flex-column" style="transition: all 0.3s;">
+                    <div class="position-relative" style="height: 200px;">
+                        <img class="w-100 h-100 object-fit-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPsa8EO1pwImTn5NHV6tHUMDSd_UhSQwMqS5imi5nrp9Sw1VTTzxA0zpiE7H6uXuxf-qP9OCj_4o1XuraojbUdL8739Xeb1Bcjsv3McMoibfVslPPzhiNz3L3yKhOMKHrS8nTNa6AziynyEE52RNKL1GV5c0J68TIFoWZ6AnCa0laGE6zlJ-XDGPqbgPm0KR-4A73AdCOqRxQka3XZD-QouNTjo6k-FXRQy19EJ2g_ySuKLt2L0V1NyxTqD6qTX05AUM9b6DKmedk"/>
+                        <div class="position-absolute top-0 start-0 m-3 bg-primary px-2 py-1 text-white fw-bold text-uppercase rounded" style="font-size: 10px;">Growth Strategy</div>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h3 class="h4 font-heading fw-bold mb-3">Omni-Channel Scale for Meridian Global</h3>
+                        <p class="text-on-surface-variant small mb-4 flex-grow-1">Implementing a restructured logistics and supply chain framework for a leading manufacturer.</p>
+                        <a class="text-primary fw-bold text-decoration-none d-flex align-items-center gap-2 group" href="#" onmouseover="this.querySelector('.material-symbols-outlined').style.transform='translateX(4px)'" onmouseout="this.querySelector('.material-symbols-outlined').style.transform='translateX(0)'">
+                            View Full Case Study <span class="material-symbols-outlined small" style="transition: transform 0.3s;">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white rounded-3 overflow-hidden shadow-sm metallic-border card-hover h-100 d-flex flex-column border-top border-4 border-secondary-container" style="transition: all 0.3s;">
+                    <div class="position-relative" style="height: 200px;">
+                        <img class="w-100 h-100 object-fit-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACkDBFm3DoxhOErvp8ZKzJYfEfKXlzhpbLdv1ZXL5aEdOaC6WhSnhljK7-BUBTwru0tYdCRJ7jqIUmpoI9kZ4cWU6vcTQTyiwzrn5a2xwM7hJnL2mPPLdPomaRy_2mvXNwKO0IsKIHHXDkul64DE5Av9UYc2p_SAjCGFg7Dd0lsbCMXwlbzaB_FX_puaWksqiBJbOe2SqCRujtBXQIVVw48CQg_X0wFI_Ocpmi_An65E72lQtcsOKLPhhwu1eBQGYLgo2E78U_G00"/>
+                        <div class="position-absolute top-0 start-0 m-3 bg-primary px-2 py-1 text-white fw-bold text-uppercase rounded" style="font-size: 10px;">Digital Transformation</div>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h3 class="h4 font-heading fw-bold mb-3">FinTech Ecosystem Modernization</h3>
+                        <p class="text-on-surface-variant small mb-4 flex-grow-1">Revolutionizing legacy payment systems for a Tier-1 European banking group via cloud architecture.</p>
+                        <a class="text-primary fw-bold text-decoration-none d-flex align-items-center gap-2 group" href="#" onmouseover="this.querySelector('.material-symbols-outlined').style.transform='translateX(4px)'" onmouseout="this.querySelector('.material-symbols-outlined').style.transform='translateX(0)'">
+                            View Full Case Study <span class="material-symbols-outlined small" style="transition: transform 0.3s;">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white rounded-3 overflow-hidden shadow-sm metallic-border card-hover h-100 d-flex flex-column" style="transition: all 0.3s;">
+                    <div class="position-relative" style="height: 200px;">
+                        <img class="w-100 h-100 object-fit-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUqjY7rgKu9wbGbB8wHk2WJwEeUwRHG_ZI5fJOd6s6j2vQ3SW-7fYuW6VEsaqBJT-BkBQ3iEU9oAZJ-kMbc5KDdjNeWLr5pPAz8w0utRiKRZgTsd78rSYfGdKCSkzxr31HrVVIv7Hb_keykjPVm11hd4aAxYIyvWV4AjR-oU8Ld3KNmHjyd2Nwy-N5vb5SRvURsnTp82xBLoXSUfyWOPqLG9RzAvV94174cO7Zq9R3YUQl7uR6RaKTyIf9rtu4ZjVRMHZoFSsaa6k"/>
+                        <div class="position-absolute top-0 start-0 m-3 bg-primary px-2 py-1 text-white fw-bold text-uppercase rounded" style="font-size: 10px;">Risk Management</div>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h3 class="h4 font-heading fw-bold mb-3">SecureScale Infrastructure Audit</h3>
+                        <p class="text-on-surface-variant small mb-4 flex-grow-1">Comprehensive risk mitigation and compliance overhaul for a NASDAQ-listed data services firm.</p>
+                        <a class="text-primary fw-bold text-decoration-none d-flex align-items-center gap-2 group" href="#" onmouseover="this.querySelector('.material-symbols-outlined').style.transform='translateX(4px)'" onmouseout="this.querySelector('.material-symbols-outlined').style.transform='translateX(0)'">
+                            View Full Case Study <span class="material-symbols-outlined small" style="transition: transform 0.3s;">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Featured Success Story detail -->
+<section class="py-5 bg-surface">
+    <div class="container px-4 px-lg-5" data-aos="fade-up">
+        <div class="bg-inverse-surface text-white rounded-4 overflow-hidden row g-0">
+            <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+                <div class="p-md-4">
+                    <span class="font-label-caps text-primary bg-white bg-opacity-10 px-3 py-1 rounded text-uppercase d-inline-block mb-4 tracking-widest fw-bold shadow-sm border border-white border-opacity-25 backdrop-blur">Featured Story</span>
+                    <h2 class="display-6 font-heading fw-bold mb-4">The $450M Pivot: How Apex Logistics Dominating the APAC Market.</h2>
+                    <p class="text-white-50 fs-5 fst-italic mb-4">"GoldStandard didn't just give us a report; they gave us a blueprint for the next decade of our business existence."</p>
+                    <div class="d-flex flex-column gap-3 mb-5">
+                        <div class="d-flex align-items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary-fixed">check_circle</span>
+                            <span class="small">94% reduction in cross-border transaction friction.</span>
+                        </div>
+                        <div class="d-flex align-items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary-fixed">check_circle</span>
+                            <span class="small">Full digital integration across 14 sovereign territories.</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-premium btn-premium-secondary font-button px-5 py-3 rounded fw-bold align-self-start">Read the Full Narrative</button>
+                </div>
+            </div>
+            <div class="col-md-6" style="min-height: 400px;">
+                <img class="w-100 h-100 object-fit-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMuSQmQ0UXyEfDpLZm1tDolKn5PFG9NIdlYxI9BoBntxyNGLzH2JwFBKLG1cHU1svn43yLzzsc9K2Er2Ue-DnF7lg3SoAc77UttShQJc675tonr0MmfGOG6HbOQyMpJre__4jzglosAPJJcGQf6g7yOkcO7DLnK1ZEKyGA_f-uQcmO4ooKXNSdPWQv9XCR3EkV2sKW5DvzFYDV0meRqpN0t1OCZz8pLq03SQYgCN26ILCaxRzJfC5jFb0dIVIoXvM50f8ZY9hHZJM"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: Client Testimonial Quotes Grid -->
+<section class="py-5 bg-surface-container">
+    <div class="container px-4 px-lg-5">
+        <div class="text-center mb-5 pb-4" data-aos="fade-up">
+            <span class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Testimonials</span>
+            <h2 class="display-6 font-heading fw-bold">Words from our Partners</h2>
+        </div>
+        <style>
+            .testimonial-card {
+                transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                background: #ffffff;
+                border-top: 4px solid transparent;
+            }
+            .testimonial-card:hover {
+                background: var(--primary);
+                transform: translateY(-8px);
+                box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+                border-top-color: var(--secondary-container);
+            }
+            .testimonial-text, .testimonial-name, .testimonial-title {
+                transition: color 0.4s ease;
+            }
+            .testimonial-card:hover .testimonial-text,
+            .testimonial-card:hover .testimonial-name {
+                color: #ffffff !important;
+            }
+            .testimonial-card:hover .testimonial-title {
+                color: rgba(255,255,255,0.7) !important;
+            }
+            .testimonial-icon {
+                transition: all 0.4s ease;
+            }
+            .testimonial-card:hover .testimonial-icon {
+                color: var(--secondary-container) !important;
+                opacity: 0.8 !important;
+                transform: scale(1.1);
+            }
+        </style>
+
+        <div class="row g-4">
+            <!-- Quote 1 -->
+            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="testimonial-card p-4 p-lg-5 rounded-4 shadow-sm position-relative h-100 d-flex flex-column">
+                    <span class="material-symbols-outlined display-4 text-secondary-container text-opacity-50 position-absolute top-0 end-0 m-3 m-md-4 testimonial-icon">format_quote</span>
+                    <p class="testimonial-text text-on-surface-variant mb-5 fst-italic position-relative z-1 flex-grow-1 mt-4 mt-md-0">"The depth of analytical rigor brought to our restructuring project was unlike anything we've seen from the Big Four. Exceptional ROI."</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="rounded-circle overflow-hidden bg-surface-dim" style="width: 50px; height: 50px; flex-shrink: 0;">
+                            <img class="w-100 h-100 object-fit-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCeDJrIl5kDGWE3NRcUOFt9eqr4i8fPf1P5CR2RvWLt99ftQeZNoZn9rN9DgGO7x72SueC-2ZZa2-TNF1u7T_CBoLNbNVNdquP67NZil4E2xm-yyGXto_5yHF9gxBQ52GRTLVHSDlyoSNXtnvi1Yk7GWaBKhYseUMhFA1Mtp9qjbVslC7gnAQuZBU7Z7Ec7Y9gI3B0TEZWgcF-IQ5o2lFBkpm0DiQyRdJM2yU2YMZ3dgM5e_3mYCXc046HqUtWBidTf475vaP_Lqk" alt="Elena Vovk"/>
+                        </div>
+                        <div>
+                            <h4 class="testimonial-name fw-bold mb-0" style="font-size: 0.9rem;">Elena Vovk</h4>
+                            <p class="testimonial-title small text-on-surface-variant mb-0" style="font-size: 0.8rem;">CEO, Vovk Tech Systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quote 2 -->
+            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-card p-4 p-lg-5 rounded-4 shadow-sm position-relative h-100 d-flex flex-column" style="border-top-color: var(--primary);">
+                    <span class="material-symbols-outlined display-4 text-secondary-container text-opacity-50 position-absolute top-0 end-0 m-3 m-md-4 testimonial-icon">format_quote</span>
+                    <p class="testimonial-text text-on-surface-variant mb-5 fst-italic position-relative z-1 flex-grow-1 mt-4 mt-md-0">"GoldStandard’s approach to risk management allowed us to navigate our IPO with unprecedented confidence and zero compliance delays."</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="rounded-circle overflow-hidden bg-surface-dim" style="width: 50px; height: 50px; flex-shrink: 0;">
+                            <img class="w-100 h-100 object-fit-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw9Hidm4uX5P3qJBughWQKigHKdoq2LaxPjnlo4xk0_8vQn1bP4rwS5m_3ie9h3mwgP0lPOJbiHlAWZkDaAedaxoYqllZyy_9vyQMQWYbldhBjGCoNm8GrbojhsOLkvkSR8kFE0nPavxLQdZ8iAIk3fnJMpm4tZeNfstEFXstbJGQS7199vzZXYxHwDwK4LnjY1KktNYzLVTwwKZ2DnxxmRFlFQ7qtISzF7WcfN_gD0gYJkaaehIt_305GBo7sFa3nAkNGB5K-tr4" alt="Marcus Chen"/>
+                        </div>
+                        <div>
+                            <h4 class="testimonial-name fw-bold mb-0" style="font-size: 0.9rem;">Marcus Chen</h4>
+                            <p class="testimonial-title small text-on-surface-variant mb-0" style="font-size: 0.8rem;">CFO, Horizon Data Corp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote 3 -->
+            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-card p-4 p-lg-5 rounded-4 shadow-sm position-relative h-100 d-flex flex-column">
+                    <span class="material-symbols-outlined display-4 text-secondary-container text-opacity-50 position-absolute top-0 end-0 m-3 m-md-4 testimonial-icon">format_quote</span>
+                    <p class="testimonial-text text-on-surface-variant mb-5 fst-italic position-relative z-1 flex-grow-1 mt-4 mt-md-0">"They don't just solve the problem you present; they identify the underlying systemic issues you didn't even know were holding you back."</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="rounded-circle overflow-hidden bg-surface-dim" style="width: 50px; height: 50px; flex-shrink: 0;">
+                            <img class="w-100 h-100 object-fit-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZb0INklstensBTcz0SV1Konnzat6bwPzEadCRyWYDwvRM5UFZcfc_bO76pH4hroth25N3bNiSmQkumqlEQxLIJ8m2G03Mvs__mk6aZEDMZSTEz4oaoepPMb1Xl-gLAUrno_McwWjuTWu_KIPXCazJyu5hwZgJliuFAIGvm9JxwgidRjYAt3SSI2KVnQs3DNtYKzcSV4mo4IJje5Vaf86QuYQs7SExTgI-KUJxrG-xLcTmBYnIm0FotBfZH9QyZoR9CjcT82NhcsA" alt="Julian Aris"/>
+                        </div>
+                        <div>
+                            <h4 class="testimonial-name fw-bold mb-0" style="font-size: 0.9rem;">Julian Aris</h4>
+                            <p class="testimonial-title small text-on-surface-variant mb-0" style="font-size: 0.8rem;">Founder, NeoBank APAC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 5: 'By the Numbers' ROI results -->
+<section class="py-5 bg-surface text-center">
+    <div class="container px-4 px-lg-5" data-aos="fade-up">
+        <span class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">The ROI</span>
+        <h2 class="display-6 font-heading fw-bold mb-4">The Gold Standard ROI</h2>
+        <p class="text-on-surface-variant mx-auto mb-5 pb-4 fs-5" style="max-width: 42rem;">Aggregated results across 500+ client engagements in the last 24 months. Data isn't just a part of our process; it's the foundation.</p>
+        
+        <style>
+            .roi-card {
+                transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                background: #ffffff;
+                border: 1px solid rgba(0,0,0,0.05);
+            }
+            .roi-card:hover {
+                background: var(--primary);
+                transform: translateY(-8px);
+                box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+                border-color: var(--primary);
+            }
+            .roi-number {
+                background: linear-gradient(135deg, var(--secondary-container), #d4af37);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all 0.4s ease;
+            }
+            .roi-card:hover .roi-number {
+                background: linear-gradient(135deg, #ffffff, #f0f0f0);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .roi-label {
+                transition: color 0.4s ease;
+            }
+            .roi-card:hover .roi-label {
+                color: rgba(255,255,255,0.9) !important;
+            }
+        </style>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                <div class="p-4 p-lg-5 rounded-4 text-center roi-card h-100 shadow-sm">
+                    <div class="display-4 font-heading fw-bold mb-3 roi-number">32%</div>
+                    <div class="small fw-bold text-uppercase text-on-surface-variant tracking-widest roi-label">Average OpEx Reduction</div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-4 p-lg-5 rounded-4 text-center roi-card h-100 shadow-sm">
+                    <div class="display-4 font-heading fw-bold mb-3 roi-number">$1.2B</div>
+                    <div class="small fw-bold text-uppercase text-on-surface-variant tracking-widest roi-label">Capital Optimized</div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-4 p-lg-5 rounded-4 text-center roi-card h-100 shadow-sm">
+                    <div class="display-4 font-heading fw-bold mb-3 roi-number">4.5x</div>
+                    <div class="small fw-bold text-uppercase text-on-surface-variant tracking-widest roi-label">Average Yield Increase</div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="p-4 p-lg-5 rounded-4 text-center roi-card h-100 shadow-sm">
+                    <div class="display-4 font-heading fw-bold mb-3 roi-number">12mo</div>
+                    <div class="small fw-bold text-uppercase text-on-surface-variant tracking-widest roi-label">Avg. Time to Full ROI</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 6: Methodology Behind Success -->
+<section class="py-5 bg-surface text-on-surface">
+    <div class="container px-4 px-lg-5">
+        <div class="row g-5">
+            <div class="col-lg-4" data-aos="fade-right">
+                <span class="font-label-caps text-secondary-container bg-dark px-3 py-1 rounded text-uppercase d-inline-block mb-3 tracking-widest fw-bold shadow-sm">Framework</span>
+                <h2 class="display-6 font-heading fw-bold mb-4">The Methodology of Success</h2>
+                <p class="text-on-surface-variant mb-5 fs-5">We don't rely on guesswork. Every success story is the result of our proprietary 4-pillar methodology that bridges the gap between vision and execution.</p>
+                <button class="btn btn-premium btn-premium-primary font-button px-4 py-3 rounded-pill shadow-lg fw-bold d-inline-flex align-items-center gap-2" onmouseover="this.querySelector('.material-symbols-outlined').style.transform='translateY(4px)'" onmouseout="this.querySelector('.material-symbols-outlined').style.transform='translateY(0)'">
+                    Download Methodology PDF <span class="material-symbols-outlined" style="transition: transform 0.3s;">download</span>
+                </button>
+            </div>
+            
+            <style>
+                .methodology-card {
+                    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    background: #ffffff;
+                    border-left: 4px solid var(--secondary-container);
+                }
+                .methodology-card:hover {
+                    background: var(--primary);
+                    transform: translateY(-8px);
+                    box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+                }
+                .methodology-card .icon-box {
+                    transition: all 0.4s ease;
+                }
+                .methodology-card:hover .icon-box {
+                    background: rgba(255,255,255,0.1) !important;
+                }
+                .methodology-card:hover .material-symbols-outlined {
+                    color: var(--secondary-container) !important;
+                    transform: scale(1.1);
+                }
+                .methodology-card .card-title, .methodology-card .card-text {
+                    transition: color 0.4s ease;
+                }
+                .methodology-card:hover .card-title, .methodology-card:hover .card-text {
+                    color: #ffffff !important;
+                }
+            </style>
+
+            <div class="col-lg-8">
+                <div class="row g-4">
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="0">
+                        <div class="p-4 shadow-sm h-100 methodology-card rounded-end-3">
+                            <div class="bg-secondary-container bg-opacity-25 rounded d-flex align-items-center justify-content-center mb-4 icon-box" style="width: 50px; height: 50px;">
+                                <span class="material-symbols-outlined text-secondary" style="transition: all 0.3s;">analytics</span>
+                            </div>
+                            <h4 class="fw-bold fs-5 mb-2 card-title">01. Deep Audit</h4>
+                            <p class="small text-on-surface-variant mb-0 card-text">Granular analysis of existing systems, financial health, and cultural bottlenecks using 200+ unique KPIs.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="p-4 shadow-sm h-100 methodology-card rounded-end-3">
+                            <div class="bg-secondary-container bg-opacity-25 rounded d-flex align-items-center justify-content-center mb-4 icon-box" style="width: 50px; height: 50px;">
+                                <span class="material-symbols-outlined text-secondary" style="transition: all 0.3s;">architecture</span>
+                            </div>
+                            <h4 class="fw-bold fs-5 mb-2 card-title">02. Strategic Blueprint</h4>
+                            <p class="small text-on-surface-variant mb-0 card-text">Design of custom intervention frameworks that align stakeholder interests with long-term profitability.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="p-4 shadow-sm h-100 methodology-card rounded-end-3">
+                            <div class="bg-secondary-container bg-opacity-25 rounded d-flex align-items-center justify-content-center mb-4 icon-box" style="width: 50px; height: 50px;">
+                                <span class="material-symbols-outlined text-secondary" style="transition: all 0.3s;">rocket_launch</span>
+                            </div>
+                            <h4 class="fw-bold fs-5 mb-2 card-title">03. Rapid Deployment</h4>
+                            <p class="small text-on-surface-variant mb-0 card-text">Agile implementation of high-impact changes with minimal disruption to ongoing business operations.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="p-4 shadow-sm h-100 methodology-card rounded-end-3">
+                            <div class="bg-secondary-container bg-opacity-25 rounded d-flex align-items-center justify-content-center mb-4 icon-box" style="width: 50px; height: 50px;">
+                                <span class="material-symbols-outlined text-secondary" style="transition: all 0.3s;">monitoring</span>
+                            </div>
+                            <h4 class="fw-bold fs-5 mb-2 card-title">04. Iterative Optimization</h4>
+                            <p class="small text-on-surface-variant mb-0 card-text">Continuous monitoring and adjustment to ensure the intervention scales with the company's growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 7: Premium Glass CTA Footer -->
+<section class="py-5 bg-surface pb-5">
+    <div class="container px-4 px-lg-5" data-aos="fade-up">
+        <!-- The Floating Glass Card -->
+        <div class="position-relative bg-dark rounded-5 overflow-hidden shadow-lg border border-secondary border-opacity-25" style="transform-style: preserve-3d; perspective: 1000px;">
+            
+            <!-- Dynamic Background elements -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-secondary opacity-25" style="mix-blend-mode: overlay; background-image: radial-gradient(circle at 80% 20%, var(--secondary-container), transparent 50%);"></div>
+            <div class="position-absolute top-50 start-0 translate-middle-y rounded-circle bg-primary opacity-50" style="width: 300px; height: 300px; filter: blur(80px);"></div>
+            <div class="position-absolute bottom-0 end-0 rounded-circle bg-secondary-container opacity-50" style="width: 400px; height: 400px; filter: blur(100px); transform: translate(30%, 30%);"></div>
+            
+            <div class="position-relative z-1 p-3 p-md-5 text-center text-white d-flex flex-column align-items-center justify-content-center" style="min-height: 400px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+                <span class="font-label-caps text-secondary-container bg-white bg-opacity-10 px-3 py-1 rounded text-uppercase d-inline-block mb-4 tracking-widest fw-bold shadow-sm backdrop-blur border border-white border-opacity-25">Take Action</span>
+                
+                <h2 class="display-4 font-heading fw-bold mb-4 text-shadow-sm">Ready to author your next <br/><span class="text-gradient-gold">success story?</span></h2>
+                <p class="fs-5 text-white-75 mb-5 lh-lg mx-auto" style="max-width: 42rem;">Book a discovery session with our senior partners to explore how the "Gold Standard" can be applied to your specific challenges.</p>
+                
+                <style>
+                    .cta-input::placeholder {
+                        color: rgba(255, 255, 255, 0.6) !important;
+                    }
+                    @media (max-width: 380px) {
+                        .cta-input {
+                            font-size: 1rem !important;
+                        }
+                    }
+                </style>
+                <form class="mx-auto w-100" style="max-width: 42rem;">
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-12 col-sm-7 col-md-8">
+                            <input class="form-control form-control-lg bg-white bg-opacity-10 border border-white border-opacity-25 text-white shadow-none rounded-pill px-4 w-100 h-100 cta-input" placeholder="Corporate Email" type="email" style="min-height: 56px; transition: all 0.3s;" onfocus="this.classList.replace('bg-opacity-10', 'bg-opacity-25'); this.style.borderColor='var(--secondary-container)'" onblur="this.style.borderColor='rgba(255,255,255,0.25)'"/>
+                        </div>
+                        <div class="col-12 col-sm-5 col-md-4">
+                            <button class="btn btn-premium btn-premium-primary font-button w-100 rounded-pill fw-bold shadow-lg h-100 d-flex align-items-center justify-content-center gap-2" type="submit" style="min-height: 56px;">
+                                Schedule Consultation
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                
+                <p class="mt-4 pt-3 small text-white-50 fst-italic">Join 500+ enterprises currently outperforming their markets.</p>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- Footer Placeholder -->
+<div id="footer-placeholder"></div>
+
+<!-- Bootstrap 5.3.3 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS Animation JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
+

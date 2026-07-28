@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Clients - GoldStandard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        body {
+            background-color: transparent;
+            padding: 2rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .chart-box {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid var(--outline-variant);
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            height: 100%;
+        }
+
+        .client-health-card {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid var(--outline-variant);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            padding: 1.5rem;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .client-health-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            box-shadow: 0 8px 25px rgba(30, 58, 138, 0.1);
+        }
+
+        .health-indicator {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(255,255,255,0.8);
+        }
+        .health-green { background: #10b981; box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2); }
+        .health-yellow { background: #f59e0b; box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2); }
+        .health-red { background: #ef4444; box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.2); }
+
+        .client-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--outline-variant);
+        }
+        .metric-row:last-child { border-bottom: none; }
+        
+        .metric-label { color: var(--on-surface-variant); font-size: 0.85rem; font-weight: 600; }
+        .metric-val { color: var(--primary); font-weight: 700; font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid p-0">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h4 class="font-heading fw-bold text-primary mb-1">Key Accounts Portfolio</h4>
+                <p class="text-secondary small font-button mb-0">Monitor the health and lifetime value of Top Tier clients.</p>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-2 fw-bold d-flex align-items-center gap-2">
+                    <div class="health-indicator health-green" style="position:static; width:8px; height:8px; box-shadow:none;"></div> Overall Portfolio: Healthy
+                </span>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <!-- Industry Breakdown Chart -->
+            <div class="col-lg-5">
+                <div class="chart-box">
+                    <h6 class="font-heading fw-bold text-primary mb-1">Revenue by Industry</h6>
+                    <p class="text-secondary small font-button mb-3">YTD Distribution</p>
+                    <div id="industryChart" style="width: 100%; display: flex; justify-content: center;"></div>
+                </div>
+            </div>
+
+            <!-- Summary KPI -->
+            <div class="col-lg-7">
+                <div class="row g-4 h-100">
+                    <div class="col-md-6">
+                        <div class="chart-box d-flex flex-column justify-content-center">
+                            <p class="mb-1 text-secondary small text-uppercase fw-bold">Total Active Accounts</p>
+                            <h2 class="font-heading fw-bold text-primary mb-0">124</h2>
+                            <span class="text-success small fw-bold d-flex align-items-center gap-1 mt-2">
+                                <span class="material-symbols-outlined fs-6">add</span> 8 New this Quarter
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="chart-box d-flex flex-column justify-content-center" style="background: linear-gradient(135deg, var(--primary), #1e3a8a); color: white;">
+                            <p class="mb-1 text-white-50 small text-uppercase fw-bold">Avg Client Lifetime Value</p>
+                            <h2 class="font-heading fw-bold text-white mb-0">$1.2M</h2>
+                            <span class="text-white-50 small fw-bold d-flex align-items-center gap-1 mt-2">
+                                Top 20% accounts for 80% Rev
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="font-heading fw-bold text-primary mb-3">Tier 1 Client Health Watchlist</h5>
+        
+        <div class="row g-4">
+            <!-- Client 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="client-health-card">
+                    <div class="health-indicator health-green" title="Healthy"></div>
+                    
+                    <div class="client-logo" style="background: rgba(30, 58, 138, 0.1); color: var(--primary);">GT</div>
+                    <h5 class="font-heading fw-bold text-primary mb-0">GlobalTech Inc.</h5>
+                    <p class="text-secondary small mb-4">Enterprise Technology</p>
+                    
+                    <div class="metric-row">
+                        <span class="metric-label">Account Manager</span>
+                        <span class="metric-val" style="font-family: 'Inter', sans-serif;">Sarah Jenkins</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">YTD Revenue</span>
+                        <span class="metric-val">$850,000</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">CSAT Score</span>
+                        <span class="metric-val text-success">4.9 / 5.0</span>
+                    </div>
+                    
+                    <button class="btn btn-outline-primary w-100 mt-4 rounded-pill font-button fw-bold">View Full Profile</button>
+                </div>
+            </div>
+
+            <!-- Client 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="client-health-card">
+                    <div class="health-indicator health-yellow" title="At Risk"></div>
+                    
+                    <div class="client-logo" style="background: rgba(184, 151, 116, 0.2); color: var(--secondary-container);">NC</div>
+                    <h5 class="font-heading fw-bold text-primary mb-0">NovaCorp Solutions</h5>
+                    <p class="text-secondary small mb-4">Financial Services</p>
+                    
+                    <div class="metric-row">
+                        <span class="metric-label">Account Manager</span>
+                        <span class="metric-val" style="font-family: 'Inter', sans-serif;">Michael Chen</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">YTD Revenue</span>
+                        <span class="metric-val">$420,000</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">CSAT Score</span>
+                        <span class="metric-val text-warning">3.4 / 5.0</span>
+                    </div>
+                    
+                    <button class="btn btn-outline-primary w-100 mt-4 rounded-pill font-button fw-bold">View Full Profile</button>
+                </div>
+            </div>
+
+            <!-- Client 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="client-health-card">
+                    <div class="health-indicator health-green" title="Healthy"></div>
+                    
+                    <div class="client-logo" style="background: #f1f5f9; color: #475569;">AC</div>
+                    <h5 class="font-heading fw-bold text-primary mb-0">Acme Corp</h5>
+                    <p class="text-secondary small mb-4">Retail & Logistics</p>
+                    
+                    <div class="metric-row">
+                        <span class="metric-label">Account Manager</span>
+                        <span class="metric-val" style="font-family: 'Inter', sans-serif;">David Patel</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">YTD Revenue</span>
+                        <span class="metric-val">$1,100,000</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">CSAT Score</span>
+                        <span class="metric-val text-success">4.8 / 5.0</span>
+                    </div>
+                    
+                    <button class="btn btn-outline-primary w-100 mt-4 rounded-pill font-button fw-bold">View Full Profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize ApexChart Donut
+        document.addEventListener('DOMContentLoaded', function () {
+            var options = {
+                series: [45, 25, 20, 10], // Percentages
+                chart: {
+                    type: 'donut',
+                    height: 280,
+                    fontFamily: 'Inter, sans-serif',
+                },
+                labels: ['Technology', 'Financial Services', 'Retail/Logistics', 'Healthcare'],
+                colors: ['#1e3a8a', '#dfb78c', '#64748b', '#cbd5e1'], 
+                plotOptions: {
+                    pie: {
+                        donut: {
+                            size: '65%',
+                        }
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                legend: {
+                    position: 'bottom',
+                    fontSize: '12px',
+                    fontFamily: 'Inter',
+                    markers: { radius: 12 }
+                },
+                stroke: {
+                    width: 3,
+                    colors: ['#ffffff']
+                }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#industryChart"), options);
+            chart.render();
+        });
+    </script>
+</body>
+</html>

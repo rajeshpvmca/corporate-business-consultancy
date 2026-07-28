@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Overview - GoldStandard Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&family=Fira+Code:wght@500&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        body {
+            background-color: transparent;
+            padding: 2rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .metric-card {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid var(--outline-variant);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .metric-value {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .chart-box {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid var(--outline-variant);
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            height: 100%;
+        }
+
+        .terminal-box {
+            background: #0f172a;
+            border-radius: 12px;
+            padding: 1.5rem;
+            color: #38bdf8;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            height: 100%;
+            overflow-y: auto;
+            max-height: 350px;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
+        }
+        
+        .terminal-line { margin-bottom: 0.5rem; }
+        .t-time { color: #64748b; margin-right: 10px; }
+        .t-info { color: #10b981; }
+        .t-warn { color: #f59e0b; }
+        .t-err { color: #ef4444; }
+
+        .pulse-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #10b981;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            animation: pulse-green 2s infinite;
+        }
+
+        @keyframes pulse-green {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid p-0">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h4 class="font-heading fw-bold text-primary mb-1">System Overview</h4>
+                <p class="text-secondary small font-button mb-0">Monitor application health, active sessions, and server performance.</p>
+            </div>
+            <div class="d-flex align-items-center gap-2 px-3 py-2 bg-white rounded-pill border border-outline-variant shadow-sm">
+                <span class="pulse-dot"></span>
+                <span class="fw-bold small text-success font-button">All Systems Operational</span>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <!-- KPI 1 -->
+            <div class="col-md-3">
+                <div class="metric-card border-bottom border-4 border-primary">
+                    <div class="metric-icon" style="background: rgba(30, 58, 138, 0.1); color: var(--primary);">
+                        <span class="material-symbols-outlined">group</span>
+                    </div>
+                    <div>
+                        <p class="text-secondary small text-uppercase fw-bold mb-1">Active Users (24h)</p>
+                        <div class="metric-value">1,248</div>
+                    </div>
+                </div>
+            </div>
+            <!-- KPI 2 -->
+            <div class="col-md-3">
+                <div class="metric-card border-bottom border-4 border-success">
+                    <div class="metric-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">
+                        <span class="material-symbols-outlined">api</span>
+                    </div>
+                    <div>
+                        <p class="text-secondary small text-uppercase fw-bold mb-1">API Requests</p>
+                        <div class="metric-value">45.2k</div>
+                    </div>
+                </div>
+            </div>
+            <!-- KPI 3 -->
+            <div class="col-md-3">
+                <div class="metric-card border-bottom border-4" style="border-color: var(--secondary-container) !important;">
+                    <div class="metric-icon" style="background: rgba(184, 151, 116, 0.2); color: var(--secondary-container);">
+                        <span class="material-symbols-outlined">memory</span>
+                    </div>
+                    <div>
+                        <p class="text-secondary small text-uppercase fw-bold mb-1">Server Load</p>
+                        <div class="metric-value">28%</div>
+                    </div>
+                </div>
+            </div>
+            <!-- KPI 4 -->
+            <div class="col-md-3">
+                <div class="metric-card border-bottom border-4 border-danger">
+                    <div class="metric-icon" style="background: rgba(239, 68, 68, 0.1); color: #ef4444;">
+                        <span class="material-symbols-outlined">error</span>
+                    </div>
+                    <div>
+                        <p class="text-secondary small text-uppercase fw-bold mb-1">Active Errors</p>
+                        <div class="metric-value">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Server Load Chart -->
+            <div class="col-lg-8">
+                <div class="chart-box">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <h6 class="font-heading fw-bold text-primary mb-1">Network Traffic & Server Load</h6>
+                            <p class="text-secondary small font-button mb-0">Last 24 hours timeline</p>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-sm btn-outline-secondary font-button">1H</button>
+                            <button class="btn btn-sm btn-primary font-button">24H</button>
+                            <button class="btn btn-sm btn-outline-secondary font-button">7D</button>
+                        </div>
+                    </div>
+                    <div id="systemChart" style="width: 100%; min-height: 350px;"></div>
+                </div>
+            </div>
+
+            <!-- Live Terminal -->
+            <div class="col-lg-4">
+                <div class="terminal-box">
+                    <div class="mb-3 border-bottom border-secondary pb-2 d-flex justify-content-between">
+                        <span class="text-white fw-bold">Live System Logs</span>
+                        <span class="material-symbols-outlined text-secondary fs-5">terminal</span>
+                    </div>
+                    
+                    <div class="terminal-line"><span class="t-time">[18:24:01]</span> <span class="t-info">INFO:</span> DB Connection pool refreshed.</div>
+                    <div class="terminal-line"><span class="t-time">[18:25:15]</span> <span class="t-info">INFO:</span> User auth token generated (ID: 9942).</div>
+                    <div class="terminal-line"><span class="t-time">[18:28:44]</span> <span class="t-info">INFO:</span> Cron job 'DailyBackup' executed successfully.</div>
+                    <div class="terminal-line"><span class="t-time">[18:31:02]</span> <span class="t-warn">WARN:</span> API rate limit approaching for IP 192.168.1.45</div>
+                    <div class="terminal-line"><span class="t-time">[18:35:19]</span> <span class="t-info">INFO:</span> New document uploaded to S3 bucket (8.4MB).</div>
+                    <div class="terminal-line"><span class="t-time">[18:39:10]</span> <span class="t-err">ERROR:</span> SMTP relay failed to send invoice #4002. Timeout.</div>
+                    <div class="terminal-line"><span class="t-time">[18:40:05]</span> <span class="t-info">INFO:</span> Admin user (admin@stackly.com) accessed dashboard.</div>
+                    <div class="terminal-line"><span class="t-time">[18:41:22]</span> <span class="t-info">INFO:</span> WebSocket connection established.</div>
+                    
+                    <div class="mt-3 text-secondary animate-pulse">Waiting for new events...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize ApexChart Area (System Load)
+        document.addEventListener('DOMContentLoaded', function () {
+            var options = {
+                series: [{
+                    name: 'Requests / sec',
+                    data: [120, 180, 240, 190, 310, 420, 380, 290, 450, 520, 480, 410]
+                }, {
+                    name: 'CPU Load (%)',
+                    data: [15, 20, 25, 22, 35, 45, 40, 32, 50, 60, 55, 48]
+                }],
+                chart: {
+                    height: 350,
+                    type: 'area',
+                    fontFamily: 'Inter, sans-serif',
+                    toolbar: { show: false },
+                    animations: { enabled: true, easing: 'easeinout', speed: 800 }
+                },
+                colors: ['#1e3a8a', '#dfb78c'], // Blue, Gold
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shadeIntensity: 1,
+                        opacityFrom: 0.4,
+                        opacityTo: 0.05,
+                        stops: [0, 90, 100]
+                    }
+                },
+                dataLabels: { enabled: false },
+                stroke: {
+                    curve: 'smooth',
+                    width: 2
+                },
+                xaxis: {
+                    categories: ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'],
+                    axisBorder: { show: false },
+                    axisTicks: { show: false }
+                },
+                yaxis: [{
+                    title: { text: 'Requests/sec', style: { color: '#1e3a8a', fontFamily: 'Inter' } }
+                }, {
+                    opposite: true,
+                    title: { text: 'CPU Load (%)', style: { color: '#dfb78c', fontFamily: 'Inter' } },
+                    max: 100
+                }],
+                legend: { position: 'top', horizontalAlign: 'right' },
+                grid: {
+                    borderColor: '#f1f5f9',
+                    strokeDashArray: 4,
+                }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#systemChart"), options);
+            chart.render();
+        });
+    </script>
+</body>
+</html>

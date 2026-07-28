@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roles & Permissions - GoldStandard Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            background-color: transparent;
+            padding: 2rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .role-card {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid var(--outline-variant);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            padding: 1.5rem;
+            height: 100%;
+            transition: transform 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .role-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 6px;
+        }
+        .rc-admin::before { background: #ef4444; }
+        .rc-partner::before { background: var(--secondary-container); }
+        .rc-consultant::before { background: var(--primary); }
+        .rc-client::before { background: #64748b; }
+
+        .role-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .rc-admin .role-icon { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+        .rc-partner .role-icon { background: rgba(184, 151, 116, 0.2); color: var(--secondary-container); }
+        .rc-consultant .role-icon { background: rgba(30, 58, 138, 0.1); color: var(--primary); }
+        .rc-client .role-icon { background: #f1f5f9; color: #475569; }
+
+        .permission-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .permission-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--outline-variant);
+            font-size: 0.85rem;
+            color: var(--secondary);
+            font-family: 'Inter', sans-serif;
+        }
+        .permission-item:last-child { border-bottom: none; }
+        .permission-item .material-symbols-outlined { font-size: 1.1rem; }
+        .perm-yes { color: #10b981; }
+        .perm-no { color: #ef4444; }
+
+        /* Custom Toggle Switch */
+        .form-switch .form-check-input {
+            width: 2.5em;
+            height: 1.2em;
+            cursor: pointer;
+        }
+        .form-switch .form-check-input:checked {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .matrix-table th {
+            background: #f8fafc;
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-align: center;
+            vertical-align: middle;
+            border-bottom: 2px solid var(--outline-variant);
+        }
+        .matrix-table td {
+            vertical-align: middle;
+            text-align: center;
+            padding: 1rem;
+        }
+        .matrix-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid p-0">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h4 class="font-heading fw-bold text-primary mb-1">Roles & Permissions</h4>
+                <p class="text-secondary small font-button mb-0">Configure access levels and module availability across the platform.</p>
+            </div>
+            <button class="btn btn-premium btn-premium-primary rounded-pill px-4 py-2 font-button fw-bold d-flex align-items-center gap-2">
+                <span class="material-symbols-outlined fs-5">save</span> Save Changes
+            </button>
+        </div>
+
+        <!-- Role Summaries -->
+        <div class="row g-4 mb-5">
+            <!-- Admin -->
+            <div class="col-md-3">
+                <div class="role-card rc-admin">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="role-icon"><span class="material-symbols-outlined fs-4">admin_panel_settings</span></div>
+                        <span class="badge bg-light text-secondary rounded-pill">12 Users</span>
+                    </div>
+                    <h5 class="font-heading fw-bold text-primary mb-3">Administrator</h5>
+                    <ul class="permission-list">
+                        <li class="permission-item"><span class="material-symbols-outlined perm-yes">check</span> Full System Access</li>
+                        <li class="permission-item"><span class="material-symbols-outlined perm-yes">check</span> Manage Users & Roles</li>
+                        <li class="permission-item"><span class="material-symbols-outlined perm-yes">check</span> Security & Audit Logs</li>
+                        <li class="permission-item"><span class="material-symbols-outlined perm-yes">check</span> Global Settings</li>
+                    </ul>
+                    <button class="btn btn-sm btn-outline-danger w-100 mt-4 rounded-pill fw-bold font-button">Edit Role</button>
+                </div>
+            </div>
+
+            <!-- Partner -->
+            <div class="col-md-3">
+                <div class="role-card rc-partner">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="role-icon"><span class="material-symbols-outlined fs-4">account_balance</span></div>
+                        <span class="badge bg-light text-secondary rounded-pill">40 Users</span>
+                    </div>
+                    <h5 class="font-heading fw-bold text-primary mb-3">Partner</h5>
+                    <ul class="permission-list">
+                        <li class="permission-item"><span class="material-symbols-outlined perm-yes">check</span> Executive Dashboard</li>
+                        <li class="permission-item"><span class="material-symbols-outlined perm-yes">check</span> Firm Financials</li>
+                        <li class="permission-item"><span class="material-symbols-outlined perm-yes">check</span> Sales Pipeline</li>
+                        <li class="permission-item"><span class="material-symbols-outlined perm-no">close</span> System Settings</li>
+                    </ul>
+                    <button class="btn btn-sm btn-outline-primary w-100 mt-4 rounded-pill fw-bold font-button" style="color:var(--secondary-container); border-color:var(--secondary-container);">Edit Role</button>
+                </div>
+            </div>
+
+            <!-- Consultant -->
+            <div class="col-md-3">
+                <div class="role-card rc-consultant">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="role-icon"><span class="material-symbols-outlined fs-4">work</span></div>
+                        <span class="badge bg-light text-secondary rounded-pill">200 Users</span>
+                    </div>
+                    <h5 class="font-heading fw-bold text-primary mb-3">Consultant</h5>
+                    <ul class="permission-list">
+                        <li class="permission-item"><span class="material-symbols-outlined perm-yes">check</span> Project Management</li>
+                        <li class="permission-item"><span class="material-symbols-outlined perm-yes">check</span> Timesheet Entry</li>
+                        <li class="permission-item"><span class="material-symbols-outlined perm-yes">check</span> Firm Directory</li>
+                        <li class="permission-item"><span class="material-symbols-outlined perm-no">close</span> Firm Financials</li>
+                    </ul>
+                    <button class="btn btn-sm btn-outline-primary w-100 mt-4 rounded-pill fw-bold font-button">Edit Role</button>
+                </div>
+            </div>
+
+            <!-- Client -->
+            <div class="col-md-3">
+                <div class="role-card rc-client">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="role-icon"><span class="material-symbols-outlined fs-4">storefront</span></div>
+                        <span class="badge bg-light text-secondary rounded-pill">1.2k Users</span>
+                    </div>
+                    <h5 class="font-heading fw-bold text-primary mb-3">Client</h5>
+                    <ul class="permission-list">
+                        <li class="permission-item"><span class="material-symbols-outlined perm-yes">check</span> View Own Invoices</li>
+                        <li class="permission-item"><span class="material-symbols-outlined perm-yes">check</span> Download Reports</li>
+                        <li class="permission-item"><span class="material-symbols-outlined perm-yes">check</span> Support Tickets</li>
+                        <li class="permission-item"><span class="material-symbols-outlined perm-no">close</span> Internal Directory</li>
+                    </ul>
+                    <button class="btn btn-sm btn-outline-secondary w-100 mt-4 rounded-pill fw-bold font-button">Edit Role</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Permission Matrix -->
+        <div class="card border-0 shadow-sm rounded-4" style="border: 1px solid var(--outline-variant) !important;">
+            <div class="card-header bg-white p-4 border-bottom border-outline-variant d-flex justify-content-between align-items-center">
+                <h5 class="font-heading fw-bold text-primary mb-0">Module Access Matrix</h5>
+                <span class="badge bg-light text-secondary font-button">Changes require Save</span>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table matrix-table mb-0">
+                        <thead>
+                            <tr>
+                                <th>Module Name</th>
+                                <th>Admin</th>
+                                <th>Partner</th>
+                                <th>Consultant</th>
+                                <th>Client</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dashboard Access (Login)</td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" checked disabled></div></td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" checked></div></td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" checked></div></td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" checked></div></td>
+                            </tr>
+                            <tr>
+                                <td>Financial Reporting (Firm)</td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" checked></div></td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" checked></div></td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox"></div></td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" disabled></div></td>
+                            </tr>
+                            <tr>
+                                <td>Project Timesheets</td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" checked></div></td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" checked></div></td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" checked></div></td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" disabled></div></td>
+                            </tr>
+                            <tr>
+                                <td>Invoices & Billing (Client)</td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" checked></div></td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" checked></div></td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox"></div></td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" checked></div></td>
+                            </tr>
+                            <tr>
+                                <td>System Settings & Users</td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" checked disabled></div></td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox"></div></td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" disabled></div></td>
+                                <td><div class="form-check form-switch d-flex justify-content-center"><input class="form-check-input" type="checkbox" disabled></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

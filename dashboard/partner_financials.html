@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Performance - GoldStandard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        body {
+            background-color: transparent;
+            padding: 2rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .metric-card {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid var(--outline-variant);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--primary);
+        }
+        .metric-card.gold::before { background: var(--secondary-container); }
+        .metric-card.green::before { background: #10b981; }
+        .metric-card.red::before { background: #ef4444; }
+
+        .metric-value {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 2.2rem;
+            line-height: 1;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .chart-box {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid var(--outline-variant);
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            height: 100%;
+        }
+
+        .table-modern {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid var(--outline-variant);
+        }
+        
+        .table-modern th {
+            background: var(--surface-variant);
+            color: var(--on-surface-variant);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            padding: 1rem;
+            border-bottom: none;
+        }
+        
+        .table-modern td {
+            padding: 1rem;
+            vertical-align: middle;
+            border-bottom: 1px solid var(--outline-variant);
+            color: var(--on-surface);
+        }
+
+        .amount-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .badge-status {
+            padding: 0.4em 0.8em;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+        .badge-paid { background: #d1fae5; color: #065f46; border: 1px solid #34d399; }
+        .badge-pending { background: #fef3c7; color: #92400e; border: 1px solid #fbbf24; }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid p-0">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h4 class="font-heading fw-bold text-primary mb-1">Financial Performance</h4>
+                <p class="text-secondary small font-button mb-0">Executive overview of firm revenue, margins, and accounts receivable.</p>
+            </div>
+            <button class="btn btn-premium btn-premium-primary rounded-pill px-4 py-2 font-button fw-bold d-flex align-items-center gap-2">
+                <span class="material-symbols-outlined fs-5">download</span> Export P&L Report
+            </button>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <!-- KPI 1 -->
+            <div class="col-md-3">
+                <div class="metric-card">
+                    <p class="mb-0 text-secondary small text-uppercase fw-bold">Gross Revenue (YTD)</p>
+                    <div class="metric-value">$8.4M</div>
+                    <span class="text-success small fw-bold d-flex align-items-center gap-1 mt-2">
+                        <span class="material-symbols-outlined fs-6">trending_up</span> +14% YoY
+                    </span>
+                </div>
+            </div>
+            <!-- KPI 2 -->
+            <div class="col-md-3">
+                <div class="metric-card gold">
+                    <p class="mb-0 text-secondary small text-uppercase fw-bold">EBITDA</p>
+                    <div class="metric-value">$2.1M</div>
+                    <span class="text-success small fw-bold d-flex align-items-center gap-1 mt-2">
+                        <span class="material-symbols-outlined fs-6">trending_up</span> +8% YoY
+                    </span>
+                </div>
+            </div>
+            <!-- KPI 3 -->
+            <div class="col-md-3">
+                <div class="metric-card green">
+                    <p class="mb-0 text-secondary small text-uppercase fw-bold">Net Profit Margin</p>
+                    <div class="metric-value">22.5%</div>
+                    <span class="text-secondary small fw-bold d-flex align-items-center gap-1 mt-2">
+                        Target: 20.0%
+                    </span>
+                </div>
+            </div>
+            <!-- KPI 4 -->
+            <div class="col-md-3">
+                <div class="metric-card red">
+                    <p class="mb-0 text-secondary small text-uppercase fw-bold">Accounts Receivable</p>
+                    <div class="metric-value">$450k</div>
+                    <span class="text-danger small fw-bold d-flex align-items-center gap-1 mt-2">
+                        <span class="material-symbols-outlined fs-6">warning</span> 12% > 60 Days
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <!-- Dual Axis Chart -->
+            <div class="col-12">
+                <div class="chart-box">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <h6 class="font-heading fw-bold text-primary mb-1">Revenue vs. Profit Margin</h6>
+                            <p class="text-secondary small font-button mb-0">Monthly analysis (Trailing 6 Months)</p>
+                        </div>
+                    </div>
+                    <div id="financialChart" style="width: 100%; min-height: 350px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Recent Transactions Table -->
+            <div class="col-12">
+                <div class="table-modern">
+                    <div class="p-4 border-bottom border-outline-variant d-flex justify-content-between align-items-center bg-white">
+                        <h5 class="font-heading fw-bold text-primary mb-0">Recent High-Value Invoices</h5>
+                        <button class="btn btn-sm btn-outline-primary rounded-pill px-4 font-button">View All A/R</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Client</th>
+                                    <th>Project / Description</th>
+                                    <th>Issue Date</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="fw-bold text-primary">Acme Corp</div>
+                                        <div class="small text-secondary font-button">Retail</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold text-primary">IPO Advisory - Final Retainer</div>
+                                        <div class="small text-secondary font-button">INV-2026-104</div>
+                                    </td>
+                                    <td class="text-secondary small font-button">Nov 10, 2026</td>
+                                    <td class="amount-text fs-5">$250,000</td>
+                                    <td><span class="badge badge-pending">Pending (Net 30)</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="fw-bold text-primary">GlobalTech Inc.</div>
+                                        <div class="small text-secondary font-button">Technology</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold text-primary">EU Market Entry - Phase 1</div>
+                                        <div class="small text-secondary font-button">INV-2026-098</div>
+                                    </td>
+                                    <td class="text-secondary small font-button">Nov 01, 2026</td>
+                                    <td class="amount-text fs-5">$180,000</td>
+                                    <td><span class="badge badge-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="fw-bold text-primary">NovaCorp Solutions</div>
+                                        <div class="small text-secondary font-button">Finance</div>
+                                    </td>
+                                    <td>
+                                        <div class="fw-bold text-primary">Operational Audit</div>
+                                        <div class="small text-secondary font-button">INV-2026-085</div>
+                                    </td>
+                                    <td class="text-secondary small font-button">Oct 15, 2026</td>
+                                    <td class="amount-text fs-5">$95,000</td>
+                                    <td><span class="badge badge-paid">Paid</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize ApexChart Mixed (Bar/Line)
+        document.addEventListener('DOMContentLoaded', function () {
+            var options = {
+                series: [{
+                    name: 'Monthly Revenue',
+                    type: 'column',
+                    data: [1.2, 1.4, 1.1, 1.6, 1.5, 1.8] // Millions
+                }, {
+                    name: 'Profit Margin',
+                    type: 'line',
+                    data: [20, 21.5, 19, 22.5, 21.8, 23.5] // Percentages
+                }],
+                chart: {
+                    height: 350,
+                    type: 'line',
+                    fontFamily: 'Inter, sans-serif',
+                    toolbar: { show: false }
+                },
+                stroke: {
+                    width: [0, 4] // 0 width for column, 4 for line
+                },
+                colors: ['#1e3a8a', '#dfb78c'], // Primary Blue, Gold
+                dataLabels: {
+                    enabled: true,
+                    enabledOnSeries: [1],
+                    formatter: function(val) {
+                        return val + "%"
+                    }
+                },
+                xaxis: {
+                    categories: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+                    axisBorder: { show: false },
+                    axisTicks: { show: false }
+                },
+                yaxis: [{
+                    title: {
+                        text: 'Revenue (Millions)',
+                        style: { color: '#1e3a8a', fontFamily: 'Inter' }
+                    },
+                    labels: {
+                        formatter: function(val) {
+                            return "$" + val.toFixed(1) + "M";
+                        }
+                    }
+                }, {
+                    opposite: true,
+                    title: {
+                        text: 'Profit Margin (%)',
+                        style: { color: '#dfb78c', fontFamily: 'Inter' }
+                    }
+                }],
+                grid: {
+                    borderColor: '#f1f5f9',
+                    strokeDashArray: 4,
+                }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#financialChart"), options);
+            chart.render();
+        });
+    </script>
+</body>
+</html>

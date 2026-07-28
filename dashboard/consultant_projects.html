@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultant Projects - GoldStandard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        body {
+            background-color: transparent;
+            padding: 2rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid var(--outline-variant);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            box-shadow: 0 8px 25px rgba(26, 54, 93, 0.1);
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--secondary-container);
+        }
+        .project-card.active::before { background: #10b981; }
+
+        .client-logo {
+            width: 45px;
+            height: 45px;
+            background: var(--surface-variant);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .chart-box {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid var(--outline-variant);
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        .badge-phase {
+            padding: 0.3em 0.8em;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .phase-discovery { background: #e0e7ff; color: #4338ca; }
+        .phase-execution { background: #fef3c7; color: #b45309; }
+        .phase-review { background: #d1fae5; color: #065f46; }
+
+        .avatar-group {
+            display: flex;
+        }
+        .avatar-group .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--secondary-container);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border: 2px solid white;
+            margin-left: -10px;
+        }
+        .avatar-group .avatar:first-child { margin-left: 0; }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid p-0">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h4 class="font-heading fw-bold text-primary mb-1">Active Projects</h4>
+                <p class="text-secondary small font-button mb-0">Manage your client engagements and milestones.</p>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-primary rounded-pill px-4 py-2 font-button">Archive</button>
+                <button class="btn btn-premium btn-premium-primary rounded-pill px-4 py-2 font-button fw-bold d-flex align-items-center gap-2">
+                    <span class="material-symbols-outlined fs-5">add</span> New Project
+                </button>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <!-- Timeline Chart -->
+            <div class="col-12">
+                <div class="chart-box">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h6 class="font-heading fw-bold text-primary mb-0">Milestone Timeline (Q4)</h6>
+                        <span class="badge bg-light text-secondary">Oct - Dec 2026</span>
+                    </div>
+                    <div id="timelineChart" style="width: 100%; min-height: 200px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Project 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card active">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <div class="client-logo">GT</div>
+                            <div>
+                                <h6 class="font-heading fw-bold text-primary mb-0">GlobalTech Inc.</h6>
+                                <span class="badge-phase phase-execution mt-1 d-inline-block">Phase 2: Strategy</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-light text-secondary p-1"><span class="material-symbols-outlined fs-5">more_vert</span></button>
+                    </div>
+                    
+                    <p class="text-secondary small mb-4">Leading the EU market entry strategy and financial modeling for Q1 2027 expansion.</p>
+                    
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small fw-bold mb-1">
+                            <span class="text-primary">Progress</span>
+                            <span class="text-success">65%</span>
+                        </div>
+                        <div class="progress" style="height: 6px;">
+                            <div class="progress-bar bg-success" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center pt-3 border-top border-outline-variant">
+                        <div class="avatar-group">
+                            <div class="avatar">SJ</div>
+                            <div class="avatar bg-primary">MC</div>
+                            <div class="avatar bg-secondary">+2</div>
+                        </div>
+                        <span class="small text-secondary fw-bold d-flex align-items-center gap-1">
+                            <span class="material-symbols-outlined fs-6 text-danger">schedule</span> Due Dec 15
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <div class="client-logo" style="background: rgba(184, 151, 116, 0.2);">NC</div>
+                            <div>
+                                <h6 class="font-heading fw-bold text-primary mb-0">NovaCorp Solutions</h6>
+                                <span class="badge-phase phase-discovery mt-1 d-inline-block">Phase 1: Discovery</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-light text-secondary p-1"><span class="material-symbols-outlined fs-5">more_vert</span></button>
+                    </div>
+                    
+                    <p class="text-secondary small mb-4">Conducting operational efficiency audit and restructuring proposals for the IT division.</p>
+                    
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small fw-bold mb-1">
+                            <span class="text-primary">Progress</span>
+                            <span style="color: var(--secondary-container);">20%</span>
+                        </div>
+                        <div class="progress" style="height: 6px;">
+                            <div class="progress-bar" style="width: 20%; background: var(--secondary-container);"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center pt-3 border-top border-outline-variant">
+                        <div class="avatar-group">
+                            <div class="avatar bg-primary">MC</div>
+                            <div class="avatar">ER</div>
+                        </div>
+                        <span class="small text-secondary fw-bold d-flex align-items-center gap-1">
+                            <span class="material-symbols-outlined fs-6 text-warning">schedule</span> Due Jan 10
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <div class="client-logo" style="background: rgba(30, 58, 138, 0.1);">AP</div>
+                            <div>
+                                <h6 class="font-heading fw-bold text-primary mb-0">Apex Industries</h6>
+                                <span class="badge-phase phase-review mt-1 d-inline-block">Phase 4: Review</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-light text-secondary p-1"><span class="material-symbols-outlined fs-5">more_vert</span></button>
+                    </div>
+                    
+                    <p class="text-secondary small mb-4">Finalizing the merger acquisition paperwork and presenting the integration roadmap.</p>
+                    
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small fw-bold mb-1">
+                            <span class="text-primary">Progress</span>
+                            <span class="text-primary">95%</span>
+                        </div>
+                        <div class="progress" style="height: 6px;">
+                            <div class="progress-bar bg-primary" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center pt-3 border-top border-outline-variant">
+                        <div class="avatar-group">
+                            <div class="avatar bg-dark">SJ</div>
+                        </div>
+                        <span class="small text-secondary fw-bold d-flex align-items-center gap-1">
+                            <span class="material-symbols-outlined fs-6 text-success">task_alt</span> Closes next wk
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize ApexChart Timeline (Range Bar)
+        document.addEventListener('DOMContentLoaded', function () {
+            var options = {
+                series: [
+                    {
+                        name: 'GlobalTech',
+                        data: [
+                            { x: 'Discovery', y: [new Date('2026-10-01').getTime(), new Date('2026-10-25').getTime()] },
+                            { x: 'Strategy', y: [new Date('2026-10-26').getTime(), new Date('2026-12-15').getTime()] }
+                        ]
+                    },
+                    {
+                        name: 'NovaCorp',
+                        data: [
+                            { x: 'Discovery', y: [new Date('2026-11-05').getTime(), new Date('2026-12-10').getTime()] },
+                        ]
+                    }
+                ],
+                chart: {
+                    height: 250,
+                    type: 'rangeBar',
+                    fontFamily: 'Inter, sans-serif',
+                    toolbar: { show: false }
+                },
+                plotOptions: {
+                    bar: {
+                        horizontal: true,
+                        barHeight: '50%',
+                        borderRadius: 4
+                    }
+                },
+                colors: ['#1e3a8a', '#dfb78c'],
+                xaxis: {
+                    type: 'datetime'
+                },
+                legend: {
+                    position: 'top'
+                },
+                grid: {
+                    borderColor: '#f1f5f9',
+                    xaxis: { lines: { show: true } },
+                    yaxis: { lines: { show: false } }
+                }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#timelineChart"), options);
+            chart.render();
+        });
+    </script>
+</body>
+</html>

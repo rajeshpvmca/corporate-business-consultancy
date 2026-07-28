@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        body {
+            background-color: transparent;
+            padding: 2rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .welcome-card {
+            background: linear-gradient(135deg, var(--primary) 0%, #1e3a8a 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(26, 54, 93, 0.15);
+            position: relative;
+            overflow: hidden;
+            border-left: 5px solid var(--secondary-container);
+        }
+        
+        .welcome-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .stat-card {
+            background: #ffffff;
+            border: 1px solid var(--outline-variant);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary-container);
+            box-shadow: 0 8px 25px rgba(184, 151, 116, 0.15);
+        }
+
+        .stat-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--surface-variant);
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--outline-variant);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 3px solid var(--primary);
+        }
+        
+        .timeline-item.active::before {
+            background: var(--secondary-container);
+            border-color: var(--secondary-container);
+            box-shadow: 0 0 0 4px rgba(184, 151, 116, 0.2);
+        }
+
+        .table-modern {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid var(--outline-variant);
+        }
+        
+        .table-modern th {
+            background: var(--surface-variant);
+            color: var(--on-surface-variant);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 1rem;
+            border-bottom: none;
+        }
+        
+        .table-modern td {
+            padding: 1rem;
+            vertical-align: middle;
+            border-bottom: 1px solid var(--outline-variant);
+            color: var(--on-surface);
+        }
+        
+        .badge-status {
+            padding: 0.4em 0.8em;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+        
+        .badge-completed { background: #d1fae5; color: #065f46; }
+        .badge-progress { background: #dbeafe; color: #1e40af; }
+        .badge-pending { background: #fef3c7; color: #92400e; }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid p-0">
+        <!-- Welcome Banner -->
+        <div class="welcome-card mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2 class="font-heading fw-bold mb-2">Welcome back, <span id="clientName">Client</span>!</h2>
+                    <p class="mb-0 text-white-50 font-button">Your engagement with GoldStandard Consulting is currently in Phase 2.</p>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <button class="btn btn-light rounded-pill px-4 py-2 fw-bold text-primary font-button shadow-sm">
+                        Schedule Review
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- KPI Stats -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-4">
+                <div class="stat-card d-flex align-items-center gap-3">
+                    <div class="stat-icon"><span class="material-symbols-outlined">trending_up</span></div>
+                    <div>
+                        <p class="mb-0 text-secondary small text-uppercase fw-bold">ROI Projected</p>
+                        <h4 class="mb-0 fw-bold font-heading text-primary">312%</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card d-flex align-items-center gap-3">
+                    <div class="stat-icon" style="background: rgba(184, 151, 116, 0.2); color: var(--secondary-container);"><span class="material-symbols-outlined">check_circle</span></div>
+                    <div>
+                        <p class="mb-0 text-secondary small text-uppercase fw-bold">Deliverables Met</p>
+                        <h4 class="mb-0 fw-bold font-heading text-primary">8 / 12</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card d-flex align-items-center gap-3">
+                    <div class="stat-icon" style="background: #d1fae5; color: #065f46;"><span class="material-symbols-outlined">payments</span></div>
+                    <div>
+                        <p class="mb-0 text-secondary small text-uppercase fw-bold">Next Invoice Due</p>
+                        <h4 class="mb-0 fw-bold font-heading text-primary">Nov 15</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <!-- Project Timeline -->
+            <div class="col-lg-5">
+                <div class="card border-0 shadow-sm rounded-4 h-100" style="border: 1px solid var(--outline-variant) !important;">
+                    <div class="card-header bg-white border-bottom-0 pt-4 pb-0 px-4">
+                        <h5 class="font-heading fw-bold text-primary mb-0">Engagement Timeline</h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h6 class="fw-bold mb-1 text-primary font-heading">Phase 1: Discovery</h6>
+                                <p class="text-secondary small mb-0">Completed Oct 12, 2026</p>
+                            </div>
+                            <div class="timeline-item active">
+                                <h6 class="fw-bold mb-1 text-primary font-heading">Phase 2: Strategy Dev</h6>
+                                <p class="text-secondary small mb-0">In Progress - 75% complete</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h6 class="fw-bold mb-1 text-primary font-heading">Phase 3: Implementation</h6>
+                                <p class="text-secondary small mb-0">Scheduled Dec 1, 2026</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h6 class="fw-bold mb-1 text-primary font-heading">Phase 4: Review</h6>
+                                <p class="text-secondary small mb-0">Scheduled Jan 15, 2027</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ApexChart: Engagement Progress -->
+            <div class="col-lg-7">
+                <div class="card border-0 shadow-sm rounded-4 h-100" style="border: 1px solid var(--outline-variant) !important;">
+                    <div class="card-header bg-white border-bottom-0 pt-4 pb-0 px-4">
+                        <h5 class="font-heading fw-bold text-primary mb-0">Projected ROI Growth</h5>
+                    </div>
+                    <div class="card-body p-4 d-flex align-items-center justify-content-center">
+                        <div id="roiChart" style="width: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Recent Deliverables Table -->
+            <div class="col-lg-12">
+                <div class="table-modern">
+                    <div class="p-4 border-bottom border-outline-variant d-flex justify-content-between align-items-center bg-white">
+                        <h5 class="font-heading fw-bold text-primary mb-0">Recent Deliverables</h5>
+                        <button class="btn btn-sm btn-outline-primary rounded-pill px-3 font-button">View All</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Document Name</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th class="text-end">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2 fw-bold text-primary">
+                                            <span class="material-symbols-outlined text-secondary fs-5">picture_as_pdf</span>
+                                            Q3 Market Analysis.pdf
+                                        </div>
+                                    </td>
+                                    <td class="text-secondary small font-button">Oct 28, 2026</td>
+                                    <td><span class="badge badge-completed">Finalized</span></td>
+                                    <td class="text-end">
+                                        <button class="btn btn-sm btn-light text-primary rounded-pill px-3 shadow-sm"><span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">download</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2 fw-bold text-primary">
+                                            <span class="material-symbols-outlined text-secondary fs-5">description</span>
+                                            Competitor Mapping.docx
+                                        </div>
+                                    </td>
+                                    <td class="text-secondary small font-button">Nov 02, 2026</td>
+                                    <td><span class="badge badge-progress">In Review</span></td>
+                                    <td class="text-end">
+                                        <button class="btn btn-sm btn-light text-primary rounded-pill px-3 shadow-sm"><span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">visibility</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2 fw-bold text-primary">
+                                            <span class="material-symbols-outlined text-secondary fs-5">analytics</span>
+                                            Financial Projections.xlsx
+                                        </div>
+                                    </td>
+                                    <td class="text-secondary small font-button">Nov 10, 2026</td>
+                                    <td><span class="badge badge-pending">Drafting</span></td>
+                                    <td class="text-end">
+                                        <button class="btn btn-sm btn-light text-secondary rounded-pill px-3" disabled><span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">lock</span></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Listen for user data from parent iframe
+        window.addEventListener('message', (event) => {
+            if (event.data.type === 'DASH_USER') {
+                const user = event.data.user;
+                if(user && user.name) {
+                    document.getElementById('clientName').textContent = user.name;
+                }
+            }
+        });
+
+        // Initialize ApexChart
+        document.addEventListener('DOMContentLoaded', function () {
+            var options = {
+                series: [{
+                    name: 'Projected ROI (%)',
+                    data: [0, 45, 110, 195, 260, 312]
+                }],
+                chart: {
+                    type: 'area',
+                    height: 250,
+                    fontFamily: 'Inter, sans-serif',
+                    toolbar: { show: false }
+                },
+                colors: ['#1e3a8a'], // Primary color
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shadeIntensity: 1,
+                        opacityFrom: 0.7,
+                        opacityTo: 0.1,
+                        stops: [0, 90, 100]
+                    }
+                },
+                dataLabels: { enabled: false },
+                stroke: { curve: 'smooth', width: 3 },
+                xaxis: {
+                    categories: ['Month 1', 'Month 2', 'Month 3', 'Month 4', 'Month 5', 'Month 6'],
+                    axisBorder: { show: false },
+                    axisTicks: { show: false }
+                },
+                yaxis: {
+                    labels: {
+                        formatter: function (val) { return val + "%"; }
+                    }
+                },
+                grid: {
+                    borderColor: '#f1f5f9',
+                    strokeDashArray: 4,
+                }
+            };
+            var chart = new ApexCharts(document.querySelector("#roiChart"), options);
+            chart.render();
+        });
+    </script>
+</body>
+</html>
