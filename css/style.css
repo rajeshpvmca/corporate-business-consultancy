@@ -997,3 +997,14 @@ body.loading {
     0% { transform: scale(0.9); opacity: 0.8; filter: drop-shadow(0 0 10px rgba(254, 214, 91, 0.5)); }
     100% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 20px rgba(254, 214, 91, 0.9)); }
 }
+
+
+/* Global Hero Zoom Animation */
+@keyframes zoomOutOnce {
+  from { transform: scale(1.15); }
+  to { transform: scale(1); }
+}
+
+.bg-zoom-animate {
+  animation: zoomOutOnce 6s ease-out forwards;
+}
