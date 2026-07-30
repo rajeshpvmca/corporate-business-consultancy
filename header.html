@@ -5,12 +5,24 @@
                 aria-label="Stackly Logo"></div>
         </a>
         
-        <button onclick="window.top.location.href='404.html'" class="navbar-toggler border-0 text-primary shadow-none p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler border-0 text-primary shadow-none p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="material-symbols-outlined fs-1">menu</span>
         </button>
 
+        <style>
+            @media (max-width: 991.98px) {
+                .mobile-menu-wrapper {
+                    min-height: calc(100dvh - 70px);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding-bottom: 2rem;
+                }
+            }
+        </style>
         <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4 gap-3 text-center mt-4 mt-lg-0">
+            <div class="mobile-menu-wrapper w-100">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4 gap-3 text-center mt-4 mt-lg-0">
                 <li class="nav-item">
                     <a class="nav-link font-button fw-bold d-inline-block custom-nav-link" href="index.html" style="transition: all 0.3s;">Home</a>
                 </li>
@@ -46,6 +58,7 @@
                         <span class="material-symbols-outlined login-icon" style="font-size: 16px; color: var(--primary); transition: color 0.3s ease;">login</span>
                     </div>
                 </a>
+            </div>
             </div>
         </div>
     </div>
